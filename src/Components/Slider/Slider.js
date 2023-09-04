@@ -1,5 +1,5 @@
 import './Slider.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import slidimage1 from '../../Assets/images/slider1.jpg';
 import slidimage2 from '../../Assets/images/slider2.avif';
 import slidimage3 from '../../Assets/images/slider3.jpeg';
@@ -25,6 +25,15 @@ const Slider = () => {
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
     };
+      // Otomatik kaydırma işlemini başlat
+  useEffect(() => {
+    const intervalId = setInterval(nextSlide, 5000); // 5 saniyede bir kaydır
+
+    // ComponentWillUnmount benzeri bir işlem için clearInterval kullanın
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
   
     return (
       <div className="slider">
