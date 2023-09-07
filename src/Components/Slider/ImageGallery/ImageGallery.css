@@ -1,0 +1,39 @@
+.filters-com {
+    margin: 0 auto;
+    width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+.filters-com .filters-wraper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filters-com .filters-wraper div { 
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #222;
+    font-weight: 500;
+}
+.filters-com .filters-wraper div:first-child {
+    color: #1c1970;
+}
+.filters-com .filters-wraper div::after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #222;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.filters-com .filters-wraper div:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

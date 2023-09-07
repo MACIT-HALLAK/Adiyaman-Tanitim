@@ -1,13 +1,13 @@
 import './App.css';
+import ImageGallery from './Components/Slider/ImageGallery/ImageGallery';
 import Slider from './Components/Slider/Slider';
+import TitleCom from './Components/Slider/TitleCom/TitleCom';
 
 function App() {
   return (
     <div className="App">
-     <header className="App-header">
-        <h1>React Slider Örneği</h1>
-        <Slider />
-      </header>
+     <TitleCom />
+     <ImageGallery />
     </div>
   );
 }
