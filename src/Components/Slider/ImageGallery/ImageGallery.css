@@ -1,137 +1,174 @@
 .filters-com {
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    
-   
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .filters-com .filters-wraper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .filters-com .filters-wraper div {
-    width: 600px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  width: 600px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-.filters-com .filters-wraper div div { 
-    width: fit-content;
+.filters-com .filters-wraper div div {
+  width: fit-content;
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
 }
-.filters-com .filters-wraper div { 
-    position: relative;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #222;
-    font-weight: 500;
+.filters-com .filters-wraper div {
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #222;
+  font-weight: 500;
 }
 .filters-com .filters-wraper div div:first-child {
-    color: #1c1970;
+  color: #1c1970;
 }
-.filters-com .filters-wraper div div::after { 
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #222;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+.filters-com .filters-wraper div div::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #222;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  -webkit-transition: transform 0.25s ease-out;
+  -moz-transition: transform 0.25s ease-out;
+  -ms-transition: transform 0.25s ease-out;
+  -o-transition: transform 0.25s ease-out;
+}
+.filters-com .filters-wraper div div:hover {
+  scale: 1.1;
 }
 .filters-com .filters-wraper div:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* style for gallery */
 .filters-com .gallery-wraper {
-    
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px 100px 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 100px 0 100px;
 }
 .filters-com .gallery-wraper > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    width:calc((100% - 120px) / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: calc((100% - 120px) / 3);
 }
 .filters-com .gallery-wraper div div {
-    width: 100%;
-    height: 100%;
- 
+  width: 100%;
+  height: 100%;
 }
+
 .filters-com .gallery-wraper div div img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
-@media (max-width:870px) {
-    .filters-com .gallery-wraper {
-        flex-direction: column;
-        
-    }
-    .filters-com .gallery-wraper div {
-        width:calc(100% / 1);
-        margin: 20px 0;
-        
-    }
+@media (max-width: 870px) {
+  .filters-com .gallery-wraper {
+    flex-direction: column;
+  }
+  .filters-com .gallery-wraper div {
+    width: calc(100% / 1);
+    margin: 20px 0;
+  }
 }
 .filters-com .gallery-wraper div h2 {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 700;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
 }
 .filters-com .gallery-wraper div p {
-    color: #777777;
-    font-size: 13px;
-    line-height: 2em
+  color: #eeebeb;
+  font-size: 0.75rem;
+  line-height: 2em;
+  text-transform: capitalize;
 }
 
 /* ///////////////////////////////////////// */
 
 .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .image-gallery img {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
-  }
-  
-  .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    
-  }
-  
-  .modal img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    cursor: pointer;
-  }
-  
-  .modal button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.image-gallery img:hover ~ div {
+  opacity: 1 !important;
+  translate: 0 5%;
+}
+.filters-com .gallery-wraper div .text {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -moz-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -ms-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  backdrop-filter: blur(1px);
+  padding-block: 0.75rem;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal img {
+  max-width: 90%;
+  height: 90%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.modal button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
