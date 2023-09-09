@@ -1,0 +1,92 @@
+
+.container {
+    background-color: black;
+    opacity: 1;
+    display: grid;
+    grid-auto-rows: minmax(70px, auto);
+    grid-template-areas: 'logo logo nav-item nav-item nav-item nav-item';
+    justify-items: end;
+    align-items: center;
+    gap: 0vh 0vw;
+    border-radius: 7px;
+    font-family: cursive;
+
+    }
+.nav-logo {
+    display: grid;
+    color: white;
+    grid-area: logo;
+    padding-right: 14%;
+}
+.adiyaman-logo {
+    width: 19vw;
+}
+.nav-items {
+    display: grid;
+    color: white;
+    list-style-type: none;
+    grid-area: nav-item;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 'liAnasayfa liCamiler liAlanlar liIletisim li';
+    gap: 4vw;      
+    
+}
+
+.anasayfa ,.camiler,.alanlar,.iletisim {
+    display: grid;
+    color: white;
+    
+    
+}
+.anasayfa {
+    grid-area: liAnasayfa ;
+}
+.camiler {
+    grid-area: liCamiler ;
+}
+.alanlar {
+    grid-area: liAlanlar ;
+}
+.iletisim{
+    grid-area: liIletisim ;
+}
+
+.active {
+    background-color: #443b3b;
+    height: 5vh;
+    width: 7vw;
+}
+.nav-items >li {
+    width: 90px;
+    height: 43px;
+    text-align: center;
+    padding-top: 8px;
+    cursor: grab;
+    
+}
+.nav-items >li:hover {
+    color: aqua;
+    
+}
+.nav-items >li >div {
+    display: none;
+    border-bottom: 4px solid white;
+    height: 12px;
+    
+    width: 0px; /* Başlangıçta sıfır genişlik */
+    animation: expandWidth .5s ease-in-out forwards;
+}
+@keyframes expandWidth {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 90px;
+    }
+}
+.nav-items >li:hover >div {
+    display: block;
+    
+}
+

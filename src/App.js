@@ -1,13 +1,17 @@
 import './App.css';
 import ImageGallery from './Components/Slider/ImageGallery/ImageGallery';
 import Slider from './Components/Slider/Slider';
-import TitleCom from './Components/Slider/TitleCom/TitleCom';
+import Navbar from './Components/Navbar/Navbar';
+import Content from './Components/Content/Content';
+
 
 function App() {
   return (
     <div className="App">
-     <TitleCom />
-     <ImageGallery />
+      <header className="App-header">
+        <Navbar/>
+        <Content/>
+      </header>
     </div>
   );
 }
