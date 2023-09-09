@@ -1,0 +1,62 @@
+.content {
+    margin-top: 7px;
+}
+.content-img {
+    height: 80vh;
+    width: 100%;
+    border-radius: 7px;
+    padding-top: 5px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+.content-img.active {
+    opacity: 0;
+}
+
+.content-center {
+    text-align: center; 
+    font-family: cursive;
+}
+.content-title {
+    margin-top: 10px;
+    color: black;
+}
+.content-text {
+    margin-top: 10px;
+}
+.content-btn {
+    height: 52px;
+    width: 120px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 2px solid dodgerblue;
+    font-family: cursive;
+
+}
+.content-btn:hover {
+    background-color: aqua;
+
+}
+.typing-indicator {
+    animation: yazma 1s infinite;
+}
+
+@keyframes yazma {
+0%, 100% {
+    opacity: 1;
+}
+50% {
+    opacity: 0.3;
+}
+}
+
+
