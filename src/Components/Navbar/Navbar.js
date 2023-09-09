@@ -1,6 +1,7 @@
 import './Navbar.css';
 import React, { useState, useEffect } from 'react';
 import logo from '../../Assets/images/ADIYAMANLogo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     let lis = document.querySelectorAll("ul li");
@@ -30,7 +31,7 @@ const Navbar = () => {
                     <div></div>
                 </li>
                 <li className='camiler'>
-                    Camiler
+                    <Link to='/MosquesPage' >Camiler</Link>
                     <div></div>
                 </li>
                 <li className='alanlar'>

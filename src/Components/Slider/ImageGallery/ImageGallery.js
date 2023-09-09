@@ -1,9 +1,8 @@
 import './ImageGallery.css';
-import slidimage1 from '../../../Assets/images/slider1.jpg';
-import slidimage2 from '../../../Assets/images/slider2.avif';
-import slidimage3 from '../../../Assets/images/slider3.jpeg';
-import slidimage4 from '../../../Assets/images/slider4.jpeg';
-import slidimage5 from '../../../Assets/images/slider5.jpg';
+import slidimage1 from '../../../Assets/images/t.jpg';
+import slidimage3 from '../../../Assets/images/tt.jpg';
+import slidimage4 from '../../../Assets/images/ttt.jpg';
+import slidimage5 from '../../../Assets/images/tttt.jpg';
 import { useState } from 'react';
 
 const ImageGallery = () => {
@@ -47,8 +46,8 @@ const ImageGallery = () => {
         <div>
           <div className="image-gallery">
             <img
-              onClick={() => handleClick(slidimage2)}
-              src={slidimage2}
+              onClick={() => handleClick(slidimage3)}
+              src={slidimage3}
               alt=""
             />
             <div className="text">

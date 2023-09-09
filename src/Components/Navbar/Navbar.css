@@ -33,12 +33,14 @@
     
 }
 
-.anasayfa ,.camiler,.alanlar,.iletisim {
+.anasayfa ,.camiler a ,.alanlar,.iletisim {
     display: grid;
     color: white;
+    text-decoration: none;
     
     
 }
+
 .anasayfa {
     grid-area: liAnasayfa ;
 }
@@ -57,7 +59,7 @@
     height: 5vh;
     width: 7vw;
 }
-.nav-items >li {
+.nav-items >li  {
     width: 90px;
     height: 43px;
     text-align: center;
