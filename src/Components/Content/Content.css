@@ -1,62 +1,64 @@
 .content {
-    margin-top: 7px;
+  margin-top: 7px;
 }
 .content-img {
-    height: 80vh;
-    width: 100%;
-    border-radius: 7px;
-    padding-top: 5px;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-size: cover;
-    transition: background-image 0.5s ease-in-out;
+  height: 80vh;
+  width: 100%;
+  border-radius: 7px;
+  padding-top: 5px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  transition: background-image 0.5s ease-in-out;
 }
 .content-img.active {
-    opacity: 0;
+  opacity: 0;
 }
 
 .content-center {
-    text-align: center; 
-    font-family: cursive;
+  text-align: center;
+  font-family: cursive;
 }
 .content-title {
-    margin-top: 10px;
-    color: black;
+  margin-top: 10px;
+  color: black;
 }
 .content-text {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 .content-btn {
-    height: 52px;
-    width: 120px;
-    font-size: 16px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    border: 2px solid dodgerblue;
-    font-family: cursive;
-
+  height: 52px;
+  width: 120px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 2px solid dodgerblue;
+  font-family: cursive;
+  transition: all 0.2s linear;
 }
 .content-btn:hover {
-    background-color: aqua;
-
+  background-color: rgb(22 161 174);
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  -moz-border-radius: 0.75rem;
+  -ms-border-radius: 0.75rem;
+  -o-border-radius: 0.75rem;
 }
 .typing-indicator {
-    animation: yazma 1s infinite;
+  animation: yazma 1s infinite;
 }
 
 @keyframes yazma {
-0%, 100% {
+  0%,
+  100% {
     opacity: 1;
-}
-50% {
+  }
+  50% {
     opacity: 0.3;
+  }
 }
-}
-
-
