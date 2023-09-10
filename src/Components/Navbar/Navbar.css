@@ -7,7 +7,6 @@
     grid-template-areas: 'logo logo nav-item nav-item nav-item nav-item';
     justify-items: end;
     align-items: center;
-    gap: 0vh 0vw;
     border-radius: 7px;
     font-family: cursive;
 
@@ -16,10 +15,9 @@
     display: grid;
     color: white;
     grid-area: logo;
-    padding-right: 14%;
 }
 .adiyaman-logo {
-    width: 19vw;
+    width: 18rem;
 }
 .nav-items {
     display: grid;
@@ -29,7 +27,7 @@
     justify-items: center;
     align-items: center;
     grid-template-areas: 'liAnasayfa liCamiler liAlanlar liIletisim li';
-    gap: 4vw;      
+    gap: 3vw;      
     
 }
 
@@ -56,19 +54,18 @@
 
 .active {
     background-color: #443b3b;
-    height: 5vh;
-    width: 7vw;
+    
 }
 .nav-items >li  {
     width: 90px;
     height: 43px;
     text-align: center;
-    padding-top: 8px;
+    padding-top: 16px;
     cursor: grab;
     
 }
 .nav-items >li:hover {
-    color: aqua;
+    color: #16a1ae;
     
 }
 .nav-items >li >div {

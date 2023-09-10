@@ -1,0 +1,110 @@
+.footer-body {
+    background-color: #16a1ae;
+    display: grid;
+    grid-auto-rows: minmax(70px, auto);
+    grid-template-areas: ' menu menu menu f-h3 f-h3 f-h3';
+    justify-items: center;
+    align-items: center;
+    gap: 0 0vw;
+}
+.footer-h3 {
+    display: grid;
+    grid-area: f-h3;
+    font-size: 22px;
+    width: 67%;
+    font-family: cursive;
+    color: white;
+}
+.menu{
+    display: grid;
+    grid-area: menu;
+    grid-auto-rows: minmax(70px, auto);
+    height:250px;
+    width: 12rem;
+    justify-content: center;
+    align-items: center;
+}
+.ul-menu {
+    position: absolute;
+    left: 2em;
+    
+}
+.menu .toggle{
+    
+    display:grid;
+    align-items:center;
+    justify-content:center;
+    margin-top: 1.6em;
+    margin-left: 4.3em;
+    height: 54px;
+    width: 54px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0 3px 4px rgba(0,0,0,0.15);
+    color:#333;
+    font-size:2rem;
+    cursor:pointer;
+    transition:1.25s;
+    z-index:5;
+}
+.menu.active .toggle{
+    transform:rotate(360deg);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15),
+        0 0 0 2px #333,
+        0 0 0 8px #fff;
+}
+.active {
+    background-color: #16a1ae; 
+}
+.menu li{
+    position:absolute;
+    left:0;
+    list-style:none;
+    transition:0.5s;
+    transform:rotate(calc(360deg/8 * var(--i)));
+    transform-origin:140px;
+    scale:0;
+    transition-delay: calc(0.05s * var(--i));
+}
+.menu.active li{
+    scale:1;
+    padding: 1em 2em;
+}
+.menu li a{
+    display:grid;
+    align-items:center;
+    justify-content:center;
+    transform:rotate(calc(360deg/-8 * var(--i)));
+    width:50px;
+    height:50px;
+    background-color:#FFF;
+    border-radius:50%;
+    font-size:1.75rem;
+    color:var(--clr);
+    box-shadow:0 3px 4px rgba(0,0,0,0.15);
+    transition:0.5s;
+}
+.menu li:hover a{
+    font-size:2.5rem;
+    box-shadow:0 0 0 2px var(--clr),
+        0 0 0 6px #fff;
+}
+@media screen and (max-width: 830px) {
+    .footer-body {
+        grid-template-areas:' menu menu menu menu menu menu'
+                            ' f-h3 f-h3 f-h3 f-h3 f-h3 f-h3';
+    }
+    .ul-menu {
+        position: absolute;
+        left: 53%; /* Center horizontally */
+        transform: translateX(-10em); /* Adjust to center */
+    }
+    .menu .toggle {
+        margin-left: 0; /* Reset margin */
+        margin: 1.6em auto; /* Center horizontally and vertically */
+    }
+    .menu.active li {
+        scale: 1;
+        padding: 8% 2%;
+    }
+}

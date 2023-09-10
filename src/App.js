@@ -4,6 +4,8 @@ import Slider from './Components/Slider/Slider';
 import Navbar from './Components/Navbar/Navbar';
 import Content from './Components/Content/Content';
 import TitleCom from './Components/Slider/TitleCom/TitleCom'
+import Statistics from './Components/Statistics/Statistics'
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -12,8 +14,10 @@ function App() {
       <header className="App-header">
         <Navbar/>
         <Content/>
+        <Statistics/>
         <TitleCom />
         <ImageGallery />
+        <Footer/>
       </header>
     </div>
   );

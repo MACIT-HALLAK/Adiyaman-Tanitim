@@ -31,7 +31,8 @@ const Navbar = () => {
                     <div></div>
                 </li>
                 <li className='camiler'>
-                    <Link to='/MosquesPage' >Camiler</Link>
+                Camiler
+                    <Link to='/MosquesPage' ></Link>
                     <div></div>
                 </li>
                 <li className='alanlar'>
