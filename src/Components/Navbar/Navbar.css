@@ -30,6 +30,11 @@
   gap: 4vw;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .anasayfa,
 .camiler a,
 .alanlar,
