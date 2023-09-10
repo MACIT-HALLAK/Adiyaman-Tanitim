@@ -6,14 +6,12 @@ const Footer = () => {
     useEffect(() => {
         const menu = document.querySelector(".menu");
         const toggle = document.querySelector(".toggle");
-    
+        
         const handleToggleClick = () => {
         menu.classList.toggle("active");
         };
-    
+        
         toggle.addEventListener("click", handleToggleClick);
-    
-        // Cleanup: Remove the event listener when the component unmounts
         return () => {
         toggle.removeEventListener("click", handleToggleClick);
         };
