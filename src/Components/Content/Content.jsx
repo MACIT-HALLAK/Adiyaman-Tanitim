@@ -1,18 +1,14 @@
 import './Content.css';
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useRef } from 'react';
 
 import slidimage1 from '../../Assets/images/t.jpg';
 import slidimage2 from '../../Assets/images/tt.jpg';
 import slidimage3 from '../../Assets/images/tttt.jpg';
 const Content = () => {
+  const indicator = useRef();
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [
-    slidimage1,
-    slidimage2,
-    slidimage3,
-  ];
+  const images = [slidimage1, slidimage2, slidimage3];
   const delay1 = 5000; // 10 saniye
 
   useEffect(() => {
@@ -24,7 +20,7 @@ const Content = () => {
   }, []);
 
   const [text, setText] = useState('');
-  const sentence = "AADIYAMAN ŞEHRINE HOŞ GELDINIZ";
+  const sentence = 'AADIYAMAN ŞEHRINE HOŞ GELDINIZ';
   const delay = 100;
 
   useEffect(() => {
@@ -33,6 +29,7 @@ const Content = () => {
     const interval = setInterval(() => {
       if (currentIndex === sentence.length - 1) {
         clearInterval(interval);
+        indicator.current.style.display = 'none';
         setTimeout(() => {
           let deleteIndex = sentence.length;
           const deleteInterval = setInterval(() => {
@@ -52,21 +49,26 @@ const Content = () => {
 
   return (
     <>
-      <div className='content'>
-        <div className={`content-img ${currentImageIndex === images.length  ? 'active' : ''}`} style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
-          <div className='content-center'>
-            <h2 className='content-title'>
+      <div className="content">
+        <div
+          className={`content-img ${
+            currentImageIndex === images.length ? 'active' : ''
+          }`}
+          style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+        >
+          <div className="content-center">
+            <h2 className="content-title">
               {text}
-              <span className="typing-indicator">_</span>
+              <span className="typing-indicator" ref={indicator}>
+                _
+              </span>
             </h2>
-            <button className="content-btn">
-            Şimdi Keşfet
-            </button>
+            <button className="content-btn">Şimdi Keşfet</button>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Content;

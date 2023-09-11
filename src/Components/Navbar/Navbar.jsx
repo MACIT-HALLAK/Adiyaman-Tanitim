@@ -1,9 +1,16 @@
 import './Navbar.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import logo from '../../Assets/images/ADIYAMANLogo.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const menu = useRef();
+  const nav_items = useRef();
+
+  const showMenu = () => {
+    nav_items.current.classList.toggle('sr-only');
+    menu.current.classList.toggle('hide');
+  };
   let lis = document.querySelectorAll('ul li');
   lis.forEach((li) => {
     li.addEventListener('mouseleave', () => {
@@ -21,11 +28,16 @@ const Navbar = () => {
     <>
       <div className="container">
         <div className="nav-logo">
-          <img className="adiyaman-logo" src={logo} />
+          <img className="adiyaman-logo" src={logo} alt="logo" />
         </div>
-        <ul className="nav-items">
+        <ul className="menu" onClick={showMenu} ref={menu}>
+          <li className="menu_item"></li>
+          <li className="menu_item"></li>
+          <li className="menu_item"></li>
+        </ul>
+        <ul className="nav-items sr-only" ref={nav_items}>
           <li className="anasayfa ">
-            Anasayfa
+            <Link to={'/'}>Anasayfa</Link>
             <div></div>
           </li>
           <li className="camiler">
