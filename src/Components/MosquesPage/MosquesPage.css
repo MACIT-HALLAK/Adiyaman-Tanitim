@@ -6,7 +6,7 @@
   grid-template-areas:
     'nav nav nav nav nav nav '
     'cont cont cont cont sec sec';
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
 }
 
 .container {
@@ -70,3 +70,14 @@ html {
   line-height: 2;
 }
 /* top mosque content style */
+@media (max-width: 570px) {
+    .main-content .mosque-content {
+        padding: 10px;
+    
+      }
+   
+      .main-content .mosque-card div p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+}

@@ -122,6 +122,8 @@ a {
     justify-self: center;
     width: 90%;
     margin-inline: auto;
+     padding: 0;  
+    width: 100%;
   }
 
   .container {
@@ -130,6 +132,7 @@ a {
 
   .menu {
     display: flex !important;
+   
   }
 
   .sr-only {
@@ -150,9 +153,12 @@ a {
 
   .hide {
     justify-content: space-between;
+    /* align-items: flex-end; */
+    
   }
   .hide .menu_item {
     transform-origin: left bottom;
+    padding: 0;
   }
 
   .hide .menu_item:nth-child(1) {
