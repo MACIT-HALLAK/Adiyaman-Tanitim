@@ -2,3 +2,7 @@
   --back-color: #ffffff;
   --border-rad-img: 0.75rem;
 }
+
+* {
+  font-family: cursive !important;
+}

@@ -32,8 +32,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 1.6em;
-  margin-left: 4.3em;
+  translate: 30% 50%;
   height: 54px;
   width: 54px;
   background: #fff;
@@ -44,6 +43,12 @@
   cursor: pointer;
   transition: 1.25s;
   z-index: 5;
+}
+
+@media (max-width: 2048px) {
+  .menu-footer .toggle {
+    margin-left: 3.5em !important;
+  }
 }
 .menu-footer.active .toggle {
   transform: rotate(360deg);
@@ -86,9 +91,9 @@
 }
 @media screen and (max-width: 830px) {
   .footer-body {
-    grid-template-areas:
-      ' menu menu menu menu menu menu'
-      ' f-h3 f-h3 f-h3 f-h3 f-h3 f-h3';
+    display: flex !important;
+    flex-direction: column-reverse;
+    align-items: center;
   }
   .ul-menu {
     position: absolute;
@@ -102,5 +107,9 @@
   .menu-footer.active li {
     scale: 1;
     padding: 8% 2%;
+  }
+
+  .menu-footer .toggle {
+    translate: -100% 50%;
   }
 }
