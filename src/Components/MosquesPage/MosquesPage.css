@@ -60,6 +60,7 @@ html {
 }
 .main-content .mosque-card div img {
   width: 100%;
+    border-radius: 7px;
 }
 .main-content > div > div:not(:first-child) img {
   margin-top: 100px;

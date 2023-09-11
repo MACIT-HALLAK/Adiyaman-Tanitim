@@ -1,7 +1,7 @@
 import './MosquesPage.css';
 import Navber from '../Navbar/Navbar';
-import image from '../../Assets/images/slider1.jpg'
-import image1 from '../../Assets/images/tt.jpg'
+import image from '../../Assets/images/cami3.jpg'
+import image1 from '../../Assets/images/cami4.png'
 const MosquesPage = () => {
   return (
     <div className='mosque-layout'>
