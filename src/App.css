@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 :root {
   --back-color: #ffffff;
   --border-rad-img: 0.75rem;
 }
 
 * {
-  font-family: cursive !important;
+  font-family: 'Montserrat', sans-serif !important;
 }

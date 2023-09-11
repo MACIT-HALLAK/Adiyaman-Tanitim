@@ -39,7 +39,6 @@
   margin-top: 20px;
   cursor: pointer;
   border: 2px solid dodgerblue;
-  font-family: cursive;
   transition: all 0.2s linear;
 }
 .content-btn:hover {
