@@ -14,7 +14,6 @@
   display: grid;
   color: white;
   grid-area: logo;
-  padding-right: 14%;
 }
 .adiyaman-logo {
   width: 19vw;
@@ -104,6 +103,20 @@ a {
 }
 
 /* Media Queies */
+@media (min-width: 1210px) {
+  .adiyaman-logo {
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+@media (max-width: 1200px) {
+  .adiyaman-logo {
+    width: 25vw !important;
+  }
+}
 @media (max-width: 768px) {
   .container {
     grid-template-areas:
@@ -114,6 +127,9 @@ a {
   .nav-logo {
     justify-self: baseline;
     translate: 10% 0;
+  }
+  .adiyaman-logo {
+    width: 35vw !important;
   }
   .nav-items {
     display: flex;
