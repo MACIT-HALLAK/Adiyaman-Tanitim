@@ -45,7 +45,8 @@ const Navbar = () => {
             <div></div>
           </li>
           <li className="alanlar">
-            Alanlar
+            
+            <Link to="/Areas">Alanlar</Link>
             <div></div>
           </li>
           <li className="iletisim">

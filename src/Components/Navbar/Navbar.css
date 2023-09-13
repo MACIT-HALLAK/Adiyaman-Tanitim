@@ -2,7 +2,7 @@
   background-color: black;
   opacity: 1;
   display: grid;
-  grid-auto-rows: minmax(70px, auto);
+  grid-auto-rows: minmax(85px, auto);
   grid-template-areas: 'logo logo nav-item nav-item nav-item nav-item';
   justify-items: end;
   align-items: center;
@@ -62,10 +62,12 @@ a {
   width: 7vw;
 }
 .nav-items > li {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   width: 90px;
   height: 43px;
   text-align: center;
-  padding-top: 8px;
   cursor: pointer;
 }
 .nav-items > li:hover {
@@ -73,9 +75,7 @@ a {
 }
 .nav-items > li > div {
   display: none;
-  border-bottom: 4px solid white;
-  height: 12px;
-
+  border-bottom: 2px solid white;
   width: 0px; /* Başlangıçta sıfır genişlik */
   animation: expandWidth 0.5s ease-in-out forwards;
 }
@@ -114,10 +114,10 @@ a {
 }
 @media (max-width: 1200px) {
   .adiyaman-logo {
-    width: 25vw !important;
+    width: 15rem !important;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 785px) {
   .container {
     grid-template-areas:
       'logo logo menu menu'
@@ -129,7 +129,7 @@ a {
     translate: 10% 0;
   }
   .adiyaman-logo {
-    width: 35vw !important;
+    width: 15rem !important;
   }
   .nav-items {
     display: flex;

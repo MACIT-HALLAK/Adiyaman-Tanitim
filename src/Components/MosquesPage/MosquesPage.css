@@ -75,10 +75,9 @@ html {
     .main-content .mosque-content {
         padding: 10px;
     
-      }
-   
-      .main-content .mosque-card div p {
+    }
+    .main-content .mosque-card div p {
         font-size: 16px;
         line-height: 1.7;
-      }
+    }
 }
