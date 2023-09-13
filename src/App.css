@@ -3,6 +3,7 @@
 :root {
   --back-color: #ffffff;
   --border-rad-img: 0.75rem;
+  --primary-color: #16a1ae;
 }
 
 * {
