@@ -5,7 +5,7 @@ import Content from './Components/Content/Content';
 import TitleCom from './Components/Slider/TitleCom/TitleCom';
 import Statistics from './Components/Statistics/Statistics';
 import Footer from './Components/Footer/Footer';
-import Areas from './Components/Areas/Areas';
+import MapComp from './Components/MapComp/MapComp';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Statistics />
         <TitleCom />
         <ImageGallery />
+        <MapComp />
         <Footer />
       </header>
     </div>

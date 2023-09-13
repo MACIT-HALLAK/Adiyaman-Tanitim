@@ -1,0 +1,74 @@
+.mapcomp-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 75px 20px;
+}
+.mapcomp-layout> div {
+    border: 1px solid var(--primary-color);
+    margin: 25px;
+    width: 30%;
+    height: 155px;
+    position: relative;
+}
+
+.mapcomp-layout  div > img {
+    width: 100%;
+    height: 155px;
+}
+.mapcomp-layout > div:first-child::after {
+    content: "";
+    position: absolute;
+    right: -42px;
+    top: 70;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent ;
+    border-left: 10px solid var(--primary-color) ;
+    border-right: 10px solid transparent ;
+    border-bottom: 10px solid transparent ;
+}
+@media (max-width:800px) {
+    .mapcomp-layout {
+        flex-direction: column;
+    }
+    .mapcomp-layout> div {
+        width: 100%;
+        margin: 25px 0px;
+    }
+    .mapcomp-layout > div:first-child::after {
+        right: 50%;
+        top: 178px;
+        border-top: 10px solid var(--primary-color) ;
+        border-left: 10px solid transparent ;
+    }
+}
+.mapcomp-layout  div > button {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 75px);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 150px;
+}
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: linear-gradient(-180deg,transparent 28%,rgba(0,0,0,.6));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.75rem;
+}
+.mapcomp-layout .mapcomp-text  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
