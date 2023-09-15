@@ -50,22 +50,26 @@ const Content = () => {
   return (
     <>
       <div className="content">
+        <div className="content-center">
+          <h2 className="content-title">
+            {text}
+            <span className="typing-indicator" ref={indicator}>
+              _
+            </span>
+          </h2>
+          <p className="desc">
+            Adıyaman'daki tarihi ve arkeolojik alanları tanıtmak için
+            oluşturulmuş bir platformdur. Bu web sitesi, bölgedeki tarihi
+            zenginlikleri ve kültürel mirası ziyaretçilere tanıtmayı amaçlar.
+          </p>
+          <button className="content-btn">Şimdi Keşfet</button>
+        </div>
         <div
           className={`content-img ${
             currentImageIndex === images.length ? 'active' : ''
           }`}
           style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-        >
-          <div className="content-center">
-            <h2 className="content-title">
-              {text}
-              <span className="typing-indicator" ref={indicator}>
-                _
-              </span>
-            </h2>
-            <button className="content-btn">Şimdi Keşfet</button>
-          </div>
-        </div>
+        ></div>
       </div>
     </>
   );

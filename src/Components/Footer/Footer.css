@@ -1,5 +1,5 @@
 .footer-body {
-  background-color: #16a1ae;
+  background-color: var(--primary-color);
   display: grid;
   grid-auto-rows: minmax(70px, auto);
   grid-template-areas: ' menu-footer menu-footer menu-footer f-h3 f-h3 f-h3';
@@ -54,7 +54,7 @@
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 0 0 2px #333, 0 0 0 8px #fff;
 }
 .active {
-  background-color: #16a1ae;
+  background-color: var(--primary-color);
 }
 .menu-footer li {
   position: absolute;

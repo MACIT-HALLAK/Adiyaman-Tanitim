@@ -8,7 +8,6 @@
   align-items: center;
   gap: 0vh 0vw;
   border-radius: 7px;
-  font-family: cursive;
 }
 .nav-logo {
   display: grid;
@@ -35,7 +34,7 @@ a {
 }
 
 .anasayfa,
-.camiler a,
+.camiler,
 .alanlar,
 .iletisim {
   display: grid;
