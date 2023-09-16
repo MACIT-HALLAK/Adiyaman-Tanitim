@@ -6,6 +6,7 @@ import TitleCom from './Components/Slider/TitleCom/TitleCom';
 import Statistics from './Components/Statistics/Statistics';
 import Footer from './Components/Footer/Footer';
 import MapComp from './Components/MapComp/MapComp';
+import Map from './Components/Map/Map';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Content />
         <Statistics />
+        <Map />
         <TitleCom />
         <ImageGallery />
         <MapComp />
