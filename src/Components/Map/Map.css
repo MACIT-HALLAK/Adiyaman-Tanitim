@@ -9,6 +9,7 @@
 }
 path:hover {
     fill:#16a1ae;
+    cursor: pointer;
 }
 .counties-list ul {
     list-style: none;
