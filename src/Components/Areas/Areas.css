@@ -1,55 +1,59 @@
 .Areas-layout {
     display: grid;
-    /* grid-template-columns: 100px repeat(2,1fr) 30px 250px 50px; */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: auto;
     grid-template-areas:
       'nav nav nav nav nav nav '
-      'cont cont cont cont sec sec';
-    /* grid-gap: 20px; */
+      'cont cont cont cont cont cont';
   }
-  
   .container {
     grid-area: nav;
   }
-  .main-content {
+  .main-areas {
     grid-area: cont;
     font-family: Arial, Helvetica, sans-serif;
-    width: 80%;
+    width: 95%;
     justify-self: center;
-    /* background-color: #f1f1f1; */
   }
   .Areas-section {
     grid-area: sec;
-    /* background-color: rgb(204, 11, 11); */
   }
-  /* start title style */
-  .main-content > h2 {
+  .main-areas > h2 {
     text-transform: uppercase;
     background-color: #f1f1f1;
     padding: 20px;
     border-radius: 7px;
     color: #222222;
   }
-  /* stop title style */
-  /* start navigation style */
-  .main-content .Areas-navigation {
+  .main-areas .Areas-navigation {
     background-color: #f1f1f1;
-    padding: 20px;
+    height: 10vh;
     border-radius: 7px;
     line-height: 2;
-  }
-  .main-content .Areas-navigation a {
+    width: 100%;
+    gap: 2rem;
+    position: relative;
+    list-style-type: none;
+    padding: 0px;
+    box-shadow:
+    0 6.7px 5.3px rgba(0, 0, 0, 0.12),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.08),
+    0 100px 80px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+  .main-areas .Areas-navigation a {
     text-decoration: none;
-    color: blue;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
     text-transform: capitalize;
   }
-  .main-content .Areas-navigation a:hover {
-    text-decoration: underline;
+  .main-areas .Areas-navigation a:hover{
+    color: white;
   }
-  /* stop navigation style */
-  /* start mosque content style */
-  .main-content .Areas-content {
+  .main-areas .Areas-content {
     background-color: #f1f1f1;
     margin-top: 20px;
     padding: 30px;
@@ -58,26 +62,90 @@
   html {
     scroll-behavior: smooth;
   }
-  .main-content .Areas-card div img {
+  .main-areas .Areas-card div img {
     width: 100%;
+    height: 45vw;
     border-radius: 7px;
   }
-  .main-content > div > div:not(:first-child) img {
+  .main-areas > div > div:not(:first-child) img {
     margin-top: 100px;
   }
-  .main-content .Areas-card div p {
+  .main-areas .Areas-card div p {
     font-size: 18px;
     color: #222222;
     line-height: 2;
   }
+.Areas-navigation .areas-li {
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.Areas-navigation .areas-li:hover {
+    transform: translateX(10px);
+    opacity: 1;
+    animation: Width 0.8s ease-in-out forwards;
+    height: 10vh;
+    border-radius: 9px;
+    background-color: rgb(22 161 174);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    
+}
+
+@keyframes Width {
+  from {
+    width: 20%; /* Başlangıç genişliği */
+  }
+  to {
+    width: 35%; /* Hedef genişlik */
+  }
+}
+
+  @media (max-width: 800px) {
+    .main-areas .Areas-navigation a{
+      width: 100%;
+    }
+    .main-areas .Areas-navigation {
+        display: block;
+        height: 25vh;
+        padding-left: 0%;
+        width: 100%;
+        text-align: center;
+    
+    }
+    .Areas-navigation .areas-li {
+      margin-top: 10px;
+      animation: expandWidth1 0.5s ease-in-out forwards;
+        
+    }
+    @keyframes expandWidth1 {
+      from {
+        width: 35%;
+      }
+      to {
+        width: 98%; 
+      }
+    }
+    .Areas-navigation .areas-li:hover {
+      height: 5vh;
+      animation: expandWidth1 0.8s ease-in-out forwards;
+      margin-left: -4px;
+        
+    }
+    
+}
   /* top mosque content style */
   @media (max-width: 570px) {
-      .main-content .Areas-content {
+      .main-areas .Areas-content {
           padding: 10px;
       
       }
-      .main-content .Areas-card div p {
+      .main-areas .Areas-card div p {
           font-size: 16px;
           line-height: 1.7;
       }
   }
+

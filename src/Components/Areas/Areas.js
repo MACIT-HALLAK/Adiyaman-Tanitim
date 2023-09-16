@@ -1,28 +1,31 @@
 import './Areas.css';
 import Navber from '../Navbar/Navbar';
-import image from '../../Assets/images/ff.webp';
-import image1 from '../../Assets/images/f.webp';
-import image2 from '../../Assets/images/fff.webp';
+import image from '../../Assets/images/r.jpg';
+import image1 from '../../Assets/images/ww.jpg';
+import image2 from '../../Assets/images/www.JPG';
 const Areas = () => {
+
+
+
   return (
     <div className="Areas-layout">
       <Navber />
-      <div className="main-content">
+      <div className="main-areas">
         <h2>Adiyamanda gezilecek Alanlar</h2>
-        <div className="Areas-navigation">
-          <div>
-            <a href="#Cendere">1. Cendere Köprüsü</a>
-          </div>
-          <div>
-            <a href="#Perre">2. Perre Antik Kenti</a>
-          </div>
-          <div>
-            <a href="#Eski">3. Eski Besni Harabeleri</a>
-          </div>
-          <div>
-            <a href="#">4. aya sofya cami</a>
-          </div>
-        </div>
+        <ul className="Areas-navigation">
+          <li className='areas-li' >
+            <a href="#Cendere">Cendere Köprüsü</a>
+          </li>
+          <li className='areas-li'>
+            <a href="#Perre">Perre Antik Kenti</a>
+          </li>
+          <li className='areas-li'>
+            <a href="#Eski">Eski Besni Harabeleri</a>
+          </li>
+          <li className='areas-li'>
+            <a href="#">aya sofya cami</a>
+          </li>
+        </ul>
         <div className="Areas-content">
           <div className="Areas-card">
             <div>
