@@ -3,6 +3,7 @@ import Navber from '../Navbar/Navbar';
 import image from '../../Assets/images/r.jpg';
 import image1 from '../../Assets/images/ww.jpg';
 import image2 from '../../Assets/images/www.JPG';
+import image3 from '../../Assets/images/wwwww.webp';
 const Areas = () => {
 
 
@@ -23,7 +24,7 @@ const Areas = () => {
             <a href="#Eski">Eski Besni Harabeleri</a>
           </li>
           <li className='areas-li'>
-            <a href="#">aya sofya cami</a>
+            <a href="#yuzen">Yüzen Adalar</a>
           </li>
         </ul>
         <div className="Areas-content">
@@ -62,6 +63,18 @@ const Areas = () => {
               <p>
                   Besni, yüzyıllar boyunca birçok medeniyete ev sahipliği yapmış ve sanayi ve ticaret kenti olarak da tanınmıştır. Besni Kalesi’yle de beraber şehir korunaklı kalmış; sulak ve ormanlık arazi varlığıyla zengin bir yerleşim yeri olarak görülmüştür.
                   Besni ilçesinin 4-5 km güneyinde bulunan Eski Besni Ören Yeri, Besni Kalesi’ni bütünleyen Ulu Camii, Külhanönü Camii, Tokatmış Camii gibi cami ve minareler, Bekir Bey Külliyesi’nden kalan hamam ve çeşme ile diğer külliye, köprü ve çarşı kalıntılarıyla oldukça çekici bir görünüme sahiptir.
+              </p>
+            </div>
+          </div>
+          <div className="Areas-card">
+            <div>
+              <img id="yuzen" src={image3} alt="" />
+            </div>
+            <div>
+              <h2>Yüzen Adalar</h2>
+              <p>
+                  Adıyaman’ın Çelikhan ilçesinde bulunan Çat Barajı’nda farklı büyüklüklerde onlarca yüzen ada bulunuyor.
+                  Sürekli şekil, boyut ve yer değiştiren bu küçük adacıkların binlerce yılda oluştuğu düşünülüyor. Adacıkların bir kısmı kıyaya vurarak artık hareket edemez oluyor.
               </p>
             </div>
           </div>
