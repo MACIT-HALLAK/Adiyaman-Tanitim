@@ -41,8 +41,9 @@
 }
 .main-content .mosque-navigation a {
   text-decoration: none;
-  color: blue;
+  color: var(--primary-color);
   text-transform: capitalize;
+  font-weight: bold;
 }
 .main-content .mosque-navigation a:hover {
   text-decoration: underline;
@@ -60,7 +61,7 @@ html {
 }
 .main-content .mosque-card div img {
   width: 100%;
-    border-radius: 7px;
+  border-radius: 7px;
 }
 .main-content > div > div:not(:first-child) img {
   margin-top: 100px;
@@ -72,12 +73,51 @@ html {
 }
 /* top mosque content style */
 @media (max-width: 570px) {
-    .main-content .mosque-content {
-        padding: 10px;
-    
-    }
-    .main-content .mosque-card div p {
-        font-size: 16px;
-        line-height: 1.7;
-    }
+  .main-content .mosque-content {
+    padding: 10px;
+  }
+  .main-content .mosque-card div p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+.mosque-card p {
+  animation: fade linear;
+  -webkit-animation: fade linear;
+  animation-timeline: view();
+  animation-range: contain 35 cover 80;
+}
+
+.mosque-card h2 {
+  background: linear-gradient(90deg, var(--second-color), transparent);
+  background-size: 200%;
+  animation: reveal both linear;
+  animation-timeline: view();
+  background-repeat: no-repeat;
+  animation-range: entry 50% cover 50%;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -ms-transition: all 2s linear;
+  -o-transition: all 2s linear;
+  padding: 0.5rem;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes reveal {
+  from {
+    background-position-x: 200%;
+  }
+  to {
+    background-position-x: 0%;
+  }
 }
