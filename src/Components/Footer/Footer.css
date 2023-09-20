@@ -13,6 +13,7 @@
   font-size: 22px;
   width: 67%;
   color: white;
+  font-weight: 400;
 }
 .menu-footer {
   display: grid;
@@ -22,6 +23,7 @@
   width: 12rem;
   justify-content: center;
   align-items: center;
+  transform: translateY(-10%);
 }
 .ul-menu {
   position: absolute;

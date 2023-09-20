@@ -36,8 +36,8 @@ const ImageGallery = () => {
                   alt={`${index}`}
                 />
                 <div className="text">
-                  <h2>{item.title}</h2>
-                  <p>{item.desc}</p>
+                  <h2 className="title">{item.title}</h2>
+                  <p className="desc">{item.desc}</p>
                 </div>
               </div>
             </div>

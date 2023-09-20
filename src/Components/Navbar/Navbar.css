@@ -133,10 +133,9 @@ a {
   .nav-items {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-self: center;
-    width: 90%;
-    margin-inline: auto;
+    width: 100%;
+    translate: -3.5%;
   }
 
   .container {
@@ -165,6 +164,7 @@ a {
 
   .hide {
     justify-content: space-between;
+    translate: 0 -0.25rem;
   }
   .hide .menu_item {
     transform-origin: left bottom;

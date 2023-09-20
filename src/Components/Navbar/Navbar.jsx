@@ -38,21 +38,14 @@ const Navbar = () => {
         <ul className="nav-items sr-only" ref={nav_items}>
           <li className="anasayfa ">
             <Link to={'/'}>Anasayfa</Link>
-            <div></div>
           </li>
           <li className="camiler">
             <Link to="/MosquesPage">Camiler</Link>
-            <div></div>
           </li>
           <li className="alanlar">
-            
             <Link to="/Areas">Alanlar</Link>
-            <div></div>
           </li>
-          <li className="iletisim">
-            iletişim
-            <div></div>
-          </li>
+          <li className="iletisim">iletişim</li>
         </ul>
       </div>
     </>

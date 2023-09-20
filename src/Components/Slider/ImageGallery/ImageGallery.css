@@ -55,7 +55,7 @@
   transform-origin: bottom left;
 }
 @media (max-width: 550px) {
-  .filters-com .filters-wraper> div {
+  .filters-com .filters-wraper > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,7 +168,7 @@
   -moz-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   -ms-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(10px);
   padding-block: 0.75rem;
 }
 
@@ -215,4 +215,13 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+.filters-com .gallery-wraper .title {
+  font-size: 1.5rem;
+  translate: 0 25px;
+}
+.filters-com .gallery-wraper .desc {
+  font-size: 1.125rem;
+  font-weight: 600;
 }
