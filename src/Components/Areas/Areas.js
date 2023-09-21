@@ -6,28 +6,28 @@ import image2 from '../../Assets/images/www.JPG';
 import image3 from '../../Assets/images/wwwww.webp';
 const Areas = () => {
   return (
-    <div className="Areas-layout">
+    <div className="areas-layout">
       <Navber />
-      <div className="main-areas">
+      <div className="main-content">
         <h2>Adiyamanda gezilecek Alanlar</h2>
-        <ul className="Areas-navigation">
-          <li className="areas-li">
+        <div className="areas-navigation">
+          <div>
             <a href="#Cendere">Cendere Köprüsü</a>
-          </li>
-          <li className="areas-li">
+          </div>
+          <div>
             <a href="#Perre">Perre Antik Kenti</a>
-          </li>
-          <li className="areas-li">
+          </div>
+          <div>
             <a href="#Eski">Eski Besni Harabeleri</a>
-          </li>
-          <li className="areas-li">
+          </div>
+          <div>
             <a href="#yuzen">Yüzen Adalar</a>
-          </li>
-        </ul>
-        <div className="Areas-content">
-          <div className="Areas-card">
+          </div>
+        </div>
+        <div className="areas-content">
+          <div className="areas-card">
             <div>
-              <img id="Cendere" src={image} alt="" />
+              <img src={image} alt="" />
             </div>
             <div>
               <h2>Cendere Köprüsü</h2>
@@ -40,9 +40,9 @@ const Areas = () => {
               </p>
             </div>
           </div>
-          <div className="Areas-card">
+          <div className="areas-card">
             <div>
-              <img id="Perre" src={image1} alt="" />
+              <img src={image1} alt="" />
             </div>
             <div>
               <h2>Perre Antik Kenti</h2>
@@ -58,9 +58,9 @@ const Areas = () => {
               </p>
             </div>
           </div>
-          <div className="Areas-card">
+          <div className="areas-card">
             <div>
-              <img id="Eski" src={image2} alt="" />
+              <img src={image2} alt="" />
             </div>
             <div>
               <h2>Eski Besni Harabeleri</h2>
@@ -77,7 +77,7 @@ const Areas = () => {
               </p>
             </div>
           </div>
-          <div className="Areas-card">
+          <div className="areas-card">
             <div>
               <img id="yuzen" src={image3} alt="" />
             </div>
@@ -94,7 +94,7 @@ const Areas = () => {
           </div>
         </div>
       </div>
-      <div className="Areas-section"></div>
+      <div className="areas-section"></div>
     </div>
   );
 };

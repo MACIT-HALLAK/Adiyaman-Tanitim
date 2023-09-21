@@ -10,16 +10,10 @@ const MosquesPage = () => {
         <h2>Adiyamanda gezilecek Camiler</h2>
         <div className="mosque-navigation">
           <div>
-            <a href="#ulu">1.Ulu Camii</a>
+            <a href="#ulu">Ulu Camii</a>
           </div>
           <div>
-            <a href="#car">2.Çarşı Camii</a>
-          </div>
-          <div>
-            <a href="#">3.aya sofya cami</a>
-          </div>
-          <div>
-            <a href="#">4.aya sofya cami</a>
+            <a href="#car">Çarşı Camii</a>
           </div>
         </div>
         <div className="mosque-content">

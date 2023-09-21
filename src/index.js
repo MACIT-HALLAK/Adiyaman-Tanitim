@@ -4,22 +4,19 @@ import './index.css';
 import App from './App';
 import MosquesPage from './Components/MosquesPage/MosquesPage';
 import Areas from './Components/Areas/Areas';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-const router = createBrowserRouter([
+const routers = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
   },
   {
-    path: "/MosquesPage",
+    path: '/MosquesPage',
     element: <MosquesPage />,
   },
   {
-    path: "/Areas",
+    path: '/Areas',
     element: <Areas />,
   },
 ]);
@@ -27,7 +24,6 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={routers} />
   </React.StrictMode>
 );
-

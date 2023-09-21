@@ -44,6 +44,7 @@
   color: var(--primary-color);
   text-transform: capitalize;
   font-weight: bold;
+  font-size: 1.25rem;
 }
 .main-content .mosque-navigation a:hover {
   text-decoration: underline;
@@ -120,4 +121,12 @@ html {
   to {
     background-position-x: 0%;
   }
+}
+
+.mosque-navigation {
+  counter-reset: area 0;
+}
+.mosque-navigation div a::before {
+  counter-increment: area 1;
+  content: counter(area, decimal) '. ';
 }
