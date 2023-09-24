@@ -1,7 +1,7 @@
 // ImageComponent.js
-import React from 'react';
+import React, { memo } from 'react';
 
-function ImageComponent({ images, currentImageIndex }) {
+const ImageComponent = memo(({ images, currentImageIndex }) => {
   return (
     <div
       className={`content-img ${
@@ -10,6 +10,6 @@ function ImageComponent({ images, currentImageIndex }) {
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     ></div>
   );
-}
+});
 
 export default ImageComponent;
