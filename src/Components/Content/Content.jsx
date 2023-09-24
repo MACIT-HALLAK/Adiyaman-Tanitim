@@ -75,7 +75,7 @@ const Content = () => {
           </p>
           <button className="content-btn">Şimdi Keşfet</button>
         </div>
-        <Suspense fallback={<div className="image"></div>}>
+        <Suspense fallback={<div className="skeleton-image"></div>}>
           <ImageComponent
             images={images}
             currentImageIndex={currentImageIndex}
