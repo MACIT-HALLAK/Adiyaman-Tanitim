@@ -1,15 +1,26 @@
 import './Content.css';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 
 import slidimage1 from '../../Assets/images/t.jpg';
 import slidimage2 from '../../Assets/images/tt.jpg';
 import slidimage3 from '../../Assets/images/tttt.jpg';
+
+const ImageComponent = React.lazy(() => import('../skeletons/ImageComponent'));
+
 const Content = () => {
   const indicator = useRef();
-
+  const [isPending, setIsPending] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [slidimage1, slidimage2, slidimage3];
   const delay1 = 5000; // 10 saniye
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPending(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,7 +60,7 @@ const Content = () => {
 
   return (
     <>
-      <div className="content">
+      <div className="content" style={{ position: 'relative' }}>
         <div className="content-center">
           <h2 className="content-title">
             {text}
@@ -64,12 +75,12 @@ const Content = () => {
           </p>
           <button className="content-btn">Şimdi Keşfet</button>
         </div>
-        <div
-          className={`content-img ${
-            currentImageIndex === images.length ? 'active' : ''
-          }`}
-          style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-        ></div>
+        <Suspense fallback={<div className="image"></div>}>
+          <ImageComponent
+            images={images}
+            currentImageIndex={currentImageIndex}
+          />
+        </Suspense>
       </div>
     </>
   );
