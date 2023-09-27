@@ -43,13 +43,6 @@ function Video() {
             height="100%"
             onProgress={({ played }) => setPlayed(played)}
             onDuration={(duration) => setDuration(duration)}
-            onClick={() => {
-              if (playingVideoIndex === index) {
-                setPlayingVideoIndex(null);
-              } else {
-                setPlayingVideoIndex(index);
-              }
-            }}
           />
           <div className="progress-bar">
             <div
