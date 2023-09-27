@@ -4,6 +4,7 @@ import image from '../../Assets/images/cami3.jpg';
 import image1 from '../../Assets/images/cami4.png';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import React, { Suspense } from 'react';
+import Video from '../Video/Video';
 
 const ImgComponent = React.lazy(() =>
   import('../skeletons/SideImagesComponent')

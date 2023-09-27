@@ -5,6 +5,7 @@ import App from './App';
 import MosquesPage from './Components/MosquesPage/MosquesPage';
 import Areas from './Components/Areas/Areas';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Video from './Components/Video/Video';
 
 const routers = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const routers = createBrowserRouter([
   {
     path: '/Areas',
     element: <Areas />,
+  },
+  {
+    path: '/Videos',
+    element: <Video />,
   },
 ]);
 

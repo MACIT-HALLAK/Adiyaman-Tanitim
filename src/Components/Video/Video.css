@@ -1,0 +1,59 @@
+/* لإخفاء زر picture-in-picture */
+video::-webkit-media-controls-picture-in-picture-button {
+  display: none !important;
+}
+
+/* لإخفاء زر التحميل */
+video::-webkit-media-controls-download-button {
+  display: none !important;
+}
+
+.player-wrapper {
+  position: relative;
+}
+
+.play-button {
+  position: absolute;
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.pasue-hide {
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
+  -webkit-transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  -ms-transition: opacity 0.25s ease-in;
+  -o-transition: opacity 0.25s ease-in;
+}
+
+.pasue-hide:hover {
+  opacity: 1;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 5px;
+}
+
+.progress {
+  background-color: #76c7c0;
+  height: 100%;
+  transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -ms-transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
