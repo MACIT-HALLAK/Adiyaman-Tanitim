@@ -31,7 +31,18 @@ function Video() {
   const [duration, setDuration] = useState(0);
 
   return (
-    <div>
+    <div className='rota-layout'>
+      <aside className="sidebar-wrapper">
+        <ul>
+          <li><a href="#">şehir içi tur</a></li>
+          <li><a href="#">şehir içi tur</a></li>
+          <li><a href="#">Şehir Dışı Tur Nemrut Gun Batımı</a></li>
+          <li><a href="#">Şehir Dışı Tur Nemrut Gun Dogumu</a></li>
+          <li><a href="#">Şehir Dışı Tur</a></li>
+          
+        </ul>
+      </aside>
+      <div className='video-container'>
       {dataVideos.map((item, index) => (
         <div key={index} className="player-wrapper">
           <h1>{item.title}</h1>
@@ -66,6 +77,7 @@ function Video() {
           </button>
         </div>
       ))}
+      </div>
     </div>
   );
 }
