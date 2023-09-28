@@ -102,9 +102,6 @@ video::-webkit-media-controls-download-button {
   height: fit-content !important;
 }
 
-.player-wrapper:last-child .progress-bar {
-  translate: 0 -10px;
-}
 @media (max-width: 930px) {
   .rota-layout {
     grid-template-areas:
@@ -146,4 +143,17 @@ video::-webkit-media-controls-download-button {
 
 .videos-layout .container .adiyaman-logo {
   margin-left: 20px;
+}
+
+.play-button.pause-hide {
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  -webkit-transition: opacity 0.25s ease-out;
+  -moz-transition: opacity 0.25s ease-out;
+  -ms-transition: opacity 0.25s ease-out;
+  -o-transition: opacity 0.25s ease-out;
+}
+
+.play-button:hover {
+  opacity: 1;
 }
