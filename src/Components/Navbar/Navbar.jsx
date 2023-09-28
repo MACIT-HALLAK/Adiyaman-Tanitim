@@ -39,11 +39,11 @@ const Navbar = () => {
           <li className="anasayfa ">
             <Link to={'/'}>Anasayfa</Link>
           </li>
-          <li className="camiler">
+          {/* <li className="camiler">
             <Link to="/MosquesPage">Camiler</Link>
-          </li>
+          </li> */}
           <li className="alanlar">
-            <Link to="/Areas">Alanlar</Link>
+            <Link to="/Areas">Inanç Turizm Merkezleri</Link>
           </li>
           <li className="videos">
             <Link to="/Videos">Rotalar</Link>

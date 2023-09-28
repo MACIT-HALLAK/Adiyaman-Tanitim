@@ -125,7 +125,7 @@ html {
 .areas-navigation {
   counter-reset: area 0;
 }
-.areas-navigation div a::before {
+/* .areas-navigation div a::before {
   counter-increment: area 1;
   content: counter(area, decimal) '. ';
-}
+} */
