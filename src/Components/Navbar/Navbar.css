@@ -15,7 +15,7 @@
   grid-area: logo;
 }
 .adiyaman-logo {
-  width: 19vw;
+  width: 15vw !important;
 }
 .nav-items {
   display: grid;

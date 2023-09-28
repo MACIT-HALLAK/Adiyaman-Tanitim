@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
-import { InView } from 'react-intersection-observer';
 
 const Video = (props) => {
   const { item, index, playingVideoIndex, setPlayed, setDuration } = props;
@@ -33,7 +32,17 @@ const Video = (props) => {
         }
         onDuration={(dur) => setDuration((prev) => ({ ...prev, [index]: dur }))}
       />
-      {!isVisible && <div>Thumbnail</div>}
+      {!isVisible && (
+        <div>
+          <img
+            src="../../Assets/images/rota.svg"
+            alt=""
+            width={100}
+            height={100}
+            style={{ position: 'absolute', zIndex: '1000', inset: '0' }}
+          />
+        </div>
+      )}
     </div>
   );
 };
