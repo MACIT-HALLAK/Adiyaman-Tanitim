@@ -8,6 +8,13 @@
   align-items: center;
   gap: 0vh 0vw;
   border-radius: 7px;
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 10px;
+}
+
+.App-header .container {
+  width: 100%;
 }
 .nav-logo {
   display: grid;

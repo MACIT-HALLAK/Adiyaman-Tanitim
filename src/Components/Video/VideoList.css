@@ -143,3 +143,7 @@ video::-webkit-media-controls-download-button {
   filter: blur(5px);
   -webkit-filter: blur(5px);
 }
+
+.videos-layout .container .adiyaman-logo {
+  margin-left: 20px;
+}

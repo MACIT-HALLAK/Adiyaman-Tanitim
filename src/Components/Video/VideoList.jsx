@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './VideoList.css';
 import Video from './Video';
+import Navbar from '../Navbar/Navbar';
 
 const dataVideos = [
   {
@@ -31,49 +32,53 @@ function VideoList() {
   const [duration, setDuration] = useState({} | 0);
 
   return (
-    <div className="rota-layout">
-      <div className="video-container">
-        {dataVideos?.map((item, index) => (
-          <div key={index} className="player-wrapper" id={index + 1}>
-            <h1>{item.title}</h1>
-            <Video
-              item={item}
-              index={index}
-              playingVideoIndex={playingVideoIndex}
-              setPlayed={setPlayed}
-              setDuration={setDuration}
-            />
-            <div className="progress-bar">
-              <div
-                className="progress"
-                style={{
-                  width:
-                    played[index] !== undefined && duration[index] !== undefined
-                      ? `${
-                          ((played[index] * duration[index]) /
-                            duration[index]) *
-                          100
-                        }%`
-                      : '0%',
+    <div className="videos-layout">
+      <Navbar />
+      <div className="rota-layout">
+        <div className="video-container">
+          {dataVideos?.map((item, index) => (
+            <div key={index} className="player-wrapper" id={index + 1}>
+              <h1>{item.title}</h1>
+              <Video
+                item={item}
+                index={index}
+                playingVideoIndex={playingVideoIndex}
+                setPlayed={setPlayed}
+                setDuration={setDuration}
+              />
+              <div className="progress-bar">
+                <div
+                  className="progress"
+                  style={{
+                    width:
+                      played[index] !== undefined &&
+                      duration[index] !== undefined
+                        ? `${
+                            ((played[index] * duration[index]) /
+                              duration[index]) *
+                            100
+                          }%`
+                        : '0%',
+                  }}
+                ></div>
+              </div>
+              <button
+                className={`play-button ${
+                  playingVideoIndex === index ? 'pause-hide' : ''
+                }`}
+                onClick={() => {
+                  if (playingVideoIndex === index) {
+                    setPlayingVideoIndex(null);
+                  } else {
+                    setPlayingVideoIndex(index);
+                  }
                 }}
-              ></div>
+              >
+                {playingVideoIndex === index ? '⏸' : '▶️'}
+              </button>
             </div>
-            <button
-              className={`play-button ${
-                playingVideoIndex === index ? 'pause-hide' : ''
-              }`}
-              onClick={() => {
-                if (playingVideoIndex === index) {
-                  setPlayingVideoIndex(null);
-                } else {
-                  setPlayingVideoIndex(index);
-                }
-              }}
-            >
-              {playingVideoIndex === index ? '⏸' : '▶️'}
-            </button>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
