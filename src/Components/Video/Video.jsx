@@ -1,85 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
-import './Video.css';
+import { InView } from 'react-intersection-observer';
 
-const dataVideos = [
-  {
-    title: 'Şehir İçi Tur',
-    url: '16yyeUlAedga9Ck1-1dOpbzFwKS_LCSC9',
-  },
-  {
-    title: 'Şehir İçi Tur',
-    url: '1rq4JuFd95l4TMi8TQeGHhzm474D_cY-h',
-  },
-  {
-    title: 'Şehir Dışı Tur Nemrut Gun Batımı',
-    url: '1IEEbpwEF00kmnMgAt91PjZMNREmn3MYY',
-  },
-  {
-    title: 'Şehir Dışı Tur Nemrut Gun Dogumu',
-    url: '1YB05JlDRzy46gXcEGnoPcsuNpp7XxTYH',
-  },
-  {
-    title: 'Şehir Dışı Tur',
-    url: '1d-x1yY4YtRYJxny_106IJHc9KCRnposp',
-  },
-];
+const Video = (props) => {
+  const { item, index, playingVideoIndex, setPlayed, setDuration } = props;
+  const [isVisible, setIsVisible] = useState(false);
 
-function Video() {
-  const [playingVideoIndex, setPlayingVideoIndex] = useState(null);
-  const [played, setPlayed] = useState(0);
-  const [duration, setDuration] = useState(0);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      setIsVisible(entries[0].isIntersecting);
+    });
+
+    const videoElement = document.getElementById(`video-wrapper-${index}`);
+    if (videoElement) observer.observe(videoElement);
+
+    return () => observer.disconnect();
+  }, [index]);
 
   return (
-    <div className='rota-layout'>
-      <aside className="sidebar-wrapper">
-        <ul>
-          <li><a href="#">şehir içi tur</a></li>
-          <li><a href="#">şehir içi tur</a></li>
-          <li><a href="#">Şehir Dışı Tur Nemrut Gun Batımı</a></li>
-          <li><a href="#">Şehir Dışı Tur Nemrut Gun Dogumu</a></li>
-          <li><a href="#">Şehir Dışı Tur</a></li>
-          
-        </ul>
-      </aside>
-      <div className='video-container'>
-      {dataVideos.map((item, index) => (
-        <div key={index} className="player-wrapper">
-          <h1>{item.title}</h1>
-          <ReactPlayer
-            url={`https://drive.google.com/uc?id=${item.url}`}
-            playing={playingVideoIndex === index}
-            loop
-            width="100%"
-            height="100%"
-            onProgress={({ played }) => setPlayed(played)}
-            onDuration={(duration) => setDuration(duration)}
-          />
-          <div className="progress-bar">
-            <div
-              className="progress"
-              style={{ width: `${((played * duration) / duration) * 100}%` }}
-            ></div>
-          </div>
-          <button
-            className={`play-button ${
-              playingVideoIndex === index ? 'pasue-hide' : ''
-            }`}
-            onClick={() => {
-              if (playingVideoIndex === index) {
-                setPlayingVideoIndex(null);
-              } else {
-                setPlayingVideoIndex(index);
-              }
-            }}
-          >
-            {playingVideoIndex === index ? '⏸' : '▶️'}
-          </button>
-        </div>
-      ))}
-      </div>
+    <div
+      id={`video-wrapper-${index}`}
+      className={`video-wrapper ${isVisible ? 'visible' : ''}`}
+    >
+      <ReactPlayer
+        url={`https://drive.google.com/uc?id=${item?.url}`}
+        playing={playingVideoIndex === index}
+        loop
+        width="100%"
+        height="100%"
+        onProgress={({ played }) =>
+          setPlayed((prev) => ({ ...prev, [index]: played }))
+        }
+        onDuration={(dur) => setDuration((prev) => ({ ...prev, [index]: dur }))}
+      />
+      {!isVisible && <div>Thumbnail</div>}
     </div>
   );
-}
+};
 
 export default Video;
