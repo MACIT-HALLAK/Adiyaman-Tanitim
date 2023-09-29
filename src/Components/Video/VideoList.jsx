@@ -37,46 +37,19 @@ function VideoList() {
       <div className="rota-layout">
         <div className="video-container">
           {dataVideos?.map((item, index) => (
-            <div key={index} className="player-wrapper" id={index + 1}>
-              <h1>{item.title}</h1>
+            <React.Fragment key={index}>
               <Video
+                key={index}
                 item={item}
                 index={index}
                 playingVideoIndex={playingVideoIndex}
                 setPlayed={setPlayed}
                 setDuration={setDuration}
+                played={played}
+                duration={duration}
+                setPlayingVideoIndex={setPlayingVideoIndex}
               />
-              <div className="progress-bar">
-                <div
-                  className="progress"
-                  style={{
-                    width:
-                      played[index] !== undefined &&
-                      duration[index] !== undefined
-                        ? `${
-                            ((played[index] * duration[index]) /
-                              duration[index]) *
-                            100
-                          }%`
-                        : '0%',
-                  }}
-                ></div>
-              </div>
-              <button
-                className={`play-button ${
-                  playingVideoIndex === index ? 'pause-hide' : ''
-                }`}
-                onClick={() => {
-                  if (playingVideoIndex === index) {
-                    setPlayingVideoIndex(null);
-                  } else {
-                    setPlayingVideoIndex(index);
-                  }
-                }}
-              >
-                {playingVideoIndex === index ? '⏸' : '▶️'}
-              </button>
-            </div>
+            </React.Fragment>
           ))}
         </div>
       </div>
