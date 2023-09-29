@@ -71,7 +71,7 @@ a {
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 90px;
+  width: fit-content;
   height: 43px;
   text-align: center;
   cursor: pointer;
