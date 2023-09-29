@@ -31,13 +31,13 @@ const MosquesPage = () => {
         <div className="mosque-navigation">
           {data?.map((item, index) => (
             <div key={index + 1}>
-              <a href={`#${item.title}`}>{item.title}</a>
+              <a href={`#a${index}`}>{item.title}</a>
             </div>
           ))}
         </div>
         <div className="mosque-content">
           {data?.map((item, index) => (
-            <div key={index + 1} className="mosque-card">
+            <div id={`a${index}`} key={index + 1} className="mosque-card">
               <Suspense fallback={<div className="skeleton-side-images"></div>}>
                 <ImgComponent imgSrc={item.img} />
               </Suspense>
