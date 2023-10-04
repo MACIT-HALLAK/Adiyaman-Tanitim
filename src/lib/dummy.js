@@ -1,7 +1,7 @@
-import slider1 from '../Assets/images/slider1.jpg';
+import slider1 from '../Assets/images/tt.jpg';
 import slidimage2 from '../Assets/images/tt.jpg';
 import slidimage3 from '../Assets/images/ttt.jpg';
-import slidimage4 from '../Assets/images/slider4.jpeg';
+import slidimage4 from '../Assets/images/tt.jpg';
 import slidimage5 from '../Assets/images/tttt.jpg';
 
 export const data = [

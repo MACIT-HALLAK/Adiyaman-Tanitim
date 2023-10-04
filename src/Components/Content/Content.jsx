@@ -1,9 +1,24 @@
 import './Content.css';
 import React, { useState, useEffect, useRef, Suspense } from 'react';
 
-import slidimage1 from '../../Assets/images/t.jpg';
-import slidimage2 from '../../Assets/images/tt.jpg';
-import slidimage3 from '../../Assets/images/tttt.jpg';
+import slidimage1 from '../../Assets/images/slider1.jpeg';
+import slidimage2 from '../../Assets/images/slider2.jpeg';
+import slidimage3 from '../../Assets/images/slider3.jpeg';
+import slidimage4 from '../../Assets/images/slider4.jpeg';
+import slidimage5 from '../../Assets/images/slider5.jpeg';
+import slidimage6 from '../../Assets/images/slider6.jpeg';
+import slidimage7 from '../../Assets/images/slider7.jpeg';
+import slidimage8 from '../../Assets/images/slider8.jpeg';
+import slidimage9 from '../../Assets/images/slider9.jpeg';
+import slidimage10 from '../../Assets/images/slider10.jpeg';
+import slidimage11 from '../../Assets/images/slider11.jpeg';
+import slidimage12 from '../../Assets/images/slider12.jpeg';
+import slidimage13 from '../../Assets/images/slider13.jpeg';
+import slidimage14 from '../../Assets/images/slider14.jpeg';
+import slidimage15 from '../../Assets/images/slider15.jpeg';
+import slidimage16 from '../../Assets/images/slider16.jpeg';
+import slidimage17 from '../../Assets/images/slider17.jpeg';
+import slidimage18 from '../../Assets/images/slider18.jpeg';
 
 const ImageComponent = React.lazy(() => import('../skeletons/ImageComponent'));
 
@@ -11,7 +26,7 @@ const Content = () => {
   const indicator = useRef();
   const [isPending, setIsPending] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [slidimage1, slidimage2, slidimage3];
+  const images = [slidimage1, slidimage2, slidimage3, slidimage4, slidimage5, slidimage6, slidimage7, slidimage8, slidimage9, slidimage10, slidimage11,slidimage12,slidimage13,slidimage14,slidimage15,slidimage16,slidimage17,slidimage18];
   const delay1 = 5000; // 10 saniye
 
   useEffect(() => {
