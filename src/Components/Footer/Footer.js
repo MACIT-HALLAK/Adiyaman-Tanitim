@@ -1,5 +1,7 @@
 import './Footer.css';
 import React, { useState, useEffect } from 'react';
+import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
+import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
 
 const Footer = () => {
   useEffect(() => {
@@ -18,10 +20,13 @@ const Footer = () => {
   return (
     <>
       <div className="footer-body">
+        <img className='footer-img2' src={slidimage2}/>
+        <img className='footer-img1' src={slidimage1}/>
         <h3 className="footer-h3">
           Adıyaman, Adıyaman ili'nin merkez ilçesi ve aynı ilçedeki
           şehirdir.Türkiye'nin Güneydoğu Anadolu Bölgesi'nde Fırat Nehri'nin
           batısında yer almaktadır.
+          
         </h3>
         <div className="menu-footer">
           <div className="toggle">
@@ -34,7 +39,7 @@ const Footer = () => {
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
-            <li style={{ '--i': 10, '--clr': '#1da1f2' }}>
+            <li style={{ '--i': 2, '--clr': '#1da1f2' }}>
               <a href="https://twitter.com/adiyamanbeltr">
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
@@ -44,12 +49,12 @@ const Footer = () => {
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
-            <li style={{ '--i': 4, '--clr': '#c32aa3' }}>
+            <li style={{ '--i': 6, '--clr': '#c32aa3' }}>
               <a href="https://www.instagram.com/adiyamanbeltr">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
-            <li style={{ '--i': 3, '--clr': '#ff0000' }}>
+            <li style={{ '--i': 7, '--clr': '#ff0000' }}>
               <a href="https://www.youtube.com/@AdiyamanBelediyeTv">
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
