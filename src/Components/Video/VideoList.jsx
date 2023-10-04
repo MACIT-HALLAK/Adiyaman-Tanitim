@@ -28,8 +28,26 @@ const dataVideos = [
 
 function VideoList() {
   const [playingVideoIndex, setPlayingVideoIndex] = useState(null);
-  const [played, setPlayed] = useState({} | 0);
-  const [duration, setDuration] = useState({} | 0);
+  const [played, setPlayed] = useState({});
+  const [duration, setDuration] = useState({});
+  const initialVideoState = {
+    isPlaying: false,
+    isFullscreen: false,
+    areControlsVisible: true,
+    isVisible: false,
+  };
+
+  const [videoStates, setVideoStates] = useState(
+    new Array(dataVideos.length).fill(initialVideoState)
+  );
+
+  const updateVideoState = (index, newState) => {
+    setVideoStates((prevStates) => {
+      const newStates = [...prevStates];
+      newStates[index] = newState;
+      return newStates;
+    });
+  };
 
   return (
     <div className="videos-layout">
@@ -48,6 +66,10 @@ function VideoList() {
                 played={played}
                 duration={duration}
                 setPlayingVideoIndex={setPlayingVideoIndex}
+                videoState={videoStates[index]}
+                updateVideoState={(newState) =>
+                  updateVideoState(index, newState)
+                }
               />
             </React.Fragment>
           ))}

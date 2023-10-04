@@ -12,20 +12,29 @@ const Video = (props) => {
     playingVideoIndex,
     setPlayed,
     setDuration,
-    played,
-    duration,
     setPlayingVideoIndex,
+    videoState,
+    updateVideoState,
   } = props;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+
+  const {
+    isPlaying,
+    isFullscreen,
+    areControlsVisible,
+    isExitingFullscreen, // متغير جديد لمراقبة خروج ملء الشاشة
+  } = videoState;
+
   const playerRef = useRef();
   const wrapperRef = useRef();
 
   const handleFullscreen = () => {
     const wrapperElement = wrapperRef.current;
-    setIsPlaying(true);
-    setIsFullscreen(true);
+    updateVideoState({
+      ...videoState,
+      isPlaying: true,
+      isFullscreen: true,
+      areControlsVisible: true, // إظهار الأزرار عند الدخول في ملء الشاشة
+    });
     if (wrapperElement && !isFullscreen) {
       if (wrapperElement.requestFullscreen) {
         wrapperElement.requestFullscreen();
@@ -39,34 +48,16 @@ const Video = (props) => {
     }
   };
 
-  useEffect(() => {
-    const wrapperElement = wrapperRef.current;
-
-    const handleFullscreenChange = () => {
-      if (!document.fullscreenElement) {
-        if (wrapperElement) {
-          wrapperElement.style.flexDirection = 'column';
-        }
-        setIsFullscreen(false);
-        handleExitFullscreen();
-      } else {
-        setIsFullscreen(true);
-      }
-    };
-
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-
-    return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
-    };
-  }, [index, playingVideoIndex]);
-
   const handleExitFullscreen = () => {
-    setIsFullscreen(false);
-    if (playingVideoIndex === index) {
-      setPlayingVideoIndex(null);
-      setIsPlaying(false);
-    }
+    updateVideoState({
+      ...videoState,
+      isFullscreen: false,
+      isPlaying: false,
+      areControlsVisible: false,
+      isExitingFullscreen: true, // تحديث متغير الخروج من ملء الشاشة
+    });
+    setPlayingVideoIndex(null); // إيقاف جميع الفيديوهات عند الخروج من ملء الشاشة
+    console.log(isPlaying);
   };
 
   const handleForward = () => {
@@ -75,6 +66,39 @@ const Video = (props) => {
     const newTime = currentVideoTime + 10;
     playerInstance.seekTo(newTime);
   };
+
+  useEffect(() => {
+    const wrapperElement = wrapperRef.current;
+
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement) {
+        if (wrapperElement) {
+          wrapperElement.style.flexDirection = 'column';
+        }
+        updateVideoState({
+          ...videoState,
+          isFullscreen: false,
+          isPlaying: false,
+          areControlsVisible: false,
+          isExitingFullscreen: true, // تحديث متغير الخروج من ملء الشاشة
+        });
+      } else {
+        updateVideoState({
+          ...videoState,
+          isFullscreen: true,
+          isPlaying: true,
+          areControlsVisible: true,
+          isExitingFullscreen: false, // تحديث متغير الخروج من ملء الشاشة
+        });
+      }
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, [index, playingVideoIndex, isPlaying]);
 
   const handleRewind = () => {
     const playerInstance = playerRef.current;
@@ -85,10 +109,10 @@ const Video = (props) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      setIsVisible(entries[0].isIntersecting);
+      updateVideoState({ ...videoState, isVisible: entries[0].isIntersecting });
     });
 
-    const videoElement = document.getElementById(`video-wrapper-${index}`);
+    const videoElement = document.getElementById(`video_wrapper-${index}`);
     if (videoElement) observer.observe(videoElement);
 
     return () => observer.disconnect();
@@ -103,16 +127,18 @@ const Video = (props) => {
       <span>{item.title}</span>
 
       <div className="video-controls">
-        {isFullscreen === true && playingVideoIndex === index && (
-          <div className="fullscreen-controls">
-            <button onClick={handleForward} id="forward-button">
-              <img src={forward} alt="increase video 10" srcSet="" />
-            </button>
-            <button onClick={handleRewind} id="rewind-button">
-              <img src={reply} alt="decrease video 10" srcSet="" />
-            </button>
-          </div>
-        )}
+        {isFullscreen === true &&
+          areControlsVisible === true &&
+          playingVideoIndex === index && (
+            <div className="fullscreen-controls">
+              <button onClick={handleForward} id="forward-button">
+                <img src={forward} alt="increase video 10" srcSet="" />
+              </button>
+              <button onClick={handleRewind} id="rewind-button">
+                <img src={reply} alt="decrease video 10" srcSet="" />
+              </button>
+            </div>
+          )}
       </div>
 
       <ReactPlayer
@@ -127,14 +153,20 @@ const Video = (props) => {
           setPlayed((prev) => ({ ...prev, [index]: played }))
         }
         onDuration={(dur) => setDuration((prev) => ({ ...prev, [index]: dur }))}
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
+        onPlay={() => {
+          updateVideoState({ ...videoState, isPlaying: true });
+        }}
+        onPause={() => {
+          updateVideoState({ ...videoState, isPlaying: false });
+        }}
       />
       <button
         className={`play-button ${isPlaying ? 'pause-hide' : ''}`}
         onClick={() => {
           if (playingVideoIndex === index) {
             setPlayingVideoIndex(null);
+            updateVideoState({ ...videoState, isPlaying: false });
+            handleExitFullscreen();
           } else {
             setPlayingVideoIndex(index);
             handleFullscreen();
