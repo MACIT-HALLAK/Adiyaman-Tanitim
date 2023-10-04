@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactPlayer from 'react-player';
-import fullImageIcon from '../../Assets/images/fullscreen-white.svg';
 import playImageIcon from '../../Assets/images/play.svg';
 import pauseImageIcon from '../../Assets/images/pause.svg';
+import reply from '../../Assets/images/forward.svg';
+import forward from '../../Assets/images/replay.svg';
 
 const Video = (props) => {
   const {
@@ -16,32 +17,28 @@ const Video = (props) => {
     setPlayingVideoIndex,
   } = props;
   const [isVisible, setIsVisible] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const playerRef = useRef();
   const wrapperRef = useRef();
 
   const handleFullscreen = () => {
-    const playerInstance = playerRef.current;
-    const videoElement = playerInstance.getInternalPlayer();
     const wrapperElement = wrapperRef.current;
-
-    if (videoElement) {
-      if (wrapperElement) {
-        wrapperElement.style.flexDirection = 'row';
+    setIsPlaying(true);
+    setIsFullscreen(true);
+    if (wrapperElement && !isFullscreen) {
+      if (wrapperElement.requestFullscreen) {
+        wrapperElement.requestFullscreen();
+      } else if (wrapperElement.mozRequestFullScreen) {
+        wrapperElement.mozRequestFullScreen();
+      } else if (wrapperElement.webkitRequestFullscreen) {
+        wrapperElement.webkitRequestFullscreen();
+      } else if (wrapperElement.msRequestFullscreen) {
+        wrapperElement.msRequestFullscreen();
       }
-
-      if (videoElement.requestFullscreen) {
-        videoElement.requestFullscreen();
-      } else if (videoElement.mozRequestFullScreen) {
-        videoElement.mozRequestFullScreen();
-      } else if (videoElement.webkitRequestFullscreen) {
-        videoElement.webkitRequestFullscreen();
-      } else if (videoElement.msRequestFullscreen) {
-        videoElement.msRequestFullscreen();
-      }
-    } else {
-      console.error('Video element not found!');
     }
   };
+
   useEffect(() => {
     const wrapperElement = wrapperRef.current;
 
@@ -50,6 +47,10 @@ const Video = (props) => {
         if (wrapperElement) {
           wrapperElement.style.flexDirection = 'column';
         }
+        setIsFullscreen(false);
+        handleExitFullscreen();
+      } else {
+        setIsFullscreen(true);
       }
     };
 
@@ -58,7 +59,29 @@ const Video = (props) => {
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
     };
-  }, []);
+  }, [index, playingVideoIndex]);
+
+  const handleExitFullscreen = () => {
+    setIsFullscreen(false);
+    if (playingVideoIndex === index) {
+      setPlayingVideoIndex(null);
+      setIsPlaying(false);
+    }
+  };
+
+  const handleForward = () => {
+    const playerInstance = playerRef.current;
+    const currentVideoTime = playerInstance.getCurrentTime();
+    const newTime = currentVideoTime + 10;
+    playerInstance.seekTo(newTime);
+  };
+
+  const handleRewind = () => {
+    const playerInstance = playerRef.current;
+    const currentVideoTime = playerInstance.getCurrentTime();
+    const newTime = currentVideoTime - 10;
+    playerInstance.seekTo(newTime);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -74,75 +97,56 @@ const Video = (props) => {
   return (
     <div
       ref={wrapperRef}
-      id={`video-wrapper-${index}`}
-      className={`video-wrapper ${isVisible ? 'visible' : ''}`}
+      id={`video_wrapper-${index}`}
+      className={`video-wrapper`}
     >
-      <h1>{item.title}</h1>
+      <span>{item.title}</span>
+
+      <div className="video-controls">
+        {isFullscreen === true && playingVideoIndex === index && (
+          <div className="fullscreen-controls">
+            <button onClick={handleForward} id="forward-button">
+              <img src={forward} alt="increase video 10" srcSet="" />
+            </button>
+            <button onClick={handleRewind} id="rewind-button">
+              <img src={reply} alt="decrease video 10" srcSet="" />
+            </button>
+          </div>
+        )}
+      </div>
 
       <ReactPlayer
         ref={playerRef}
         url={`https://drive.google.com/uc?id=${item?.url}`}
-        playing={playingVideoIndex === index}
+        playing={playingVideoIndex === index && isPlaying}
         loop
         width="100%"
         height="100%"
+        controls={true}
         onProgress={({ played }) =>
           setPlayed((prev) => ({ ...prev, [index]: played }))
         }
         onDuration={(dur) => setDuration((prev) => ({ ...prev, [index]: dur }))}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
       />
-      {!isVisible && (
-        <div>
-          <img
-            src="../../Assets/images/rota.svg"
-            alt=""
-            width={100}
-            height={100}
-            style={{ position: 'absolute', zIndex: '1000', inset: '0' }}
-          />
-        </div>
-      )}
-      <div className="progress-bar">
-        <div
-          className="progress"
-          style={{
-            width:
-              played[index] !== undefined && duration[index] !== undefined
-                ? `${
-                    ((played[index] * duration[index]) / duration[index]) * 100
-                  }%`
-                : '0%',
-          }}
-        ></div>
-      </div>
       <button
-        className={`play-button ${
-          playingVideoIndex === index ? 'pause-hide' : ''
-        }`}
+        className={`play-button ${isPlaying ? 'pause-hide' : ''}`}
         onClick={() => {
           if (playingVideoIndex === index) {
             setPlayingVideoIndex(null);
           } else {
             setPlayingVideoIndex(index);
+            handleFullscreen();
           }
         }}
       >
-        {playingVideoIndex === index ? (
+        {isPlaying ? (
           <img src={pauseImageIcon} alt="pause button" />
         ) : (
           <img src={playImageIcon} alt="play button" />
         )}
       </button>
-      <img
-        className={`fullscreen-button`}
-        onClick={handleFullscreen}
-        src={fullImageIcon}
-        alt="full screen button"
-        width={20}
-        height={20}
-        color="white"
-        style={{ backgroundColor: 'transparent' }}
-      />
     </div>
   );
 };
