@@ -1,0 +1,52 @@
+.project-content {
+  width: 60%;
+  margin-left: 100px;
+}
+.project-content > div:first-child {
+  background: linear-gradient(90deg, var(--second-color), transparent);
+  background-size: 200%;
+  animation: reveal both linear;
+  animation-timeline: view();
+  background-repeat: no-repeat;
+  animation-range: entry 50% cover 50%;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -ms-transition: all 2s linear;
+  -o-transition: all 2s linear;
+  padding: 0.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.project-content > div h1 {
+  margin: 0 0 10px 0;
+  z-index: 5;
+  position: relative;
+}
+.project-content p {
+  padding: 20px;
+  background-color: #f1f1f1;
+  line-height: 1.6;
+  font-size: 17px;
+  border-radius: 7px;
+  margin: 0 0 40px 0;
+}
+.project-content .project-img {
+  padding: 0;
+  position: relative;
+  top: -12px;
+}
+.project-content .project-img img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 23px;
+  margin-bottom: -10px;
+}
+@media (max-width: 800px) {
+  .project-content {
+    width: 90%;
+    margin-left: 5%;
+  }
+}

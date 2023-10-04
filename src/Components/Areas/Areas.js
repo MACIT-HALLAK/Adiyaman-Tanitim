@@ -4,6 +4,7 @@ import {data} from './Data'
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import React, { Suspense } from 'react';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const ImgComponent = React.lazy(() =>
   import('../skeletons/SideImagesComponent')
@@ -14,7 +15,7 @@ const Areas = () => {
     <div className="areas-layout">
       <Navber />
       <div className="main-content">
-        <h2>2. ADIYAMAN’ DA İNANÇ TURİZM MERKEZLERİ</h2>
+        <h2>ADIYAMAN’ DA İNANÇ TURİZM MERKEZLERİ</h2>
         <div className="areas-navigation">
           {data?.map((item, index) => (
             <div key={index + 1}>
@@ -37,6 +38,7 @@ const Areas = () => {
         </div>
       </div>
       <div className="areas-section"></div>
+      <ScrollToTop />
     </div>
   );
 };

@@ -7,6 +7,7 @@ import Statistics from './Components/Statistics/Statistics';
 import Footer from './Components/Footer/Footer';
 import MapComp from './Components/MapComp/MapComp';
 import Map from './Components/Map/Map';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <MapComp />
         <Footer />
       </header>
+      <ScrollToTop />
     </div>
   );
 }
