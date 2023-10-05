@@ -2,10 +2,10 @@
 
 :root {
   --back-color: #ffffff;
-  --background-color: #2e1c89;
-  --button-color: #0c0048;
+  --background-color: #4d4575;
+  --button-color: #4d4575;
   --border-rad-img: 0.75rem;
-  --primary-color: #8da2ff;
+  --primary-color: #1f8a87;
 }
 
 * {
