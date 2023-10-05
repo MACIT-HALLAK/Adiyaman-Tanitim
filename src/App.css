@@ -2,9 +2,10 @@
 
 :root {
   --back-color: #ffffff;
+  --background-color: #0c0048;
+  --button-color: #0c0048;
   --border-rad-img: 0.75rem;
-  --primary-color: #16a1ae;
-  --second-color: #7cc1c7;
+  --primary-color: #6279e3;
 }
 
 * {

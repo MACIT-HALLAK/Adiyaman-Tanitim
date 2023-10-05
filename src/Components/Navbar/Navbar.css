@@ -1,5 +1,5 @@
 .container {
-  background-color: black;
+  background-color: var(--background-color);
   opacity: 1;
   display: grid;
   grid-auto-rows: minmax(85px, auto);
@@ -18,7 +18,7 @@
 }
 .nav-logo {
   display: grid;
-  color: white;
+  color: var(--primary-color);
   grid-area: logo;
 }
 .adiyaman-logo {
@@ -26,7 +26,7 @@
 }
 .nav-items {
   display: grid;
-  color: white;
+  color: var(--primary-color);
   list-style-type: none;
   grid-area: nav-item;
   justify-items: center;
@@ -45,7 +45,7 @@ a {
 .alanlar,
 .iletisim {
   display: grid;
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
 }
 

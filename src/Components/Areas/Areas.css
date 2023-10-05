@@ -91,7 +91,7 @@ html {
 }
 
 .areas-card h2 {
-  background: linear-gradient(90deg, var(--second-color), transparent);
+  background: linear-gradient(90deg, var(--primary-color), transparent);
   background-size: 200%;
   animation: reveal both linear;
   animation-timeline: view();
