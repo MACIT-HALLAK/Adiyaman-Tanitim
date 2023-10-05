@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './VideoList.css';
 import Video from './Video';
 import Navbar from '../Navbar/Navbar';
+import useDocumentTitle from '../../Hooks/useDocumentTitle';
 
 const dataVideos = [
   {
@@ -27,6 +28,8 @@ const dataVideos = [
 ];
 
 function VideoList() {
+  useDocumentTitle('Rotalar');
+
   const [playingVideoIndex, setPlayingVideoIndex] = useState(null);
   const [played, setPlayed] = useState({});
   const [duration, setDuration] = useState({});

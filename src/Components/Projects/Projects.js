@@ -1,13 +1,15 @@
-import "./Projects.css";
-import Navbar from "../Navbar/Navbar";
-import zigzak from "../../Assets/images/zigzag.png";
+import './Projects.css';
+import Navbar from '../Navbar/Navbar';
+import zigzak from '../../Assets/images/zigzag.png';
+import useDocumentTitle from '../../Hooks/useDocumentTitle';
 
 const Projects = () => {
+  useDocumentTitle('Projeler');
+
   return (
     <div className="project-container">
       <Navbar />
       <div className="project-content">
-
         <div className="project-title-wrapper">
           <h1>Projenin Hedef ve Amaçları</h1>
         </div>

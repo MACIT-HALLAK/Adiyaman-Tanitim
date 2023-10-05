@@ -5,12 +5,15 @@ import { data } from './Data';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import React, { Suspense } from 'react';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import useDocumentTitle from '../../Hooks/useDocumentTitle';
 
 const ImgComponent = React.lazy(() =>
   import('../skeletons/SideImagesComponent')
 );
 
 const Areas = () => {
+  useDocumentTitle('İnanç Turizim Merkezleri');
+
   return (
     <>
       <Navber />
