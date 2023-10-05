@@ -1,5 +1,5 @@
 .footer-body {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   display: grid;
   grid-auto-rows: minmax(70px, auto);
   grid-template-areas: ' menu-footer menu-footer menu-footer f-h3 f-h3 f-h3';

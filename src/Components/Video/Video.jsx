@@ -17,12 +17,8 @@ const Video = (props) => {
     updateVideoState,
   } = props;
 
-  const {
-    isPlaying,
-    isFullscreen,
-    areControlsVisible,
-    isExitingFullscreen, // متغير جديد لمراقبة خروج ملء الشاشة
-  } = videoState;
+  const { isPlaying, isFullscreen, areControlsVisible, isExitingFullscreen } =
+    videoState;
 
   const playerRef = useRef();
   const wrapperRef = useRef();
@@ -33,7 +29,7 @@ const Video = (props) => {
       ...videoState,
       isPlaying: true,
       isFullscreen: true,
-      areControlsVisible: true, // إظهار الأزرار عند الدخول في ملء الشاشة
+      areControlsVisible: true,
     });
     if (wrapperElement && !isFullscreen) {
       if (wrapperElement.requestFullscreen) {
@@ -54,9 +50,9 @@ const Video = (props) => {
       isFullscreen: false,
       isPlaying: false,
       areControlsVisible: false,
-      isExitingFullscreen: true, // تحديث متغير الخروج من ملء الشاشة
+      isExitingFullscreen: true,
     });
-    setPlayingVideoIndex(null); // إيقاف جميع الفيديوهات عند الخروج من ملء الشاشة
+    setPlayingVideoIndex(null);
     console.log(isPlaying);
   };
 
@@ -80,7 +76,7 @@ const Video = (props) => {
           isFullscreen: false,
           isPlaying: false,
           areControlsVisible: false,
-          isExitingFullscreen: true, // تحديث متغير الخروج من ملء الشاشة
+          isExitingFullscreen: true,
         });
       } else {
         updateVideoState({
@@ -88,7 +84,7 @@ const Video = (props) => {
           isFullscreen: true,
           isPlaying: true,
           areControlsVisible: true,
-          isExitingFullscreen: false, // تحديث متغير الخروج من ملء الشاشة
+          isExitingFullscreen: false,
         });
       }
     };
