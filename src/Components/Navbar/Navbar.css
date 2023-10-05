@@ -62,11 +62,6 @@ a {
   grid-area: liIletisim;
 }
 
-.active {
-  background-color: #443b3b;
-  height: 5vh;
-  width: 7vw;
-}
 .nav-items > li {
   display: grid;
   justify-content: center;
@@ -75,9 +70,10 @@ a {
   height: 43px;
   text-align: center;
   cursor: pointer;
+  mix-blend-mode: plus-lighter;
 }
 .nav-items > li:hover {
-  color: aqua;
+  color: aqua !important;
 }
 .nav-items > li > div {
   display: none;

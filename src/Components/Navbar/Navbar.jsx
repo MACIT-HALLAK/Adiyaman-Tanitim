@@ -1,7 +1,7 @@
 import './Navbar.css';
 import React, { useState, useRef } from 'react';
 import logo from '../../Assets/images/ADIYAMANLogo.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const menu = useRef();
@@ -37,19 +37,47 @@ const Navbar = () => {
         </ul>
         <ul className="nav-items sr-only" ref={nav_items}>
           <li className="anasayfa ">
-            <Link to={'/'}>Anasayfa</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to={'/'}
+            >
+              Anasayfa
+            </NavLink>
           </li>
           {/* <li className="camiler">
-            <Link to="/MosquesPage">Camiler</Link>
+            <NavLink to="/MosquesPage">Camiler</NavLink>
           </li> */}
           <li className="alanlar">
-            <Link to="/Areas">Inanç Turizm Merkezleri</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Areas"
+            >
+              Inanç Turizm Merkezleri
+            </NavLink>
           </li>
           <li className="videos">
-            <Link to="/Videos">Rotalar</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Videos"
+            >
+              Rotalar
+            </NavLink>
           </li>
           <li className="projeler">
-            <Link to="/Projects">Projeler</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Projects"
+            >
+              Projeler
+            </NavLink>
           </li>
           {/* <li className="iletisim">iletişim</li> */}
         </ul>
