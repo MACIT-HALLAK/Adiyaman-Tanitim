@@ -26,7 +26,26 @@ const Content = () => {
   const indicator = useRef();
   const [isPending, setIsPending] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [slidimage1, slidimage2, slidimage3, slidimage4, slidimage5, slidimage6, slidimage7, slidimage8, slidimage9, slidimage10, slidimage11,slidimage12,slidimage13,slidimage14,slidimage15,slidimage16,slidimage17,slidimage18];
+  const images = [
+    slidimage1,
+    slidimage2,
+    slidimage3,
+    slidimage4,
+    slidimage5,
+    slidimage6,
+    slidimage7,
+    slidimage8,
+    slidimage9,
+    slidimage10,
+    slidimage11,
+    slidimage12,
+    slidimage13,
+    slidimage14,
+    slidimage15,
+    slidimage16,
+    slidimage17,
+    slidimage18,
+  ];
   const delay1 = 5000; // 10 saniye
 
   useEffect(() => {
