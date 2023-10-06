@@ -58,7 +58,11 @@
 
 .content-center .content-title,
 .content-center .desc {
-  background-image: linear-gradient(to right, #222a50, var(--primary-color));
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -69,21 +73,28 @@
   height: 52px;
   width: 120px;
   font-size: 16px;
-  background-color: var(--background-color);
+  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
   color: white;
   font-weight: bold;
   margin-top: 20px;
   cursor: pointer;
-  border: 2px solid dodgerblue;
+  border: 2px solid var(--primary-color);
   transition: all 0.2s linear;
+}
+.content .content-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content-btn:hover {
   background-color: var(--primary-color);
-  border-radius: 0.75rem;
-  -webkit-border-radius: 0.75rem;
-  -moz-border-radius: 0.75rem;
-  -ms-border-radius: 0.75rem;
-  -o-border-radius: 0.75rem;
+  border-radius: 0.35rem;
+  -webkit-border-radius: 0.35rem;
+  -moz-border-radius: 0.35rem;
+  -ms-border-radius: 0.35rem;
+  -o-border-radius: 0.35rem;
 }
 .typing-indicator {
   animation: yazma 1s infinite;

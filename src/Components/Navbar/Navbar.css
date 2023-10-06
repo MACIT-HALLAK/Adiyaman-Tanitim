@@ -1,5 +1,7 @@
 .container {
-  background-color: var(--background-color);
+  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   opacity: 1;
   display: grid;
   grid-auto-rows: minmax(85px, auto);
@@ -17,12 +19,28 @@
   width: 100%;
 }
 .nav-logo {
-  display: grid;
+  display: flex;
+  justify-content: flex-start;
   color: var(--primary-color);
   grid-area: logo;
+  width: 100%;
 }
+
+.container-logo {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px !important;
+}
+
 .adiyaman-logo {
-  width: 15vw !important;
+  max-width: 450px;
+  object-fit: cover;
+  height: auto;
+  position: absolute;
+  scale: 0.8;
+  mix-blend-mode: darken;
+  transform: translateX(-15%);
+  left: 15%;
 }
 .nav-items {
   display: grid;
@@ -70,10 +88,9 @@ a {
   height: 43px;
   text-align: center;
   cursor: pointer;
-  mix-blend-mode: plus-lighter;
 }
 .nav-items > li:hover {
-  color: aqua !important;
+  font-weight: 900;
 }
 .nav-items > li > div {
   display: none;
@@ -104,22 +121,32 @@ a {
   list-style: none;
 }
 
+.nav-img {
+  mix-blend-mode: color-burn;
+}
+
 /* Media Queies */
 @media (min-width: 1210px) {
   .adiyaman-logo {
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    width: 400px !important;
+    transform: translate(0%, 10%);
+    -webkit-transform: translate(0%, 10%);
+    -moz-transform: translate(0%, 10%);
+    -ms-transform: translate(0%, 10%);
+    -o-transform: translate(0%, 10%);
   }
 }
 @media (max-width: 1200px) {
   .adiyaman-logo {
-    width: 15rem !important;
+    width: 300px !important;
+    transform: translate(20%, 50%);
+    -webkit-transform: translate(20%, 50%);
+    -moz-transform: translate(20%, 50%);
+    -ms-transform: translate(20%, 50%);
+    -o-transform: translate(20%, 50%);
   }
 }
-@media (max-width: 785px) {
+@media (max-width: 1290px) {
   .container {
     grid-template-areas:
       'logo logo menu menu'
@@ -127,12 +154,18 @@ a {
   }
 
   .nav-logo {
-    justify-self: baseline;
-    translate: 10% 0;
+    width: 100%;
   }
   .adiyaman-logo {
-    width: 15rem !important;
+    transform: translate(30%, 45%);
+    -webkit-transform: translate(30%, 45%);
+    -moz-transform: translate(30%, 45%);
+    -ms-transform: translate(30%, 45%);
+    -o-transform: translate(30%, 45%);
   }
+  /* .adiyaman-logo {
+    width: 15rem !important;
+  } */
   .nav-items {
     display: flex;
     flex-direction: column;
@@ -198,5 +231,75 @@ a {
     -moz-transition: rotate 0.2s ease-in-out;
     -ms-transition: rotate 0.2s ease-in-out;
     -o-transition: rotate 0.2s ease-in-out;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1289px) {
+  .adiyaman-logo {
+    transform: translate(10%, 15%) !important ;
+    -webkit-transform: translate(10%, 15%) !important ;
+    -moz-transform: translate(10%, 15%) !important ;
+    -ms-transform: translate(10%, 15%) !important ;
+    -o-transform: translate(10%, 15%) !important ;
+    scale: 0.8 !important;
+  }
+}
+
+@media (max-width: 1290px) {
+  .adiyaman-logo {
+    transform: translate(20%, 35%);
+    -webkit-transform: translate(20%, 35%);
+    -moz-transform: translate(20%, 35%);
+    -ms-transform: translate(20%, 35%);
+    -o-transform: translate(20%, 35%);
+    scale: 1;
+  }
+}
+@media (max-width: 1100px) {
+  .adiyaman-logo {
+    transform: translate(30%, 35%);
+    -webkit-transform: translate(30%, 35%);
+    -moz-transform: translate(30%, 35%);
+    -ms-transform: translate(30%, 35%);
+    -o-transform: translate(30%, 35%);
+    scale: 1;
+  }
+}
+@media (max-width: 790px) {
+  .adiyaman-logo {
+    left: 5%;
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -moz-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    -o-transform: translateY(-60%);
+    scale: 0.9;
+  }
+
+  .hide-img {
+    display: none !important;
+  }
+}
+@media (max-width: 375px) {
+  .adiyaman-logo {
+    left: 10%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+
+  .hide-img {
+    display: none !important;
+  }
+}
+@media (min-width: 1800px) {
+  .adiyaman-logo {
+    transform: translate(-10%, 15%) !important ;
+    -webkit-transform: translate(-10%, 15%) !important ;
+    -moz-transform: translate(-10%, 15%) !important ;
+    -ms-transform: translate(-10%, 15%) !important ;
+    -o-transform: translate(-10%, 15%) !important ;
+    scale: 0.9 !important;
   }
 }

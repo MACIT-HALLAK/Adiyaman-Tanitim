@@ -1,5 +1,7 @@
 .footer-body {
-  background-color: var(--background-color);
+  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   grid-auto-rows: minmax(auto, 250px);
   grid-template-areas: ' f-img1 f-img2 f-h3 f-h3 f-h3 menu-footer menu-footer menu-footer';

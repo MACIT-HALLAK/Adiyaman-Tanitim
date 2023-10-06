@@ -7,7 +7,7 @@
   margin: auto;
 }
 path:hover {
-  fill: var(--background-color);
+  fill: var(--secondary-color);
   cursor: pointer;
 }
 .counties-list ul {
@@ -25,7 +25,7 @@ path:hover {
   text-align: center;
 }
 .counties-list ul .click {
-  color: var(--background-color);
+  color: var(--secondary-color);
   position: relative;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -40,7 +40,7 @@ path:hover {
   height: 3px;
   bottom: -10px;
   left: 0;
-  background-color: var(--background-color);
+  background-color: var(--secondary-color);
   animation-duration: 0.5s;
   animation-name: slidein;
 }

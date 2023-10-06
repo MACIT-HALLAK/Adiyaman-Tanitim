@@ -1,6 +1,8 @@
 .Statistics {
-  background-color: var(--background-color);
-  color: white;
+  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--primary-color);
   margin-top: 2rem;
   padding: 3rem 0rem;
   width: 100%;
@@ -19,12 +21,12 @@
   margin: 3rem 0rem 0.8rem;
 }
 .span-line {
-  border: 2px solid white;
+  border: 2px solid var(--secondary-color);
 }
 .statistics-line-1,
 .statistics-line-2,
 .statistics-line-3 {
-  border: 2px solid white;
+  border: 2px solid var(--secondary-color);
   display: none;
   width: 0px; /* Başlangıçta sıfır genişlik */
   animation: expandWidth 2s ease-in-out forwards;

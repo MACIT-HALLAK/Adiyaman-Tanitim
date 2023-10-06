@@ -19,6 +19,7 @@ import slidimage15 from '../../Assets/images/slider15.jpeg';
 import slidimage16 from '../../Assets/images/slider16.jpeg';
 import slidimage17 from '../../Assets/images/slider17.jpeg';
 import slidimage18 from '../../Assets/images/slider18.jpeg';
+import { Link } from 'react-router-dom';
 
 const ImageComponent = React.lazy(() => import('../skeletons/ImageComponent'));
 
@@ -82,7 +83,7 @@ const Content = () => {
               clearInterval(deleteInterval);
             }
           }, delay);
-        }, 1000); // Bekleme süresi (1 saniye) - burayı istediğiniz gibi ayarlayabilirsiniz
+        }, 1000);
       } else {
         setText((prevText) => prevText + sentence[currentIndex]);
         currentIndex++;
@@ -107,7 +108,9 @@ const Content = () => {
             oluşturulmuş bir platformdur. Bu web sitesi, bölgedeki tarihi
             zenginlikleri ve kültürel mirası ziyaretçilere tanıtmayı amaçlar.
           </p>
-          <button className="content-btn">Şimdi Keşfet</button>
+          <button className="content-btn">
+            <Link to={'/Videos'}>Şimdi Keşfet</Link>
+          </button>
         </div>
         <Suspense fallback={<div className="skeleton-image"></div>}>
           <ImageComponent

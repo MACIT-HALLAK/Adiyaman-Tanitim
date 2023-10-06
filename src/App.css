@@ -5,7 +5,8 @@
   --background-color: #4d4575;
   --button-color: #4d4575;
   --border-rad-img: 0.75rem;
-  --primary-color: #1f8a87;
+  --primary-color: #71624f;
+  --secondary-color: #877858;
 }
 
 * {
@@ -21,7 +22,7 @@
     rgba(216, 215, 215, 0.573),
     rgba(253, 243, 243, 0.546),
     #86cccc3c,
-    #a0fffcbe
+    var(--secondary-color)
   );
   background-size: 1000%;
   background-position: right;
@@ -35,6 +36,12 @@
   box-shadow: 0 0 6px 0 #a3a3a331;
 }
 
+@media (max-width: 1200px) {
+  .skeleton-image {
+    display: none;
+  }
+}
+
 /* end sekeleton for images */
 
 /* start skeleton for text areas */
@@ -45,7 +52,7 @@
     rgba(216, 215, 215, 0.573),
     rgba(253, 243, 243, 0.546),
     #86cccc3c,
-    #a0fffcbe
+    var(--secondary-color)
   );
   background-size: 1000%;
   background-position: right;
@@ -74,5 +81,5 @@
 }
 
 .nav__link__active {
-  color: aqua !important;
+  font-weight: bold !important;
 }

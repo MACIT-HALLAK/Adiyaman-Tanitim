@@ -1,8 +1,9 @@
 import './Navbar.css';
 import React, { useState, useRef } from 'react';
-import logo from '../../Assets/images/ADIYAMANLogo.png';
+import logo from '../../Assets/images/logo/adiyaman-logo.jpg';
 import { Link, NavLink } from 'react-router-dom';
-
+import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
+import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
 const Navbar = () => {
   const menu = useRef();
   const nav_items = useRef();
@@ -20,7 +21,6 @@ const Navbar = () => {
       lis.forEach((li) => {
         li.classList.remove('active');
       });
-      // Add Active Class To Current Element
       e.currentTarget.classList.add('active');
     });
   });
@@ -28,7 +28,19 @@ const Navbar = () => {
     <>
       <div className="container">
         <div className="nav-logo">
-          <img className="adiyaman-logo" src={logo} alt="logo" />
+          <div className="container-logo">
+            <img
+              className="footer-img2 nav-img hide-img"
+              src={slidimage2}
+              alt="footer-img2"
+            />
+            <img
+              className="footer-img1 nav-img hide-img"
+              src={slidimage1}
+              alt="footer-img1"
+            />
+            <img className="adiyaman-logo" src={logo} alt="logo" />
+          </div>
         </div>
         <ul className="menu" onClick={showMenu} ref={menu}>
           <li className="menu_item"></li>
@@ -46,9 +58,6 @@ const Navbar = () => {
               Anasayfa
             </NavLink>
           </li>
-          {/* <li className="camiler">
-            <NavLink to="/MosquesPage">Camiler</NavLink>
-          </li> */}
           <li className="alanlar">
             <NavLink
               className={({ isActive }) =>
@@ -79,7 +88,6 @@ const Navbar = () => {
               Projeler
             </NavLink>
           </li>
-          {/* <li className="iletisim">iletişim</li> */}
         </ul>
       </div>
     </>

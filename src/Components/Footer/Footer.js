@@ -1,7 +1,5 @@
 import './Footer.css';
 import React, { useState, useEffect } from 'react';
-import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
-import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
 
 const Footer = () => {
   useEffect(() => {
@@ -20,13 +18,10 @@ const Footer = () => {
   return (
     <>
       <div className="footer-body">
-        <img className='footer-img2' src={slidimage2}/>
-        <img className='footer-img1' src={slidimage1}/>
         <h3 className="footer-h3">
           Adıyaman, Adıyaman ili'nin merkez ilçesi ve aynı ilçedeki
           şehirdir.Türkiye'nin Güneydoğu Anadolu Bölgesi'nde Fırat Nehri'nin
           batısında yer almaktadır.
-          
         </h3>
         <div className="menu-footer">
           <div className="toggle">
