@@ -63,7 +63,7 @@ export const data = [
     img: image8,
   },
   {
-    title: '❖ 2.5 Ulubaba Türbesi',
+    title: '❖ Ulubaba Türbesi',
     desc: 'Adıyaman İli Çelikhan İlçesi sınırlarında Ulubaba Dağı’nın en tepesinde bulunan türbeye Sarıkaya Köyü’nden ulaşılmaktadır. Türbe yanındaki müştemilatlarla birlikte, betonarmeden inşa edilmiştir. Ulu Baba’nın Seyyid Battal Gazi’nin babası Hüseyin Gazi olduğu söylenmektedir. Hz. Ali’nin soyundandır, Malatya serdarıdır.Rivayete göre, Hüseyin Gazi dağda bir mağarada at sesi duyar. Yabani olan bu at Hüseyin Gazi ile ölünceye kadar yoldaş olur. Hüseyin Gazi Malatya Beydağ’ında ava çıkar ve bir geyiği kovalar. Meğer geyik Malatya Doğanşehir İlçesi Kurucaova Kasabasında kralın geyiğidir. Geyik kan ter içinde gelince kralın askerleri geyiği sorgular ve onu Hüseyin Gazi’nin kovaladığını öğrenir. Kral önce Hüseyin Gazi’yi ayağına çağırır, Hüseyin Gazi gelmeyince bu sefer bir grup askeri zorla getirmesi için yollar, ama Hüseyin Gazi bu adamların hepsini öldürür. Kral bu sefer bir ordu toplayıp Hüseyin Gazi üzerine varır. Hüseyin Gazi çarpışa çarpışa vefat ettiği yere kadar çıkar ve burada şehit düşer. Türbesini, Ulubaba’yı rüyasında gören bir vatandaş yaptırmıştır(3). ',
     img: image9,
   },
@@ -93,8 +93,8 @@ export const data = [
     img: image14,
   },
   {
-    title: '❖ 3.5 Yenipınar Camii',
-    desc: 'Yenipınar Mahallesi’ndeki bu mimari 1720 tarihinde Hacı Mehmet tarafından yaptırılmıştır.',
+    title: '❖ Yenipınar Camii',
+    desc: 'Şehrin ibadet mekanlarından biri olan Yenipınar Camii, şehir merkezinde bulunur ve kolay bir ulaşma sahiptir. Caminin kitabesi günümüze kadar gelmiştir. Kitabeye göre Hicri 1133 (Miladi 1720) yılında Hacı Mahmut adlı bir kişi tarafından inşa ettirilmiştir. Yenipınar Camii, şehirde bulunduğunuz günlere dahil olabilecek bir gezi mekanıdır. Cami, hem dış mimarisi hem de hiç dekorasyonu sizleri mistik bir atmosferin içinde ağırlayacak..',
     img: image15,
   },
   {
