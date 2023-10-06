@@ -1,9 +1,8 @@
 import './Areas.css';
 import Navber from '../Navbar/Navbar';
 import { data } from './Data';
-
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react'; // Import useState
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
 
@@ -12,38 +11,35 @@ const ImgComponent = React.lazy(() =>
 );
 
 const Areas = () => {
+  const [selectedData, setSelectedData] = useState(data[0]);
+
   useDocumentTitle('İnanç Turizim Merkezleri');
+
+  const handleLinkClick = (index) => {
+    setSelectedData(data[index]);
+  };
 
   return (
     <>
       <Navber />
       <div className="areas-layout">
         <div className="main-content">
-          <h2>ADIYAMAN’ DA İNANÇ TURİZM MERKEZLERİ</h2>
+          <p> İnanç Turizmi Merkezleri</p>
           <div className="areas-navigation">
             {data?.map((item, index) => (
               <div key={index + 1}>
-                <a href={`#i${index}`}>{item.title}</a>
-              </div>
-            ))}
-          </div>
-          <div className="areas-content">
-            {data?.map((item, index) => (
-              <div id={`i${index}`} className="areas-card" key={index + 1}>
-                <Suspense
-                  fallback={<div className="skeleton-side-images"></div>}
-                >
-                  <ImgComponent imgSrc={item.img} />
-                </Suspense>
-                <div>
-                  <h2>{item.title}</h2>
-                  <p>{item.desc}</p>
-                </div>
+                <a href={`#i${index}`} onClick={() => handleLinkClick(index)}>
+                  {item.title}
+                </a>
               </div>
             ))}
           </div>
         </div>
-        <div className="areas-section"></div>
+        <div className="areas-section">
+          <h3 className='areas-h3'>{selectedData.title.slice(1,)}</h3>
+          <img className='areas-img' src={selectedData.img} alt={selectedData.title} />
+          <div className='areas-decs' >{selectedData.desc}</div>
+        </div>
         <ScrollToTop />
       </div>
     </>

@@ -29,27 +29,27 @@ const Footer = () => {
           </div>
 
           <ul className="ul-menu">
-            <li style={{ '--i': 1, '--clr': '#1877f2' }}>
+            <li style={{ '--i': 1}}>
               <a href="https://www.facebook.com/AdiyamanBelTR">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
-            <li style={{ '--i': 2, '--clr': '#1da1f2' }}>
+            <li style={{ '--i': 2}}>
               <a href="https://twitter.com/adiyamanbeltr">
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
-            <li style={{ '--i': 0, '--clr': '#0a66c2' }}>
+            <li style={{ '--i': 0}}>
               <a href="https://www.linkedin.com/in/ad%C4%B1yaman-belediyesi-a80816183">
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
-            <li style={{ '--i': 6, '--clr': '#c32aa3' }}>
+            <li style={{ '--i': 6}}>
               <a href="https://www.instagram.com/adiyamanbeltr">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
-            <li style={{ '--i': 7, '--clr': '#ff0000' }}>
+            <li style={{ '--i': 7}}>
               <a href="https://www.youtube.com/@AdiyamanBelediyeTv">
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
