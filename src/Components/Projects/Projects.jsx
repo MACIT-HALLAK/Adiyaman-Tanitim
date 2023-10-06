@@ -58,15 +58,16 @@ const Projects = () => {
         <div className="side-content">
           <img
             src={logoImg}
-            alt=""
+            alt="discover adıyaman"
             width={100}
             height={100}
             className="proj-logo-img"
+            srcSet=""
           />
           <img
             src={mainImg}
             className="main-image"
-            alt=""
+            alt="adıyaman pricture"
             width={100}
             height={100}
           />

@@ -69,14 +69,17 @@
 
 .main-image {
   width: 80%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  height: auto;
+  min-height: 300px;
+  max-height: 320px;
 }
 
 .proj-logo-img {
   width: 60%;
-  height: auto;
-  object-fit: cover;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  max-height: 50px;
 }
 
 hr {
