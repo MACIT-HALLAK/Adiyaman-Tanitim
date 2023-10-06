@@ -10,7 +10,8 @@
 }
 
 * {
-  font-family: 'Montserrat', sans-serif !important;
+  /* font-family: 'Montserrat', sans-serif !important; */
+  font-family: Helvetica, sans-serif;
 }
 
 /* skeletons start  */
