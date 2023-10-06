@@ -83,9 +83,9 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive ? 'nav__link__active' : ''
               }
-              to="/Projects"
+              to="/Hakkinda"
             >
-              Projeler
+              Hakkında
             </NavLink>
           </li>
         </ul>

@@ -26,7 +26,7 @@ const routers = createBrowserRouter([
     element: <VideoList />,
   },
   {
-    path: '/Projects',
+    path: '/Hakkinda',
     element: <Projects />,
   },
 ]);
