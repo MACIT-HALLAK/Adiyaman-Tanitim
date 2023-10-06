@@ -1,7 +1,7 @@
 import './Navbar.css';
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import logo from '../../Assets/images/logo/adiyaman-logo.jpg';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
 import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
 const Navbar = () => {

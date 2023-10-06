@@ -1,5 +1,5 @@
 import './Content.css';
-import React, { useState, useEffect, useRef, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 
 import slidimage1 from '../../Assets/images/sliders/slider1.jpeg';
 import slidimage2 from '../../Assets/images/sliders/slider2.jpeg';
@@ -25,8 +25,6 @@ import TypeWriter from './TypeWriter';
 const ImageComponent = React.lazy(() => import('../skeletons/ImageComponent'));
 
 const Content = () => {
-  const indicator = useRef();
-  const [isPending, setIsPending] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     slidimage1,
@@ -51,14 +49,6 @@ const Content = () => {
   const delay1 = 5000; // 10 saniye
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsPending(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, delay1);
@@ -68,7 +58,7 @@ const Content = () => {
 
   const sentence = "ADIYAMAN'I KEŞFETMEYE HAZIR MISINIZ ?";
 
-  const [textValues, setTextValues] = useState([
+  const [textValues] = useState([
     {
       title: 'Abuzer Gaffari Türbesi',
       content:
