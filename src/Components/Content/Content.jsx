@@ -66,7 +66,7 @@ const Content = () => {
   }, []);
 
   const [text, setText] = useState('');
-  const sentence = 'ADIYAMAN’I KEŞFETMEYE HAZIR MISINIZ?';
+  const sentence = 'AADIYAMAN’I KEŞFETMEYE HAZIR MISINIZ?';
   const delay = 100;
 
   useEffect(() => {
