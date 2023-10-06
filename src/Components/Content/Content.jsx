@@ -195,7 +195,7 @@ const Content = () => {
               _
             </span>
           </h2>
-          <p>{textValues[currentImageIndex]?.title}</p>
+          <p className="imgTilte">{textValues[currentImageIndex]?.title}</p>
           <p className="desc">{textValues[currentImageIndex]?.content}</p>
           <button className="content-btn">
             <Link to={'/Videos'}>Şimdi Keşfet</Link>

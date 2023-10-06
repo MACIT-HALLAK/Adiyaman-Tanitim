@@ -109,3 +109,8 @@
     opacity: 0.3;
   }
 }
+
+.content .imgTilte {
+  color: var(--primary-color);
+  font-weight: bold;
+}
