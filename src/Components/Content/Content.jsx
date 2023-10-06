@@ -1,7 +1,7 @@
 import './Content.css';
 import React, { useState, useEffect, useRef, Suspense } from 'react';
 
-import slidimage1 from '../../Assets/images/sliders/slider1.jpeg';
+import slidimage1 from '../../Assets/images/sliders/slider1edit.png';
 import slidimage2 from '../../Assets/images/sliders/slider2.jpeg';
 import slidimage3 from '../../Assets/images/sliders/slider3.jpeg';
 import slidimage4 from '../../Assets/images/sliders/slider4.jpeg';
@@ -11,9 +11,9 @@ import slidimage7 from '../../Assets/images/sliders/slider7.jpeg';
 import slidimage8 from '../../Assets/images/sliders/slider8.jpeg';
 import slidimage9 from '../../Assets/images/sliders/slider9.jpeg';
 import slidimage10 from '../../Assets/images/sliders/slider10.jpeg';
-import slidimage11 from '../../Assets/images/sliders/slider11.jpeg';
+import slidimage11 from '../../Assets/images/sliders/silder11edit.png';
 import slidimage12 from '../../Assets/images/sliders/slider12.jpeg';
-import slidimage13 from '../../Assets/images/sliders/slider13.jpeg';
+import slidimage13 from '../../Assets/images/sliders/slider13edit.png';
 import slidimage14 from '../../Assets/images/sliders/slider14.jpeg';
 import slidimage15 from '../../Assets/images/sliders/slider15.jpeg';
 import slidimage16 from '../../Assets/images/sliders/slider16.jpeg';

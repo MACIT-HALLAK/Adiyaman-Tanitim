@@ -5,10 +5,11 @@
   align-items: center;
   justify-content: space-between;
   height: 85vh;
+  /* background-color: #fefefe;  istege bagli */
 }
 .content-img {
   width: 60%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 13 / 9;
   border-radius: 7px;
   padding-top: 5px;
   background-repeat: no-repeat;
