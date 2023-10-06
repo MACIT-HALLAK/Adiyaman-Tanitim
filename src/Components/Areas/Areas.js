@@ -27,7 +27,15 @@ const Areas = () => {
       <Navber />
       <div className="areas-layout">
         <div className="main-content">
-          <p> İnanç Turizmi Merkezleri</p>
+          <p
+            style={{
+              color: 'var(--primary-color)',
+              fontSize: '1.75rem',
+              fontWeight: '600',
+            }}
+          >
+            İnanç Turizmi Merkezleri
+          </p>
           <div className="areas-navigation">
             {data?.map((item, index) => (
               <div key={index + 1}>
@@ -43,7 +51,9 @@ const Areas = () => {
           </div>
         </div>
         <div className="areas-section">
-          <h3 className="areas-h3">{selectedData.title.slice(1)}</h3>
+          <h3 className="areas-h3" style={{ color: 'var(--primary-color)' }}>
+            {selectedData.title.slice(1)}
+          </h3>
           <div className="areas-div">
             <img
               className="areas-img"
