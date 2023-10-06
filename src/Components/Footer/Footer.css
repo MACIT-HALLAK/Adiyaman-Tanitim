@@ -7,7 +7,7 @@
   grid-template-areas: ' f-img1 f-img2 f-h3 f-h3 f-h3 menu-footer menu-footer menu-footer';
   justify-items: center;
   align-items: center;
-  gap: 0 0vw;
+  gap: 2rem;
 }
 .footer-h3 {
   display: grid;
@@ -52,7 +52,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  translate: 130% 5%;
+  translate: 150% -25%;
   height: 54px;
   width: 54px;
   background: #fff;
@@ -83,14 +83,20 @@
   left: 0;
   list-style: none;
   transition: 0.5s;
-  transform: rotate(calc(360deg / 8 * var(--i)));
+  transform: rotate(calc(360deg / 8 * var(--i))) translate3d(35px, 0px, 14px);
   transform-origin: 140px;
   scale: 0;
   transition-delay: calc(0.05s * var(--i));
+  -webkit-transform: rotate(calc(360deg / 8 * var(--i)))
+    translate3d(35px, 0px, 14px);
+  -moz-transform: rotate(calc(360deg / 8 * var(--i)))
+    translate3d(35px, 0px, 14px);
+  -ms-transform: rotate(calc(360deg / 8 * var(--i)))
+    translate3d(35px, 0px, 14px);
+  -o-transform: rotate(calc(360deg / 8 * var(--i))) translate3d(35px, 0px, 14px);
 }
 .menu-footer.active li {
   scale: 1;
-  padding: 1em 2em;
 }
 .menu-footer li a {
   display: grid;
@@ -113,45 +119,21 @@
 @media screen and (max-width: 830px) {
   .footer-body {
     background-color: var(--background-color);
-    display: grid;
-    grid-auto-rows: minmax(auto, 215px);
-    grid-template-areas:
-      ' . . . f-img1 f-img2 . . .'
-      ' . f-h3 f-h3 f-h3 f-h3 f-h3 f-h3 .'
-      ' . . menu-footer menu-footer menu-footer menu-footer . .';
-    justify-items: center;
-    align-items: center;
-    gap: 0 0vw;
+    display: flex;
+    flex-direction: column;
   }
   .menu-footer {
-    height: 13rem;
-  }
-  .ul-menu {
-    top: 0.5em;
-  }
-  .footer-h3 {
-    grid-auto-rows: minmax(auto, 200px);
-  }
-  .menu-footer .toggle {
-    margin-left: -2.3em !important;
-    translate: 3rem -2.5rem;
-  }
-  .ul-menu {
-    position: absolute;
-    transform: translateY(1em); /* Adjust to center */
-  }
-
-  .menu-footer.active li {
-    scale: 1;
-    padding: 0% 95%;
+    transform: rotateZ(90deg) translateX(-50%);
+    -webkit-transform: rotateZ(90deg) translateX(-50%);
+    -moz-transform: rotateZ(90deg) translateX(-50%);
+    -ms-transform: rotateZ(90deg) translateX(-50%);
+    -o-transform: rotateZ(90deg) translateX(-50%);
   }
   .active {
     margin-left: 0rem;
   }
-}
 
-@media screen and (max-width: 530px) {
   .footer-h3 {
-    grid-auto-rows: minmax(auto, 310px);
+    width: 90%;
   }
 }

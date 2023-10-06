@@ -335,17 +335,17 @@ a {
 }
 @media (min-width: 1100px) and (max-width: 1200px) {
   .adiyaman-logo {
-    transform: translate(25%, 45%) !important ;
-    -webkit-transform: translate(25%, 45%) !important ;
-    -moz-transform: translate(25%, 45%) !important ;
-    -ms-transform: translate(25%, 45%) !important ;
-    -o-transform: translate(25%, 45%) !important ;
+    transform: translate(30%, 45%) !important ;
+    -webkit-transform: translate(30%, 45%) !important ;
+    -moz-transform: translate(30%, 45%) !important ;
+    -ms-transform: translate(30%, 45%) !important ;
+    -o-transform: translate(30%, 45%) !important ;
     scale: 1 !important;
   }
 }
 @media (min-width: 700px) and (max-width: 900px) {
   .adiyaman-logo {
-    translate: 0% 10%;
+    translate: 5% 10%;
     scale: 1 !important;
   }
 }
