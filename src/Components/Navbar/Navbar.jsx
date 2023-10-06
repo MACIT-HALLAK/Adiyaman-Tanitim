@@ -29,16 +29,21 @@ const Navbar = () => {
       <div className="container">
         <div className="nav-logo">
           <div className="container-logo">
-            <img
-              className="footer-img2 nav-img hide-img"
-              src={slidimage2}
-              alt="footer-img2"
-            />
-            <img
-              className="footer-img1 nav-img hide-img"
-              src={slidimage1}
-              alt="footer-img1"
-            />
+            <div className="logo-img-con hide-img">
+              {' '}
+              <img
+                className="footer-img2 nav-img "
+                src={slidimage2}
+                alt="footer-img2"
+              />
+            </div>
+            <div className="logo-img-con hide-img">
+              <img
+                className="footer-img1 nav-img "
+                src={slidimage1}
+                alt="footer-img1"
+              />
+            </div>
             <img className="adiyaman-logo" src={logo} alt="logo" />
           </div>
         </div>
