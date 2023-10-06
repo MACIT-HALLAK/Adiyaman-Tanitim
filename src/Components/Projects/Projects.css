@@ -1,9 +1,15 @@
+.project-container {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  margin: 0 auto;
+}
 .project-content {
-  width: 60%;
-  margin-left: 100px;
+  color: var(--secondary-color);
 }
 .project-content > div:first-child {
-  background: linear-gradient(90deg, var(--second-color), transparent);
+  background: linear-gradient(90deg, #917d5082, transparent);
   background-size: 200%;
   animation: reveal both linear;
   animation-timeline: view();
@@ -15,7 +21,7 @@
   -ms-transition: all 2s linear;
   -o-transition: all 2s linear;
   padding: 0.5rem;
-  color: #333;
+  color: var(--secondary-color);
   margin-top: 20px;
 }
 
@@ -26,11 +32,13 @@
 }
 .project-content p {
   padding: 20px;
-  background-color: #f1f1f1;
   line-height: 1.6;
   font-size: 17px;
   border-radius: 7px;
   margin: 0 0 40px 0;
+  text-align: justify;
+  margin: 0 0 40px 0;
+  font-weight: 800;
 }
 .project-content .project-img {
   padding: 0;
@@ -44,9 +52,33 @@
   height: 23px;
   margin-bottom: -10px;
 }
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .project-content {
     width: 90%;
     margin-left: 5%;
   }
+} */
+
+.side-content {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  align-items: flex-end;
+  padding-top: 25px;
+}
+
+.main-image {
+  width: 80%;
+  object-fit: cover;
+  height: auto;
+}
+
+.proj-logo-img {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+
+hr {
+  opacity: 0;
 }
