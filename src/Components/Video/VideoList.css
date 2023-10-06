@@ -6,6 +6,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: auto;
+  color: var(--primary-color) !important;
 }
 
 .video-container {
@@ -185,4 +186,12 @@ svg {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.rota-layout video {
+  border: 10px solid var(--secondary-color);
+  -webkit-border: 1px solid var(--secondary-color);
+  -moz-border: 1px solid var(--secondary-color);
+  -ms-border: 1px solid var(--secondary-color);
+  -o-border: 1px solid var(--secondary-color);
 }

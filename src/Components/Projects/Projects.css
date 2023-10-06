@@ -82,3 +82,15 @@
 hr {
   opacity: 0;
 }
+
+@media (max-width: 1290px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+  .side-content img:first-child {
+    display: none;
+  }
+  .side-content img {
+    width: 100%;
+  }
+}
