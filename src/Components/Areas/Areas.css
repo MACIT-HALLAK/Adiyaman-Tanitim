@@ -30,7 +30,7 @@
   grid-area: title;
   display: grid;
   justify-content: end;
-  
+  color: var(--primary-color);
   
   
 }

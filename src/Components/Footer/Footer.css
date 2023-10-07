@@ -20,11 +20,11 @@
 .footer-img1 {
   display: grid;
   grid-area: f-img1;
-  width: 4em;
+  width: 4.3em;
   height: 4em;
   justify-items: center;
   align-items: center;
-  padding-left: 5px;
+  
 }
 .footer-img2 {
   display: grid;
@@ -37,7 +37,7 @@
 .menu-footer {
   display: grid;
   grid-area: menu-footer;
-  height: 10rem;
+  height: 8rem;
   width: 3rem;
   justify-content: end;
   align-items: center;
@@ -63,6 +63,7 @@
   cursor: pointer;
   transition: 1.25s;
   z-index: 5;
+  margin-top: 1em;
 }
 
 @media (max-width: 2048px) {
