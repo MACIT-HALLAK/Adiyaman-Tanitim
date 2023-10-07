@@ -295,6 +295,10 @@ a {
   .hide-img {
     display: none !important;
   }
+
+  .container {
+    margin-inline: auto;
+  }
 }
 @media (max-width: 375px) {
   .adiyaman-logo {

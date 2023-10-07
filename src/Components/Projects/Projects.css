@@ -38,7 +38,6 @@
   margin: 0 0 40px 0;
   text-align: justify;
   margin: 0 0 40px 0;
-  font-weight: 800;
 }
 .project-content .project-img {
   padding: 0;
@@ -95,5 +94,6 @@ hr {
   }
   .side-content img {
     width: 100%;
+    object-fit: contain;
   }
 }
