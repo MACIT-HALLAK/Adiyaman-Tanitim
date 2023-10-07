@@ -54,8 +54,9 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-.content-center .title {
-  font-size: 1.125rem;
+
+.content-center .content-title {
+  font-size: 1.25rem;
 }
 .content-center .desc {
   font-size: 1.125rem;

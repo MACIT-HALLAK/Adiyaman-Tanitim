@@ -155,9 +155,9 @@ const Content = () => {
     <>
       <div className="content" style={{ position: 'relative' }}>
         <div className="content-center">
-          <h2 className="content-title">
+          <p className="content-title">
             <TypeWriter text={sentence} delay={150} />
-          </h2>
+          </p>
 
           <p className="imgTilte">{textValues[currentImageIndex]?.title}</p>
           <p className="desc">{textValues[currentImageIndex]?.content}</p>

@@ -8,7 +8,7 @@ import useDocumentTitle from '../../Hooks/useDocumentTitle';
 
 const Areas = () => {
   const [selectedData, setSelectedData] = useState(data[0]);
-  const [boldIndex, setBoldIndex] = useState(0); // Initialize with 0
+  const [boldIndex, setBoldIndex] = useState(0);
 
   useDocumentTitle('İnanç Turizim Merkezleri');
 
@@ -18,10 +18,8 @@ const Areas = () => {
   };
 
   useEffect(() => {
-    // Set the first link to be bold on initial load (when component mounts)
     setBoldIndex(0);
-  }, []); // Empty dependency array to run this effect only once
-
+  }, []);
   return (
     <>
       <Navber />
