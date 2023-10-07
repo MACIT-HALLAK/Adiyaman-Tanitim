@@ -28,8 +28,9 @@
   color: #222;
   font-weight: 500;
 }
-.filters-com .filters-wraper div div:first-child {
-  color: #1c1970;
+.filters-com .filters-wraper div div.activ {
+  color: var(    --primary-color);
+  font-weight: bold;
 }
 .filters-com .filters-wraper div div::after {
   content: '';
@@ -68,6 +69,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 50px 100px 0 100px;
+
 }
 .filters-com .gallery-wraper > div {
   display: flex;

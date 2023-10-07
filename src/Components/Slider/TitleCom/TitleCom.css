@@ -5,7 +5,7 @@
     margin-top: 60px;
 }
 .title-com h1 { 
-    color: #222222;
+    color: var(--primary-color);
     font-family: 600;
     margin-bottom: 10px;
 }
