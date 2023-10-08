@@ -158,10 +158,11 @@
 }
 .filters-com .gallery-wraper div .text {
   width: 100%;
-  height: auto;
+  height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 0;
   opacity: 0;
@@ -172,6 +173,7 @@
   -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   backdrop-filter: blur(10px);
   padding-block: 0.75rem;
+  text-align: center;
 }
 
 .image-gallery img {
@@ -180,7 +182,7 @@
   cursor: pointer;
 }
 
-.modal {
+.modal1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,9 +192,10 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
 }
 
-.modal img {
+.modal1 img {
   max-width: 90%;
   height: 90%;
   object-fit: contain;
@@ -204,7 +207,7 @@
   -o-border-radius: var(--border-rad-img);
 }
 
-.modal button {
+.modal1 button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -220,10 +223,10 @@
 }
 
 .filters-com .gallery-wraper .title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   translate: 0 25px;
 }
 .filters-com .gallery-wraper .desc {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
 }

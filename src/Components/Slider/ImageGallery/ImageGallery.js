@@ -23,10 +23,10 @@ const ImageGallery = () => {
       <div className="filters-wraper">
         <div>
           <div  onClick={() => handleImagCat("all")}>All</div>
-          <div className="activ" onClick={() => handleImagCat("cami")}>Camiler</div>
-          <div onClick={() => handleImagCat("tursim")}>Turism mekanlari</div>
+          <div className="activ" onClick={() => handleImagCat("cami")}>Camiiler</div>
+          <div onClick={() => handleImagCat("tursim")}>İnanç Turizmi Merkezleri</div>
           <div onClick={() => handleImagCat("proje")}>Projeler</div>
-          <div onClick={() => handleImagCat("yemek")}>Yemekleri</div>
+          <div onClick={() => handleImagCat("yemek")}>Yemekler</div>
         </div>
       </div>
       <div className="gallery-wraper">
@@ -69,7 +69,7 @@ const ImageGallery = () => {
         })}
       </div>
       {selectedImage && (
-        <div className="modal">
+        <div className="modal1">
           <img src={selectedImage} alt="Büyük Resim" />
           <button onClick={handleClickClose}>❌</button>
         </div>
