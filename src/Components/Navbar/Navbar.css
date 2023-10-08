@@ -30,7 +30,7 @@
 .container-logo {
   display: flex;
   gap: 10px;
-  margin-left: 20px !important;
+  margin-left: 0.5vw !important;
 }
 
 .adiyaman-logo {
