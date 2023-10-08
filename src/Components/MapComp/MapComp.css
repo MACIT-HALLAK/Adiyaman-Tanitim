@@ -28,21 +28,7 @@
     border-right: 10px solid transparent ;
     border-bottom: 10px solid transparent ;
 }
-@media (max-width:800px) {
-    .mapcomp-layout {
-        flex-direction: column;
-    }
-    .mapcomp-layout> div {
-        width: 100%;
-        margin: 25px 0px;
-    }
-    .mapcomp-layout > div:first-child::after {
-        right: 50%;
-        top: 178px;
-        border-top: 10px solid var(--primary-color) ;
-        border-left: 10px solid transparent ;
-    }
-}
+
 .mapcomp-layout  div > button {
     position: absolute;
     bottom: 20px;
@@ -52,6 +38,7 @@
     padding: 10px;
     border: none;
     width: 150px;
+    cursor: pointer;
 }
 .card-img-overlay {
     display: flex;
@@ -71,4 +58,58 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Arkaplanı karartan renk ve opaklık */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Modal'ı diğer elementlerin üstünde göstermek için kullanılır */
+  }
+  
+  .modal {
+    background-color: white;
+    width: 70%;
+    height: 550px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: var(--primary-color);
+  }
+  .modal-content {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  @media (max-width:800px) {
+    .mapcomp-layout {
+        flex-direction: column;
+    }
+    .mapcomp-layout> div {
+        width: 100%;
+        margin: 25px 0px;
+    }
+    .mapcomp-layout > div:first-child::after {
+        right: 50%;
+        top: 178px;
+        border-top: 10px solid var(--primary-color) ;
+        border-left: 10px solid transparent ;
+    }
+      
+  .modal {
+    width: 95%;
+  }
 }
