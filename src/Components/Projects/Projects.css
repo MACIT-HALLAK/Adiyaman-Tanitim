@@ -33,7 +33,7 @@
 .project-content p {
   padding: 20px;
   line-height: 1.6;
-  font-size: 17px;
+  font-size: 1.25rem;
   border-radius: 7px;
   margin: 0 0 40px 0;
   text-align: justify;
@@ -79,6 +79,12 @@
   object-fit: contain;
   max-height: 50px;
 }
+@media (min-width: 1800px) {
+  .main-image {
+    flex-grow: 1;
+    max-height: 490px !important;
+  }
+}
 
 hr {
   opacity: 0;
@@ -93,6 +99,9 @@ hr {
   }
   .side-content img {
     width: 100%;
+    height: auto !important;
     object-fit: contain;
+    max-height: none;
+    aspect-ratio: auto;
   }
 }
