@@ -31,18 +31,22 @@ const Navbar = () => {
           <div className="container-logo">
             <div className="logo-img-con hide-img">
               {' '}
-              <img
+             <a href='https://www.tbb.gov.tr/Tr/'>
+             <img
                 className="footer-img2 nav-img "
                 src={slidimage2}
                 alt="footer-img2"
               />
+              </a> 
             </div>
             <div className="logo-img-con hide-img">
+            <a href='https://ww.adiyaman.bel.tr/'>
               <img
                 className="footer-img1 nav-img "
                 src={slidimage1}
                 alt="footer-img1"
               />
+              </a>
             </div>
             <img className="adiyaman-logo" src={logo} alt="logo" />
           </div>

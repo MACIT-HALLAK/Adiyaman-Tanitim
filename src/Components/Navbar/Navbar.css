@@ -121,7 +121,9 @@ a {
 .nav-img {
   mix-blend-mode: color-burn;
 }
-
+.nav-img:hover {
+  mix-blend-mode:normal;
+}
 .logo-img-con {
   box-sizing: border-box;
   --img-border: 0.5rem;
@@ -131,14 +133,6 @@ a {
   -moz-border-radius: var(--img-border);
   -ms-border-radius: var(--img-border);
   -o-border-radius: var(--img-border);
-}
-
-.logo-img-con img {
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
 }
 
 /* Media Queies */
