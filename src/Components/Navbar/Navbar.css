@@ -296,7 +296,8 @@ a {
 }
 @media (max-width: 375px) {
   .adiyaman-logo {
-    left: 10%;
+    left: 0.2vw;
+    top: 7.4vh;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
