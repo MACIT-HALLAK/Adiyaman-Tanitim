@@ -58,33 +58,35 @@ function VideoList() {
   };
 
   return (
-    <div className="videos-layout">
-      <Navbar />
-      <div className="rota-layout">
-        <div className="video-container">
-          {dataVideos?.map((item, index) => (
-            <React.Fragment key={index}>
-              {console.log(item)}
-              <Video
-                key={index}
-                item={item}
-                index={index}
-                playingVideoIndex={playingVideoIndex}
-                setPlayed={setPlayed}
-                setDuration={setDuration}
-                played={played}
-                duration={duration}
-                setPlayingVideoIndex={setPlayingVideoIndex}
-                videoState={videoStates[index]}
-                updateVideoState={(newState) =>
-                  updateVideoState(index, newState)
-                }
-              />
-            </React.Fragment>
-          ))}
+    <>
+      <div className="videos-layout">
+        <Navbar />
+        <div className="rota-layout">
+          <div className="video-container">
+            {dataVideos?.map((item, index) => (
+              <React.Fragment key={index}>
+                {console.log(item)}
+                <Video
+                  key={index}
+                  item={item}
+                  index={index}
+                  playingVideoIndex={playingVideoIndex}
+                  setPlayed={setPlayed}
+                  setDuration={setDuration}
+                  played={played}
+                  duration={duration}
+                  setPlayingVideoIndex={setPlayingVideoIndex}
+                  videoState={videoStates[index]}
+                  updateVideoState={(newState) =>
+                    updateVideoState(index, newState)
+                  }
+                />
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

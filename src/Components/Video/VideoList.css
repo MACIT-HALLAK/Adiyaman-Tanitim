@@ -81,10 +81,6 @@ video::-webkit-media-controls-download-button {
   margin-bottom: 5px;
 }
 
-.videos-layout .container .adiyaman-logo {
-  /* margin-left: 20px; */
-}
-
 .play-button.pause-hide {
   opacity: 0;
   transition: opacity 0.25s ease-out;
@@ -194,4 +190,10 @@ svg {
   -moz-border: 1px solid var(--secondary-color);
   -ms-border: 1px solid var(--secondary-color);
   -o-border: 1px solid var(--secondary-color);
+}
+
+@media (max-width: 790px) {
+  .videos-layout .container {
+    width: 90% !important;
+  }
 }
