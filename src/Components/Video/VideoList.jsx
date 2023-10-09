@@ -3,27 +3,32 @@ import './VideoList.css';
 import Video from './Video';
 import Navbar from '../Navbar/Navbar';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
+import rota1 from '../../Assets/Rotalar/Rota1.mp4';
+import rota2 from '../../Assets/Rotalar/Rota2.mp4';
+import rota3 from '../../Assets/Rotalar/Rota3.mp4';
+import rota4 from '../../Assets/Rotalar/Rota4.mp4';
+import rota5 from '../../Assets/Rotalar/Rota5.mp4';
 
 const dataVideos = [
   {
     title: 'Şehir İçi Tur',
-    url: '16yyeUlAedga9Ck1-1dOpbzFwKS_LCSC9',
+    url: rota1,
   },
   {
     title: 'Şehir İçi Tur',
-    url: '1rq4JuFd95l4TMi8TQeGHhzm474D_cY-h',
+    url: rota2,
   },
   {
     title: 'Şehir Dışı Tur Nemrut Gun Batımı',
-    url: '1IEEbpwEF00kmnMgAt91PjZMNREmn3MYY',
+    url: rota3,
   },
   {
     title: 'Şehir Dışı Tur Nemrut Gun Dogumu',
-    url: '1YB05JlDRzy46gXcEGnoPcsuNpp7XxTYH',
+    url: rota4,
   },
   {
     title: 'Şehir Dışı Tur',
-    url: '1d-x1yY4YtRYJxny_106IJHc9KCRnposp',
+    url: rota5,
   },
 ];
 
@@ -59,6 +64,7 @@ function VideoList() {
         <div className="video-container">
           {dataVideos?.map((item, index) => (
             <React.Fragment key={index}>
+              {console.log(item)}
               <Video
                 key={index}
                 item={item}

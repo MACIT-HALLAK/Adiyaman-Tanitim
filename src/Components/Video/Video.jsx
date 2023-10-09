@@ -139,7 +139,7 @@ const Video = (props) => {
 
       <ReactPlayer
         ref={playerRef}
-        url={`https://drive.google.com/uc?id=${item?.url}`}
+        url={item?.url}
         playing={playingVideoIndex === index && isPlaying}
         loop
         width="100%"
