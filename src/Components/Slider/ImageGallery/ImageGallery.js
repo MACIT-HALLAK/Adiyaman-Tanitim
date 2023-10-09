@@ -35,7 +35,7 @@ const ImageGallery = () => {
           {
             return (
               <div key={index}>
-                <div className="image-gallery">
+                <div className="image-gallery image-animation">
                   <img
                     onClick={() => handleClick(item.img)}
                     src={item.img}
@@ -52,7 +52,7 @@ const ImageGallery = () => {
           if (item.cat === ImagCat) {
             return (
               <div key={index}>
-                <div className="image-gallery">
+                <div className="image-gallery image-animation">
                   <img
                     onClick={() => handleClick(item.img)}
                     src={item.img}
