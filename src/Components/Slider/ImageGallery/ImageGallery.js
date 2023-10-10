@@ -1,18 +1,19 @@
-import "./ImageGallery.css";
-import { data } from "../../../lib/dummy";
-import { useState } from "react";
+import './ImageGallery.css';
+import { data } from '../../../lib/dummy';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const ImageGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [ImagCat, setImagCat] = useState("all");
+  const [ImagCat, setImagCat] = useState('all');
 
   const handleClick = (image) => {
     setSelectedImage(image);
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
   };
   const handleClickClose = () => {
     setSelectedImage(null);
-    document.body.style.overflow = "scroll";
+    document.body.style.overflow = 'scroll';
   };
   const handleImagCat = (val) => {
     setImagCat(val);
@@ -22,17 +23,41 @@ const ImageGallery = () => {
     <div className="filters-com">
       <div className="filters-wraper">
         <div>
-          <div  onClick={() => handleImagCat("all")}>All</div>
-          <div className="activ" onClick={() => handleImagCat("cami")}>Camiiler</div>
-          <div onClick={() => handleImagCat("tursim")}>İnanç Turizmi Merkezleri</div>
-          <div onClick={() => handleImagCat("proje")}>Projeler</div>
-          <div onClick={() => handleImagCat("yemek")}>Yemekler</div>
+          <div>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Areas"
+            >
+              Inanç Turizm Merkezleri
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Videos"
+            >
+              Rotalar
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Hakkinda"
+            >
+              Hakkında
+            </NavLink>
+          </div>
         </div>
       </div>
       <div className="gallery-wraper">
         {data?.map((item, index) => {
-          if(ImagCat === "all")
-          {
+          if (ImagCat === 'all') {
             return (
               <div key={index}>
                 <div className="image-gallery image-animation">
