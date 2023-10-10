@@ -6,7 +6,7 @@ import logoImg from '../../Assets/images/logo/adiyaman-logo.png';
 import mainImg from '../../Assets/images/hakkinda/main-image.jpg';
 
 const Projects = () => {
-  useDocumentTitle('Projeler');
+  useDocumentTitle('Hakkında');
 
   return (
     <>
