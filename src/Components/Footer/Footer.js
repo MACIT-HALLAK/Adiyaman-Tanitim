@@ -33,12 +33,12 @@ const Footer = () => {
 
           <ul className="ul-menu">
             <li style={{ '--i': 1 }}>
-              <a href="https://www.facebook.com/AdiyamanBelTR">
+              <a href="https://www.facebook.com/AdiyamanBelTR" target="blank">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
             <li style={{ '--i': 2 }}>
-              <a href="https://twitter.com/adiyamanbeltr">
+              <a href="https://twitter.com/adiyamanbeltr" target="blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="1em"
@@ -50,17 +50,23 @@ const Footer = () => {
               </a>
             </li>
             <li style={{ '--i': 0 }}>
-              <a href="https://www.linkedin.com/in/ad%C4%B1yaman-belediyesi-a80816183">
+              <a
+                href="https://www.linkedin.com/in/ad%C4%B1yaman-belediyesi-a80816183"
+                target="blank"
+              >
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
             <li style={{ '--i': 6 }}>
-              <a href="https://www.instagram.com/adiyamanbeltr">
+              <a href="https://www.instagram.com/adiyamanbeltr" target="blank">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
             <li style={{ '--i': 7 }}>
-              <a href="https://www.youtube.com/@AdiyamanBelediyeTv">
+              <a
+                href="https://www.youtube.com/@AdiyamanBelediyeTv"
+                target="blank"
+              >
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
             </li>
