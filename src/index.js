@@ -7,7 +7,7 @@ import Areas from './Components/Areas/Areas';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import VideoList from './Components/Video/VideoList';
 import Projects from './Components/Projects/Projects';
-import './i18n';
+import Deneme from './Components/Deneme/Deneme';
 
 const routers = createBrowserRouter([
   {
@@ -29,6 +29,10 @@ const routers = createBrowserRouter([
   {
     path: '/Hakkinda',
     element: <Projects />,
+  },
+  {
+    path: '/Deneme',
+    element: <Deneme />,
   },
 ]);
 
