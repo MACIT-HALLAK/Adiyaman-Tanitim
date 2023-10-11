@@ -3,6 +3,7 @@ import map from '../../Assets/images/map.png';
 import GoogleMap from '../GoogleMap/GoogleMap.js';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { t } from 'i18next';
 
 const MapComp = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ const MapComp = () => {
               }
               to="/Videos"
             >
-              Adıyaman'ı Keşfetmeye Hazır mısınız?
+              {t('anasayfa.gallery.footer.text')}
             </NavLink>
           </p>
         </div>
@@ -36,7 +37,9 @@ const MapComp = () => {
           </div>
 
           <div className="card-img-overlay">
-            <button onClick={openModal}>TIKLAYINIZ</button>
+            <button onClick={openModal}>
+              {t('anasayfa.gallery.footer.button')}
+            </button>
           </div>
         </div>
       </div>

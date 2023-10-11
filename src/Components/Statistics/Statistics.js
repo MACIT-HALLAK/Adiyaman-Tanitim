@@ -1,99 +1,95 @@
+import { useTranslation } from 'react-i18next';
 import './Statistics.css';
 import React, { useState, useEffect } from 'react';
 
 const Statistics = () => {
-    const [population, setPopulation] = useState(0);
-    const [malePopulation, setMalePopulation] = useState(0);
-    const [femalePopulation, setFemalePopulation] = useState(0);
-    let Statistics_line1 = document.querySelector(".statistics-line-1");
-    let Statistics_line2 = document.querySelector(".statistics-line-2");
-    let Statistics_line3 = document.querySelector(".statistics-line-3");
-    
-    useEffect(() => {
-        const targetPopulation = 635169;
-        const targetMalePopulation = 320177;
-        const targetFemalePopulation = 314992;
-        const duration = 2000; // 2 saniye
-        
+  const { t } = useTranslation();
+  const [population, setPopulation] = useState(0);
+  const [malePopulation, setMalePopulation] = useState(0);
+  const [femalePopulation, setFemalePopulation] = useState(0);
+  let Statistics_line1 = document.querySelector('.statistics-line-1');
+  let Statistics_line2 = document.querySelector('.statistics-line-2');
+  let Statistics_line3 = document.querySelector('.statistics-line-3');
 
-        let startTimestamp;
-        let requestId;
-        
-        const updatePopulations = (timestamp) => {
-            if (!startTimestamp) {
-                startTimestamp = timestamp;
-            }
+  useEffect(() => {
+    const targetPopulation = 635169;
+    const targetMalePopulation = 320177;
+    const targetFemalePopulation = 314992;
+    const duration = 2000; // 2 saniye
 
-            const elapsedTime = timestamp - startTimestamp;
-            const nextPopulation = Math.min(
-                Math.ceil((elapsedTime / duration) * targetPopulation),
-                targetPopulation
-            );
-            const nextMalePopulation = Math.min(
-                Math.ceil((elapsedTime / duration) * targetMalePopulation),
-                targetMalePopulation
-            );
-            const nextFemalePopulation = Math.min(
-                Math.ceil((elapsedTime / duration) * targetFemalePopulation),
-                targetFemalePopulation
-            );
+    let startTimestamp;
+    let requestId;
 
-            setPopulation(nextPopulation);
-            setMalePopulation(nextMalePopulation);
-            setFemalePopulation(nextFemalePopulation);
+    const updatePopulations = (timestamp) => {
+      if (!startTimestamp) {
+        startTimestamp = timestamp;
+      }
 
-            if (nextPopulation < targetPopulation) {
-                requestId = requestAnimationFrame(updatePopulations);
-            }
-        };
+      const elapsedTime = timestamp - startTimestamp;
+      const nextPopulation = Math.min(
+        Math.ceil((elapsedTime / duration) * targetPopulation),
+        targetPopulation
+      );
+      const nextMalePopulation = Math.min(
+        Math.ceil((elapsedTime / duration) * targetMalePopulation),
+        targetMalePopulation
+      );
+      const nextFemalePopulation = Math.min(
+        Math.ceil((elapsedTime / duration) * targetFemalePopulation),
+        targetFemalePopulation
+      );
 
-        const handleScroll = () => {
-            if (window.scrollY > 155) {
-                requestId = requestAnimationFrame(updatePopulations);
-            }
-        };
-        
-        
+      setPopulation(nextPopulation);
+      setMalePopulation(nextMalePopulation);
+      setFemalePopulation(nextFemalePopulation);
 
-        window.addEventListener('scroll', handleScroll);
+      if (nextPopulation < targetPopulation) {
+        requestId = requestAnimationFrame(updatePopulations);
+      }
+    };
 
-        return () => {
-            if (requestId) {
-                cancelAnimationFrame(requestId);
-            }
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-    if (window.scrollY > 155) {
-        Statistics_line1.style.display = 'block';
-        Statistics_line2.style.display = 'block';
-        Statistics_line3.style.display = 'block';
+    const handleScroll = () => {
+      if (window.scrollY > 155) {
+        requestId = requestAnimationFrame(updatePopulations);
+      }
+    };
 
-        
-    }
-    
-    
-    return (
-        <div className="Statistics">
-            <div>
-                Nüfus Sayısı
-                <div className='statistics-line-1'></div>
-                <span>{population.toLocaleString()}</span>
-            </div>
+    window.addEventListener('scroll', handleScroll);
 
-            <div>
-                Erkek Nüfusu
-                <div className='statistics-line-2'></div>
-                <span>{malePopulation.toLocaleString()}</span>
-            </div>
+    return () => {
+      if (requestId) {
+        cancelAnimationFrame(requestId);
+      }
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  if (window.scrollY > 155) {
+    Statistics_line1.style.display = 'block';
+    Statistics_line2.style.display = 'block';
+    Statistics_line3.style.display = 'block';
+  }
 
-            <div>
-                Kadın Nüfusu
-                <div className='statistics-line-3'></div>
-                <span>{femalePopulation.toLocaleString()}</span>
-            </div>
-        </div>
-    );
-}
+  return (
+    <div className="Statistics">
+      <div>
+        {t('anasayfa.istatistic.nufusSayisi')}
+        <div className="statistics-line-1"></div>
+        <span>{population.toLocaleString()}</span>
+      </div>
+
+      <div>
+        {t('anasayfa.istatistic.erkekSayisi')}
+        <div className="statistics-line-2"></div>
+        <span>{malePopulation.toLocaleString()}</span>
+      </div>
+
+      <div>
+        {t('anasayfa.istatistic.kadinSayisi')}
+        <div className="statistics-line-3"></div>
+        <span>{femalePopulation.toLocaleString()}</span>
+      </div>
+    </div>
+  );
+};
 
 export default Statistics;

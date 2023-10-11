@@ -1,0 +1,187 @@
+{
+  "anasayfa": {
+    "navbar": {
+      "ana": "Anasayfa",
+      "rotalar": "Rotalar",
+      "inanc": "Inanç Turizm Merkezleri",
+      "hakkinda": "Hakkında"
+    },
+    "sliders": {
+      "baslik": "ADIYAMAN'I KEŞFETMEYE HAZIR MISINIZ ?",
+      "slide1": {
+        "title": "Abuzer Gaffari Türbesi",
+        "content": "Sahabelerden olduğu söylenir. Adıyaman’da savaşırken düşmanlar tarafından şehit edildiği ve buraya gömüldüğü rivayet edilmektedir."
+      },
+      "slide2": {
+        "title": "Adıyaman Kalesi",
+        "content": "Adıyaman şehir merkezinde yer alan kale yaklaşık 25 metre yükseklikteki yığma bir höyük üzerine kurulmuştur. VII. yüzyıl ortalarında Bizans saldırılarına karşı koymak amacıyla Emevi komutanı Mansur İbn-i Cavana yaptırdığı bilinmektedir"
+      },
+      "slide3": {
+        "title": "Altınlı Köprüsü",
+        "content": "Adıyaman’ın Gölbaşı ilçesine bağlı olan Yolbağ Köyü’ndeki Altınlı Köprü, şehrin en eski kalıntılarının başında geliyor. Altınlı Köprü’nün tarihi Roma dönemlerine dayanmakta ve günümüze kadar çok fazla tadilat görmemiştir. Yapımı sırasında beyaz kesme taş ve moloz taş kullanıldığı görülen köprü, büyük dört kemerden oluşmaktadır. Yapım tarihi ise kesin olarak bilinmemektedir"
+      },
+      "slide4": {
+        "title": "Arsemia",
+        "content": "Arsemia Antik Kenti, Nemrut güzergâhı üzerindeki bir başka ören yeri. Kommagene medeniyetinin bir dönem başkentiymiş burası. Kale olarak da adlandırılan Arsemia, savunma amacıyla kullanılmasının yanısıra dini amaçlı tüneller kazmak için de kullanılmış"
+      },
+      "slide5": {
+        "title": "Nemrud Arslanlı Horoskop",
+        "content": "Aslanın gövdesinde 19 yıldız vardır. Her yıldız sivri uçlu sekiz ışından oluşur. Konumlarındaki küçük değişiklikler dışında, bu yıldızlar Eratostenes'in Ephemeris'inde tasvir ettiği Aslan Konstelasyonu'nu temsil eder."
+      },
+      "slide6": {
+        "title": "Cendere Köprüsü",
+        "content": "Cendere Köprüsü, Roma İmparatoru Septimius Severus adına M.S. 193 yılında inşa edilmiş olup halen kullanılmakta olan en eski köprülerden birisidir."
+      },
+      "slide7": {
+        "title": "Dikilitaş (Sesönk)",
+        "content": "Besni ilçesi Hacıhalil ve Dikilitaş köyü yakınlarında konumlanan, Roma dönemine ait anıt mezar olan Dikilitaş (Sesönk), Kızıldağ üzerinde yer alır."
+      },
+      "slide8": {
+        "title": "Gerger Kalesi",
+        "content": "Gerger Kalesi Adıyaman Oymaklı Köyü'nde bulunmaktadır. Tarihi Geç Hitit Beylikleri Dönemi'ne kadar dayanır. Ancak Eski Gerger Kenti'nin MÖ. 3'üncü yüzyılda Arsames adında Seleukos kralı zamanında kurulduğu bilinmektedir. MÖ. II. yüzyılda ise Fırat (Euphrat) Arsameiası olarak adlandırılmaktaydı."
+      },
+      "slide9": {
+        "title": "Gerger Kanyonu",
+        "content": "2004 yılında kent turizmine kazandırılan Gerger Kanyonu, Fırat Nehri ile Atatürk Baraj Gölü’nün kesiştiği noktada yer almaktadır. Eskiden çok fazla bilinmeyen bu kanyon, son yıllarda popüler olmaya başlamıştır. Yolunuz buraya düşerse bu doğal güzelliğin tadını çıkarmak için mutlaka Gerger Kanyonu’na uğramalısınız."
+      },
+      "slide10": {
+        "title": "Antiochos Apollon",
+        "content": "Adıyaman'ın Gerger ilçesinde keşfedilen Temenosta Kral l. Antiochos ve Tanrı Apollon'un tokalaşma sahnesi ile Antiochos kanunların yazılı olduğu steller görülmeye değer."
+      },
+      "slide11": {
+        "title": "Karakuş Tümülüsü",
+        "content": "Adıyaman-Kahta girişinde bulunan, Kommagene Kralı II. Mithridates tarafından annesi İsas adına yaptırılan anıt mezar, sütun üzerindeki kartaldan dolayı Karakuş Tümülüsü olarak anılmaktadır."
+      },
+      "slide12": {
+        "title": "Keleş Konağı",
+        "content": "Keleş Konağı, Adıyaman Merkez ilçesinde Hısn-ı Mansur Kalesi’nin altında bulunuyor. Buranın restorasyonu tamamlanmıştır. Kale yolu ve merpenlerinin yenilendiği konak günümüzde sosyal tesis olarak hizmet veriyor."
+      },
+      "slide13": {
+        "title": "Mahmud El Ensari",
+        "content": "Medineli bir Sahabe olduğu rivayet edilmektedir. İslamiyet’i yaymak amacıyla Anadolu’ya gelmiş ve burada şehit düşmüştür. Mezarının bulunduğu yerde başka şehitlerin de olduğu rivayet edilir."
+      },
+      "slide14": {
+        "title": "Musalla Cami",
+        "content": "Adıyaman merkezde bulunan camiinin yapım tarihi kesin olarak bilinmemektedir. 1308 hicri 1890 miladi yılında deprem sonucu minaresinin yıkıldığı rivayet edilmektedir. Dolayısıyla daha önce inşa edilmiş olmalıdır."
+      },
+      "slide15": {
+        "title": "Nemrut Dağı Örenyeri",
+        "content": " 1987 yılında UNESCO İnsanlığın Kültür Mirası listesine girmiş olan Nemrut Dağı Örenyeri, İl merkezine 77 km, Kahta ilçesine 43 km uzaklıktadır. Dünya Miras Alanı bu yer, Doğu Toros sıradağları üzerinde 2.206 metre yükseklikte, Fırat Nehri geçitlerine ve ovaya hakim bir tepe üzerinde yer almaktadır."
+      },
+      "slide16": {
+        "title": "Perre Antik Kenti",
+        "content": "Eski kaynaklarda Me’arath gazze Pörön, Mezopotamya’da ise Pirin ve Perin olarak bilinen Kommagene Krallığı’nın beş büyük kentinden biri olan Perre Antik Kenti, Melitene’yi (Malatya) başkent Samosata’ya (Samsat) bağlayan yol güzergahı üzerinde olması nedeniyle geçmişte jeopolitik bir öneme sahipti."
+      },
+      "slide17": {
+        "title": "Mor Petrus ve Mor Paulus Kilisesi",
+        "content": "Mor Petrus ve Mor Paulus Kilisesi Adıyaman Merkez Mara Mahallesi'ndedir. 4 veya 5'inci yüzyılda yapıldığı tahmin edilen kilise, giriş kapısı üzerinde ve içeride bulunan Süryanice kitabelere göre 1888 ve 1905 yıllarında onarım görmüştür."
+      },
+      "slide18": {
+        "title": "Tuzhanı",
+        "content": "Tarihte yolcuların konaklama ve ticaret merkezi olarak inşa edilen ve günümüze kadar ayakta kalmayı başaran 200 yıllık Tarihi Tuz Hanı, aslına ve günümüz şartlarına uygun yapılan restorasyon çalışmalarının ardından mimari güzelliğiyle dikkatleri üzerinde topluyor."
+      },
+      "submit": "Şimdi Keşfet"
+    },
+    "istatistic": {
+      "nufusSayisi": "Nüfus Sayısı",
+      "erkekSayisi": "Erkek Nüfusu",
+      "kadinSayisi": "Kadın Nüfusu"
+    },
+    "gallery": {
+      "header": {
+        "mainTitle": "Adıyaman'a aşık olacaksınız",
+        "title": "Adıyamani'ı Nemrut daği'dan Cendere Köprüsü'ne keşfedin",
+        "list": {
+          "first": "INANÇ TURIZM MERKEZLERI",
+          "second": "ROTALAR",
+          "third": "HAKKINDA"
+        }
+      },
+      "body": {
+        "img1": {
+          "cat": "cami",
+          "title": "MUSALLA CAMII",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img2": {
+          "cat": "cami",
+          "title": "ULU CAMII",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img3": {
+          "cat": "cami",
+          "title": "ALTINSEHIR CAMII",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img4": {
+          "cat": "cami",
+          "title": "CARSI CAMII",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img5": {
+          "cat": "cami",
+          "title": "KAP CAMII",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img6": {
+          "cat": "cami",
+          "title": "YENIPINAR CAMII",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img7": {
+          "cat": "cami",
+          "title": "DURSUN CAVUS CAMII",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img8": {
+          "cat": "tursim",
+          "title": "Besni Bekirbey Hamamı Ulucami",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img9": {
+          "cat": "tursim",
+          "title": "Besni Dikilitaş Sesönk",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img10": {
+          "cat": "tursim",
+          "title": "Eski Kahta Kalesi",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img11": {
+          "cat": "tursim",
+          "title": "Eski Kahta Kalesi",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img12": {
+          "cat": "tursim",
+          "title": "Eski Kahta Kalesi",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img13": {
+          "cat": "tursim",
+          "title": "Nemrut Dağı",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img14": {
+          "cat": "tursim",
+          "title": "Nemrut Dağı",
+          "desc": "Antik Medeniyetlerin İzinde"
+        },
+        "img15": {
+          "cat": "tursim",
+          "title": "Perre Nekropol Alanı",
+          "desc": "Antik Medeniyetlerin İzinde"
+        }
+      },
+      "footer": {
+        "text": "Adıyaman'ı Keşfetmeye Hazır Mısınız?",
+        "button": "tıklayınız"
+      }
+    },
+    "footerSection": "Türkiye Belediyeler Birliği, uluslararası kuruluşların ve merkezi yönetimin öne çıkardığı konularda belediyeler düzeyinde farkındalığı artırmak amacıyla yarışmalar tertip etmektedir. Bu çerçevede, “Şehirlerde İnanç Turizminin Desteklenmesi Fikir ve Proje Yarışması” düzenlenmiş ve Adıyaman Belediyesi dereceye girmiştir. Bu web sitesi Adıyaman Belediyesi'nin yarışma projesi olan Adıyaman'ı Keşfet projesinin bir ürünüdür."
+  },
+  "hakkinda": {
+    "hedef": "Projenin Hedef ve Amaçları"
+  }
+}

@@ -9,13 +9,22 @@ import MapComp from './Components/MapComp/MapComp';
 import Map from './Components/Map/Map';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import useDocumentTitle from './Hooks/useDocumentTitle';
+import { useTranslation, Trans } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import LangCom from './Components/lang/LangCom';
 
 function App() {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lang) => {
+    localStorage.setItem('lang', lang || 'tr');
+    i18n.changeLanguage(lang || 'tr');
+  };
   useDocumentTitle('Ana Sayfa');
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar />
+        <Navbar changeLanguage={changeLanguage} />
         <Content />
         <Statistics />
         <Map />

@@ -1,0 +1,187 @@
+{
+  "anasayfa": {
+    "navbar": {
+      "ana": "Home",
+      "rotalar": "Routes",
+      "inanc": "Religious Tourism Centres",
+      "hakkinda": "About"
+    },
+    "sliders": {
+      "baslik": "ARE YOU READY TO DISCOVER ADIYAMAN?",
+      "slide1": {
+        "title": "Tomb of Abuzer Gaffari",
+        "content": "He is believed to be one of the Companions. It's said he was martyred by enemies while fighting in Adıyaman and buried here."
+      },
+      "slide2": {
+        "title": "Adıyaman Castle",
+        "content": "Situated in the Adıyaman city center, the castle is built on a mound approximately 25 meters high. It is believed to have been constructed by the Umayyad commander, Mansur Ibn-i Cavana, in the mid-7th century to fend off Byzantine attacks."
+      },
+      "slide3": {
+        "title": "Golden Bridge",
+        "content": "Located in Adıyaman's Gölbaşı district near Yolbağ Village, the Golden Bridge is among the city's oldest relics. Its history traces back to the Roman period and has seen minimal renovations. Built using white cut stone and rubble, it consists of four large arches. Its exact construction date remains uncertain."
+      },
+      "slide4": {
+        "title": "Arsemia",
+        "content": "Arsemia Ancient City is another historical site on the Nemrut route. It was once the capital of the Kommagene civilization. Also known as the castle, Arsemia was utilized not only for defense but also for religious purposes, like tunnel digging."
+      },
+      "slide5": {
+        "title": "Nemrut Lion Horoscope",
+        "content": "The lion's body features 19 stars, each comprising eight pointed rays. Except for slight variations in their positions, these stars represent the Leo Constellation as depicted in Eratosthenes' Ephemeris."
+      },
+      "slide6": {
+        "title": "Cendere Bridge",
+        "content": "Built in honor of Roman Emperor Septimius Severus in 193 AD, the Cendere Bridge stands as one of the oldest bridges still in use today."
+      },
+      "slide7": {
+        "title": "Dikilitaş (Sesönk)",
+        "content": "Located near the Besni district's Hacıhalil and Dikilitaş villages, Dikilitaş (Sesönk) is a Roman-era monument situated on the Red Mountain."
+      },
+      "slide8": {
+        "title": "Gerger Castle",
+        "content": "Gerger Castle is found in Adıyaman's Oymaklı Village. Its history dates back to the Late Hittite Kingdom period. The Old Gerger City, however, is believed to have been founded during the reign of a Seleucid king named Arsames in the 3rd century BC. By the 2nd century BC, it was referred to as Euphrates Arsameia."
+      },
+      "slide9": {
+        "title": "Gerger Canyon",
+        "content": "Introduced to city tourism in 2004, Gerger Canyon is situated at the intersection of the Euphrates River and Atatürk Dam Lake. Once a hidden gem, the canyon has gained popularity in recent years. If you're in the area, a visit to this natural beauty is a must."
+      },
+      "slide10": {
+        "title": "Antiochos Apollon",
+        "content": "Discovered in Adıyaman's Gerger district, the Temple features King I. Antiochos and God Apollon shaking hands, alongside stellae inscribed with the laws of Antiochos, a sight worth seeing."
+      },
+      "slide11": {
+        "title": "Karakuş Tumulus",
+        "content": "Located at the entrance of Adıyaman-Kahta, this monument was built by Kommagene King II. Mithridates in honor of his mother İsas. Due to the eagle on its column, it's referred to as the Karakuş Tumulus."
+      },
+      "slide12": {
+        "title": "Keleş Mansion",
+        "content": "Keleş Mansion is situated below the Hısn-ı Mansur Castle in Adıyaman's central district. The mansion has been restored and now serves as a social facility, with its route and stairs being renovated."
+      },
+      "slide13": {
+        "title": "Mahmud El Ensari",
+        "content": "Believed to be a Companion from Medina. He came to Anatolia to spread Islam and was martyred here. It is rumored that other martyrs are buried at the same site."
+      },
+      "slide14": {
+        "title": "Musalla Mosque",
+        "content": "Located in Adıyaman's city center, the construction date of the mosque remains uncertain. It's said that its minaret collapsed due to an earthquake in 1890, implying it was built before that time."
+      },
+      "slide15": {
+        "title": "Mount Nemrut Historical Site",
+        "content": "Incorporated into UNESCO's World Heritage list in 1987, the Mount Nemrut Historical Site is 77 km from the city center and 43 km from the Kahta district. This World Heritage Site is perched on a hill 2,206 meters high in the Eastern Taurus mountain range, overlooking the Euphrates River crossings and the plain."
+      },
+      "slide16": {
+        "title": "Perre Ancient City",
+        "content": "Known as Me’arath gazze Pörön in ancient sources and Pirin or Perin in Mesopotamia, the Perre Ancient City was one of the five major cities of the Kommagene Kingdom. Its geopolitical significance stemmed from its location on the route connecting Melitene (Malatya) to the capital Samosata (Samsat)."
+      },
+      "slide17": {
+        "title": "Mor Petrus and Mor Paulus Church",
+        "content": "The Mor Petrus and Mor Paulus Church is located in Adıyaman's central Mara District. Estimated to have been built in the 4th or 5th century, the church underwent renovations in 1888 and 1905, as indicated by Syriac inscriptions found at its entrance and inside."
+      },
+      "slide18": {
+        "title": "Tuzhanı",
+        "content": "The 200-year-old Historic Tuz Han, constructed in the past as a resting and trade center for travelers, stands out with its architectural beauty after recent restorations."
+      },
+      "submit": "Discover Now"
+    },
+    "istatistic": {
+      "nufusSayisi": "Population Count",
+      "erkekSayisi": "Male Population",
+      "kadinSayisi": "Female Population"
+    },
+    "gallery": {
+      "header": {
+        "mainTitle": "You'll fall in love with Adıyaman",
+        "title": "Discover Adıyaman from Mount Nemrut to Cendere Bridge",
+        "list": {
+          "first": "RELIGIOUS TOURISM CENTERS",
+          "second": "ROUTES",
+          "third": "ABOUT"
+        }
+      },
+      "body": {
+        "img1": {
+          "cat": "mosque",
+          "title": "MUSALLA MOSQUE",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img2": {
+          "cat": "mosque",
+          "title": "ULU MOSQUE",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img3": {
+          "cat": "mosque",
+          "title": "ALTINSEHIR MOSQUE",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img4": {
+          "cat": "mosque",
+          "title": "CARSI MOSQUE",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img5": {
+          "cat": "mosque",
+          "title": "KAP MOSQUE",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img6": {
+          "cat": "mosque",
+          "title": "YENIPINAR MOSQUE",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img7": {
+          "cat": "mosque",
+          "title": "DURSUN CAVUS MOSQUE",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img8": {
+          "cat": "tourism",
+          "title": "Besni Bekirbey Hamam Ulucami",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img9": {
+          "cat": "tourism",
+          "title": "Besni Dikilitaş Sesönk",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img10": {
+          "cat": "tourism",
+          "title": "Old Kahta Castle",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img11": {
+          "cat": "tourism",
+          "title": "Old Kahta Castle",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img12": {
+          "cat": "tourism",
+          "title": "Old Kahta Castle",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img13": {
+          "cat": "tourism",
+          "title": "Mount Nemrut",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img14": {
+          "cat": "tourism",
+          "title": "Mount Nemrut",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        },
+        "img15": {
+          "cat": "tourism",
+          "title": "Perre Necropolis Area",
+          "desc": "In the Footsteps of Ancient Civilizations"
+        }
+      },
+      "footer": {
+        "text": "Are you ready to discover Adıyaman?",
+        "button": "Click here"
+      }
+    },
+    "footerSection": "The Union of Municipalities of Turkey organizes competitions with the aim of increasing awareness at the municipal level on issues highlighted by international organizations and the central government. In this context, a 'Supporting Faith Tourism in Cities Idea and Project Competition' was held, and the Adıyaman Municipality was among the top contenders. This website is a product of the 'Discover Adıyaman' project, which was the competition entry of the Adıyaman Municipality."
+  },
+  "hakkinda": {
+    "hedef": "Goals and Objectives of the Project"
+  }
+}

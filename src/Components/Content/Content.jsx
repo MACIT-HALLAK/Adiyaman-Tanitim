@@ -21,10 +21,13 @@ import slidimage17 from '../../Assets/images/sliders/slider17.jpeg';
 import slidimage18 from '../../Assets/images/sliders/slider18.jpeg';
 import { Link } from 'react-router-dom';
 import TypeWriter from './TypeWriter';
+import { useTranslation } from 'react-i18next';
 
 const ImageComponent = React.lazy(() => import('../skeletons/ImageComponent'));
 
 const Content = () => {
+  const { t } = useTranslation();
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     slidimage1,
@@ -56,7 +59,7 @@ const Content = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const sentence = "ADIYAMAN'I KEŞFETMEYE HAZIR MISINIZ ?";
+  const sentence = t('anasayfa.sliders.baslik');
 
   const [textValues] = useState([
     {
@@ -150,7 +153,6 @@ const Content = () => {
         'Tarihte yolcuların konaklama ve ticaret merkezi olarak inşa edilen ve günümüze kadar ayakta kalmayı başaran 200 yıllık Tarihi Tuz Hanı, aslına ve günümüz şartlarına uygun yapılan restorasyon çalışmalarının ardından mimari güzelliğiyle dikkatleri üzerinde topluyor.',
     },
   ]);
-
   return (
     <>
       <div className="content" style={{ position: 'relative' }}>
@@ -158,11 +160,14 @@ const Content = () => {
           <p className="content-title">
             <TypeWriter text={sentence} delay={150} />
           </p>
-
-          <p className="imgTilte">{textValues[currentImageIndex]?.title}</p>
-          <p className="desc">{textValues[currentImageIndex]?.content}</p>
+          <p className="imgTilte">
+            {t(`anasayfa.sliders.slide${currentImageIndex + 1}.title`)}
+          </p>
+          <p className="desc">
+            {t(`anasayfa.sliders.slide${currentImageIndex + 1}.content`)}
+          </p>
           <button className="content-btn">
-            <Link to={'/Videos'}>Şimdi Keşfet</Link>
+            <Link to={'/Videos'}>{t('anasayfa.sliders.submit')}</Link>
           </button>
         </div>
         <Suspense fallback={<div className="skeleton-image"></div>}>
