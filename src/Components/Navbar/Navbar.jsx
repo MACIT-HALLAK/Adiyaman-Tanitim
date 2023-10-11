@@ -9,10 +9,10 @@ import LangCom from '../lang/LangCom';
 import { useTranslation } from 'react-i18next';
 const Navbar = () => {
   const { i18n } = useTranslation();
-  const lang = navigator.language;
   useEffect(() => {
+    const lang = localStorage.getItem('lang');
     i18n.changeLanguage(lang);
-  }, [lang]);
+  }, [i18n]);
   const menu = useRef();
   const nav_items = useRef();
 

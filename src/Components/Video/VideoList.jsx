@@ -65,7 +65,6 @@ function VideoList() {
           <div className="video-container">
             {dataVideos?.map((item, index) => (
               <React.Fragment key={index}>
-                {console.log(item)}
                 <Video
                   key={index}
                   item={item}

@@ -55,7 +55,6 @@ const Video = (props) => {
       isExitingFullscreen: true,
     });
     setPlayingVideoIndex(null);
-    console.log(isPlaying);
   };
 
   const handleForward = () => {
