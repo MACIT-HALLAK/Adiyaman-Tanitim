@@ -4,8 +4,11 @@ import zigzak from '../../Assets/images/zigzag.png';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
 import logoImg from '../../Assets/images/logo/adiyaman-logo.png';
 import mainImg from '../../Assets/images/hakkinda/main-image.jpg';
+import { useTransition } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
   useDocumentTitle('Hakkında');
 
   return (
@@ -14,7 +17,7 @@ const Projects = () => {
       <div className="project-container">
         <div className="project-content">
           <div className="project-title-wrapper">
-            <h1>Projenin Hedef ve Amaçları</h1>
+            <h1>{t('hakkinda.hedef')}</h1>
           </div>
           <div className="project-img">
             <img src={zigzak} alt="zigzak" />

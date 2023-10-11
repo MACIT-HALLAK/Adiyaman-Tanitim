@@ -1,9 +1,10 @@
 import './ImageGallery.css';
 import { data } from '../../../lib/dummy';
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const ImageGallery = () => {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
   const [ImagCat, setImagCat] = useState('all');
 
@@ -30,7 +31,7 @@ const ImageGallery = () => {
               }
               to="/Areas"
             >
-              Inanç Turizm Merkezleri
+              {t('anasayfa.gallery.header.list.first')}
             </NavLink>
           </div>
           <div>
@@ -40,7 +41,7 @@ const ImageGallery = () => {
               }
               to="/Videos"
             >
-              Rotalar
+              {t('anasayfa.gallery.header.list.second')}
             </NavLink>
           </div>
           <div>
@@ -50,7 +51,7 @@ const ImageGallery = () => {
               }
               to="/Hakkinda"
             >
-              Hakkında
+              {t('anasayfa.gallery.header.list.third')}
             </NavLink>
           </div>
         </div>
@@ -67,8 +68,12 @@ const ImageGallery = () => {
                     alt={`${index}`}
                   />
                   <div className="text">
-                    <h2 className="title">{item.title}</h2>
-                    <p className="desc">{item.desc}</p>
+                    <h2 className="title">
+                      {t(`anasayfa.gallery.body.img${index + 1}.title`)}
+                    </h2>
+                    <p className="desc">
+                      {t(`anasayfa.gallery.body.img${index + 1}.desc`)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -84,8 +89,12 @@ const ImageGallery = () => {
                     alt={`${index}`}
                   />
                   <div className="text">
-                    <h2 className="title">{item.title}</h2>
-                    <p className="desc">{item.desc}</p>
+                    <h2 className="title">
+                      {t(`anasayfa.gallery.body.img${index + 1}.title`)}
+                    </h2>
+                    <p className="desc">
+                      {t(`anasayfa.gallery.body.img${index + 1}.desc`)}
+                    </p>
                   </div>
                 </div>
               </div>

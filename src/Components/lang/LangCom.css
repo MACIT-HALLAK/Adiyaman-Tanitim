@@ -1,0 +1,25 @@
+.languages {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.languages:hover {
+  border-color: var(--primary-color);
+}
+
+.languages:focus {
+  border-color: var(
+    --secondary-color
+  ); /* Feel free to adjust the color to match your design */
+}
+
+@media (min-width: 1290px) {
+  li:has(.languages) {
+    margin-right: 1rem;
+  }
+}

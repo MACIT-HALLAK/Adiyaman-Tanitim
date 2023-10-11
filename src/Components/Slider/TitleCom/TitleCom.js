@@ -1,13 +1,15 @@
 import React from 'react';
 import './TitleCom.css';
+import { useTranslation } from 'react-i18next';
 
 const TitleCom = () => {
+  const { t } = useTranslation();
   return (
-    <div className='title-com'>
-        <h1>Adıyaman'a aşık olacaksınız</h1>
-        <p>Adıyamani'ı Nemrut daği'dan Cendere Köprüsü'ne keşfedin</p>
+    <div className="title-com">
+      <h1>{t('anasayfa.gallery.header.mainTitle')}</h1>
+      <p>{t('anasayfa.gallery.header.title')}</p>
     </div>
-  )
-}
+  );
+};
 
-export default TitleCom
+export default TitleCom;

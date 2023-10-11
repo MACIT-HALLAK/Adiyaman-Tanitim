@@ -1,10 +1,18 @@
 import './Navbar.css';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import logo from '../../Assets/images/logo/adiyaman-logo.jpg';
 import { NavLink } from 'react-router-dom';
 import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
 import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
+import i18next, { t } from 'i18next';
+import LangCom from '../lang/LangCom';
+import { useTranslation } from 'react-i18next';
 const Navbar = () => {
+  const { i18n } = useTranslation();
+  const lang = navigator.language;
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
   const menu = useRef();
   const nav_items = useRef();
 
@@ -31,21 +39,21 @@ const Navbar = () => {
           <div className="container-logo">
             <div className="logo-img-con hide-img">
               {' '}
-             <a href='https://www.tbb.gov.tr/Tr/'>
-             <img
-                className="footer-img2 nav-img "
-                src={slidimage2}
-                alt="footer-img2"
-              />
-              </a> 
+              <a href="https://www.tbb.gov.tr/Tr/">
+                <img
+                  className="footer-img2 nav-img "
+                  src={slidimage2}
+                  alt="footer-img2"
+                />
+              </a>
             </div>
             <div className="logo-img-con hide-img">
-            <a href='https://ww.adiyaman.bel.tr/'>
-              <img
-                className="footer-img1 nav-img "
-                src={slidimage1}
-                alt="footer-img1"
-              />
+              <a href="https://ww.adiyaman.bel.tr/">
+                <img
+                  className="footer-img1 nav-img "
+                  src={slidimage1}
+                  alt="footer-img1"
+                />
               </a>
             </div>
             <img className="adiyaman-logo" src={logo} alt="logo" />
@@ -64,7 +72,7 @@ const Navbar = () => {
               }
               to={'/'}
             >
-              Anasayfa
+              {t('anasayfa.navbar.ana')}
             </NavLink>
           </li>
           <li className="alanlar">
@@ -74,7 +82,7 @@ const Navbar = () => {
               }
               to="/Areas"
             >
-              Inanç Turizm Merkezleri
+              {t('anasayfa.navbar.inanc')}
             </NavLink>
           </li>
           <li className="videos">
@@ -84,7 +92,7 @@ const Navbar = () => {
               }
               to="/Videos"
             >
-              Rotalar
+              {t('anasayfa.navbar.rotalar')}
             </NavLink>
           </li>
           <li className="projeler">
@@ -94,8 +102,11 @@ const Navbar = () => {
               }
               to="/Hakkinda"
             >
-              Hakkında
+              {t('anasayfa.navbar.hakkinda')}
             </NavLink>
+          </li>
+          <li>
+            <LangCom />
           </li>
         </ul>
       </div>

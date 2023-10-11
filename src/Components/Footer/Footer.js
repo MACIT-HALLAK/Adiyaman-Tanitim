@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 import React, { useEffect } from 'react';
 const Footer = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     const menu = document.querySelector('.menu-footer');
     const toggle = document.querySelector('.toggle');
@@ -17,15 +19,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-body">
-        <p className="footer-h3">
-          Türkiye Belediyeler Birliği, uluslararası kuruluşların ve merkezi
-          yönetimin öne çıkardığı konularda belediyeler düzeyinde farkındalığı
-          artırmak amacıyla yarışmalar tertip etmektedir. Bu çerçevede,
-          “Şehirlerde İnanç Turizminin Desteklenmesi Fikir ve Proje Yarışması”
-          düzenlenmiş ve Adıyaman Belediyesi dereceye girmiştir. Bu web sitesi
-          Adıyaman Belediyesi'nin yarışma projesi olan Adıyaman'ı Keşfet
-          projesinin bir ürünüdür.
-        </p>
+        <p className="footer-h3">{t('anasayfa.footerSection')}</p>
         <div className="menu-footer">
           <div className="toggle">
             <ion-icon name="share-social"></ion-icon>
