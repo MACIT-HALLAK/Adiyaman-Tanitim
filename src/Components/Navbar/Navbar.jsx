@@ -1,12 +1,18 @@
 import './Navbar.css';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import logo from '../../Assets/images/logo/adiyaman-logo.jpg';
 import { NavLink } from 'react-router-dom';
 import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
 import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
-import { t } from 'i18next';
+import i18next, { t } from 'i18next';
 import LangCom from '../lang/LangCom';
-const Navbar = ({ changeLanguage }) => {
+import { useTranslation } from 'react-i18next';
+const Navbar = () => {
+  const { i18n } = useTranslation();
+  const lang = navigator.language;
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
   const menu = useRef();
   const nav_items = useRef();
 
@@ -100,7 +106,7 @@ const Navbar = ({ changeLanguage }) => {
             </NavLink>
           </li>
           <li>
-            <LangCom changeLanguage={changeLanguage} />
+            <LangCom />
           </li>
         </ul>
       </div>

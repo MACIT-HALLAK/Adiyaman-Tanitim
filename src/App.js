@@ -14,17 +14,11 @@ import { useEffect, useState } from 'react';
 import LangCom from './Components/lang/LangCom';
 
 function App() {
-  const { i18n } = useTranslation();
-
-  const changeLanguage = (lang) => {
-    localStorage.setItem('lang', lang || 'tr');
-    i18n.changeLanguage(lang || 'tr');
-  };
   useDocumentTitle('Ana Sayfa');
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar changeLanguage={changeLanguage} />
+        <Navbar />
         <Content />
         <Statistics />
         <Map />

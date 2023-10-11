@@ -348,22 +348,3 @@ a {
     scale: 1 !important;
   }
 }
-
-.languages {
-  display: block;
-  padding: 10px;
-  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
-  border-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-size: 0.75rem;
-  outline: none;
-}
-.container li:has(.languages) {
-  margin-right: 1rem;
-}
-
-@media (max-width: 1290px) {
-  .container li:has(.languages) {
-    margin-left: 1rem;
-  }
-}

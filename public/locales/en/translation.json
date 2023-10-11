@@ -181,6 +181,13 @@
     },
     "footerSection": "The Union of Municipalities of Turkey organizes competitions with the aim of increasing awareness at the municipal level on issues highlighted by international organizations and the central government. In this context, a 'Supporting Faith Tourism in Cities Idea and Project Competition' was held, and the Adıyaman Municipality was among the top contenders. This website is a product of the 'Discover Adıyaman' project, which was the competition entry of the Adıyaman Municipality."
   },
+  "rotalar": {
+    "rota1": "City Tour",
+    "rota2": "City Tour",
+    "rota3": "Out-of-City Tour Nemrut Sunset",
+    "rota4": "Out-of-City Tour Nemrut Sunrise",
+    "rota5": "Out-of-City Tour"
+  },
   "hakkinda": {
     "hedef": "Goals and Objectives of the Project"
   }

@@ -181,6 +181,13 @@
     },
     "footerSection": "Türkiye Belediyeler Birliği, uluslararası kuruluşların ve merkezi yönetimin öne çıkardığı konularda belediyeler düzeyinde farkındalığı artırmak amacıyla yarışmalar tertip etmektedir. Bu çerçevede, “Şehirlerde İnanç Turizminin Desteklenmesi Fikir ve Proje Yarışması” düzenlenmiş ve Adıyaman Belediyesi dereceye girmiştir. Bu web sitesi Adıyaman Belediyesi'nin yarışma projesi olan Adıyaman'ı Keşfet projesinin bir ürünüdür."
   },
+  "rotalar": {
+    "rota1": "Şehir İçi Tur",
+    "rota2": "Şehir İçi Tur",
+    "rota3": "Şehir Dışı Tur Nemrut Gun Batımı",
+    "rota4": "Şehir Dışı Tur Nemrut Gun Dogumu",
+    "rota5": "Şehir Dışı Tur"
+  },
   "hakkinda": {
     "hedef": "Projenin Hedef ve Amaçları"
   }
