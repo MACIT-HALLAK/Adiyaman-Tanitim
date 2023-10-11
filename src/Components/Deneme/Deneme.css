@@ -1,0 +1,23 @@
+.rota-wrapper .rota-content .title {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-size: 20px;
+    color: #1976d2;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(148 163 184);;
+}
+.rota-wrapper .rota-content .content-wrap {
+    background-color: white;
+    color: var(--primary-color);
+    display: flex;
+}
+.rota-wrapper .rota-content .explain {
+   display: flex;
+   flex-direction: column;
+   font-size: 16px;
+   padding: 10px;
+   width: 50%;
+}
+.rota-wrapper .rota-content .explain span {
+    padding: 3px;
+}

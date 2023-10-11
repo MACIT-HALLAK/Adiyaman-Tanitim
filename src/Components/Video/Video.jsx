@@ -115,7 +115,7 @@ const Video = (props) => {
   }, [index]);
 
   return (
-    <div
+        <div
       ref={wrapperRef}
       id={`video_wrapper-${index}`}
       className={`video-wrapper`}
@@ -176,6 +176,7 @@ const Video = (props) => {
         )}
       </button>
     </div>
+
   );
 };
 
