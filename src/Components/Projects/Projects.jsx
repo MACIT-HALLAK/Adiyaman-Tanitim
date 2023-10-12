@@ -4,9 +4,11 @@ import zigzak from '../../Assets/images/zigzag.png';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
 import logoImg from '../../Assets/images/logo/adiyaman-logo.png';
 import mainImg from '../../Assets/images/hakkinda/main-image.jpg';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
-  useDocumentTitle('Projeler');
+  const { t } = useTranslation();
+  useDocumentTitle('Hakkında');
 
   return (
     <>
@@ -14,45 +16,24 @@ const Projects = () => {
       <div className="project-container">
         <div className="project-content">
           <div className="project-title-wrapper">
-            <h1>Projenin Hedef ve Amaçları</h1>
+            <h1>{t('hakkinda.hedef')}</h1>
           </div>
           <div className="project-img">
             <img src={zigzak} alt="zigzak" />
           </div>
           <p>
-            Projenin Hedef ve Amaçları Adıyaman başta inanç ve kültür turizmi
-            olmak üzere spor, doğa, gastronomi, sağlık turizm türleri açısından
-            oldukça büyük bir potansiyele sahiptir. İldeki tarihi yapılar
-            insanlığın ilk çağlarından başlayarak günümüze kadar birçok
-            medeniyetin izlerini taşımaktadır.
+            {t('hakkinda.content.section1')}
             <hr />
-            Bölgede yaşayan eski çağ insanları ve sonrasında hâkimiyet kuran
-            medeniyetler kendi dönemlerin inanç sistemi değerlerini eserlerine
-            yansıtmışlardır. Örneğin Nemrut Dağı, Karakuş ve Sofraz tümülüsleri
-            ile Pirin Kaya Mezarları dönemin inanç değerlerini günümüze taşıyan
-            önemli eserlerdendir. İslamiyet’in yayılması amacıyla bölgeye
-            yapılan fetihler sonucunda şehit olan ve kabri de Samsat ilçesi
-            sınırlarında bulunan Sahabe Safvan B. Muattal Hz.’de Müslüman âlemi
-            için çok önemli bir sahabedir.
+            {t('hakkinda.content.section2')}
             <hr />
-            Osmanlı dönemi eserlerinden ayakta kalan Camii, İbadethane ve
-            Türbeler de inanç turizmi açısından önemli eserlerdir. Yüzyıllardır
-            bölgede yaşayan Süryani Cemaati’nin halen Metropolitlik olarak
-            bölgedeki 7 ili kapsayan Mor Petrus-Mor Pavlus kilisesi son yıllarda
-            geçirdiği restorasyon çalışmaları sonucunda özgün mimarisine
-            kavuşarak Süryani Cemaatine hizmet vermektedir.
+            {t('hakkinda.content.section3')}
             <hr />
-            Sonuç olarak Adıyaman ilinin tüm bu inanç turizmi eserleri ile sahip
-            olduğu potansiyelinin ilin kalkınmasında hizmet edecek şekilde
-            kullanılması son derece önemlidir. Bu proje ile; *Adıyaman’ın
-            yurtiçi ve yurtdışında tanıtımının yapılması, *Bölgede inanç turizmi
-            alanında öne çıkan Şanlıurfa, Diyarbakır ve Mardin’i de kapsayan
-            Güneydoğu gezilerinde rotaya Adıyaman’ın dâhil edilerek tur
-            programlarının oluşturulması, *Adıyaman’ın sahip olduğu inanç turizm
-            potansiyelini ortaya çıkarmak, yapılacak yatırım ve verilecek
-            hizmetlere ışık tutmak, hem sosyo-ekonomik gelişmişlik farklarının
-            azaltılmasına hem de bölgenin kalkınmasına katkıda bulunmak
-            hedeflenmektedir.
+            {t('hakkinda.content.section4')}
+            <hr />
+            {t('hakkinda.content.section5')}
+            <hr />
+            {t('hakkinda.content.section6')}
+            <hr />
           </p>
         </div>
         <div className="side-content">

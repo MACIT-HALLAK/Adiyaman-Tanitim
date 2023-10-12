@@ -1,18 +1,20 @@
-import "./ImageGallery.css";
-import { data } from "../../../lib/dummy";
-import { useState } from "react";
-
+import './ImageGallery.css';
+import { data } from '../../../lib/dummy';
+import { useState, useTransition } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 const ImageGallery = () => {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
-  const [ImagCat, setImagCat] = useState("all");
+  const [ImagCat, setImagCat] = useState('all');
 
   const handleClick = (image) => {
     setSelectedImage(image);
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
   };
   const handleClickClose = () => {
     setSelectedImage(null);
-    document.body.style.overflow = "scroll";
+    document.body.style.overflow = 'scroll';
   };
   const handleImagCat = (val) => {
     setImagCat(val);
@@ -22,17 +24,41 @@ const ImageGallery = () => {
     <div className="filters-com">
       <div className="filters-wraper">
         <div>
-          <div  onClick={() => handleImagCat("all")}>All</div>
-          <div className="activ" onClick={() => handleImagCat("cami")}>Camiiler</div>
-          <div onClick={() => handleImagCat("tursim")}>İnanç Turizmi Merkezleri</div>
-          <div onClick={() => handleImagCat("proje")}>Projeler</div>
-          <div onClick={() => handleImagCat("yemek")}>Yemekler</div>
+          <div>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Areas"
+            >
+              {t('anasayfa.gallery.header.list.first')}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Videos"
+            >
+              {t('anasayfa.gallery.header.list.second')}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/Hakkinda"
+            >
+              {t('anasayfa.gallery.header.list.third')}
+            </NavLink>
+          </div>
         </div>
       </div>
       <div className="gallery-wraper">
         {data?.map((item, index) => {
-          if(ImagCat === "all")
-          {
+          if (ImagCat === 'all') {
             return (
               <div key={index}>
                 <div className="image-gallery image-animation">
@@ -42,8 +68,12 @@ const ImageGallery = () => {
                     alt={`${index}`}
                   />
                   <div className="text">
-                    <h2 className="title">{item.title}</h2>
-                    <p className="desc">{item.desc}</p>
+                    <h2 className="title">
+                      {t(`anasayfa.gallery.body.img${index + 1}.title`)}
+                    </h2>
+                    <p className="desc">
+                      {t(`anasayfa.gallery.body.img${index + 1}.desc`)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -59,8 +89,12 @@ const ImageGallery = () => {
                     alt={`${index}`}
                   />
                   <div className="text">
-                    <h2 className="title">{item.title}</h2>
-                    <p className="desc">{item.desc}</p>
+                    <h2 className="title">
+                      {t(`anasayfa.gallery.body.img${index + 1}.title`)}
+                    </h2>
+                    <p className="desc">
+                      {t(`anasayfa.gallery.body.img${index + 1}.desc`)}
+                    </p>
                   </div>
                 </div>
               </div>

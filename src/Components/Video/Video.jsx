@@ -4,8 +4,10 @@ import playImageIcon from '../../Assets/images/play.svg';
 import pauseImageIcon from '../../Assets/images/pause.svg';
 import reply from '../../Assets/images/forward.svg';
 import forward from '../../Assets/images/replay.svg';
+import { useTranslation } from 'react-i18next';
 
 const Video = (props) => {
+  const { t } = useTranslation();
   const {
     item,
     index,
@@ -53,7 +55,6 @@ const Video = (props) => {
       isExitingFullscreen: true,
     });
     setPlayingVideoIndex(null);
-    console.log(isPlaying);
   };
 
   const handleForward = () => {
@@ -120,7 +121,7 @@ const Video = (props) => {
       id={`video_wrapper-${index}`}
       className={`video-wrapper`}
     >
-      <span>{item.title}</span>
+      <span>{t(`rotalar.rota${index + 1}`)}</span>
 
       <div className="video-controls">
         {isFullscreen === true &&

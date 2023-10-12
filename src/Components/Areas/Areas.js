@@ -5,8 +5,10 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import React, { useState, useEffect } from 'react';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
+import { useTranslation } from 'react-i18next';
 
 const Areas = () => {
+  const { t } = useTranslation();
   const [selectedData, setSelectedData] = useState(data[0]);
   const [boldIndex, setBoldIndex] = useState(0);
 
@@ -32,7 +34,7 @@ const Areas = () => {
               fontWeight: '600',
             }}
           >
-            İnanç Turizmi Merkezleri
+            {t('anasayfa.navbar.inanc')}
           </p>
           <div className="areas-navigation">
             {data?.map((item, index) => (
@@ -42,7 +44,7 @@ const Areas = () => {
                   onClick={() => handleLinkClick(index)}
                   className={index === boldIndex ? 'bold-text' : ''}
                 >
-                  {item.title}
+                  {t(`inancTurizim.section${index + 1}.title`)}
                 </a>
               </div>
             ))}
@@ -50,7 +52,7 @@ const Areas = () => {
         </div>
         <div className="areas-section">
           <h3 className="areas-h3" style={{ color: 'var(--primary-color)' }}>
-            {selectedData.title.slice(1)}
+            {t(`inancTurizim.section${boldIndex + 1}.title`).slice(1)}
           </h3>
           <div className="areas-div">
             <img
@@ -60,7 +62,9 @@ const Areas = () => {
             />
           </div>
 
-          <div className="areas-decs">{selectedData.desc}</div>
+          <div className="areas-decs">
+            {t(`inancTurizim.section${boldIndex + 1}.desc`).slice(1)}
+          </div>
         </div>
         <ScrollToTop />
       </div>
