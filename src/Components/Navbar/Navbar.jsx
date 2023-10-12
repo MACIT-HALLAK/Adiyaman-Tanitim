@@ -97,6 +97,16 @@ const Navbar = () => {
               Hakkında
             </NavLink>
           </li>
+          <li className="bize-ulasin">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/ContactUs"
+            >
+              Bize ulaşın
+            </NavLink>
+          </li>
         </ul>
       </div>
     </>

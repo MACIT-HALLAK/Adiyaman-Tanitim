@@ -9,7 +9,6 @@ import MapComp from './Components/MapComp/MapComp';
 import Map from './Components/Map/Map';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import useDocumentTitle from './Hooks/useDocumentTitle';
-
 function App() {
   useDocumentTitle('Ana Sayfa');
   return (

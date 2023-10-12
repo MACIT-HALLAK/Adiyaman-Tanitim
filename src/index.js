@@ -7,7 +7,7 @@ import Areas from './Components/Areas/Areas';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import VideoList from './Components/Video/VideoList';
 import Projects from './Components/Projects/Projects';
-
+import ContactUS from './Components/ContactUS/ContactUS';
 const routers = createBrowserRouter([
   {
     path: '/',
@@ -28,6 +28,10 @@ const routers = createBrowserRouter([
   {
     path: '/Hakkinda',
     element: <Projects />,
+  },
+  {
+    path: '/ContactUS',
+    element: <ContactUS />,
   },
 ]);
 

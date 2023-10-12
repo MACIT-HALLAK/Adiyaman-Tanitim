@@ -5,7 +5,7 @@
   opacity: 1;
   display: grid;
   grid-auto-rows: minmax(85px, auto);
-  grid-template-areas: 'logo logo nav-item nav-item nav-item nav-item';
+  grid-template-areas: 'logo logo nav-item nav-item nav-item nav-item nav-item .';
   justify-items: end;
   align-items: center;
   gap: 0vh 0vw;
@@ -50,8 +50,8 @@
   grid-area: nav-item;
   justify-items: center;
   align-items: center;
-  grid-template-areas: 'liAnasayfa liCamiler liAlanlar liIletisim li';
-  gap: 4vw;
+  grid-template-areas: 'liAnasayfa liCamiler liAlanlar liIletisim liBizeUlasin';
+  gap: 2vw;
 }
 
 a {
@@ -62,7 +62,8 @@ a {
 .anasayfa,
 .camiler,
 .alanlar,
-.iletisim {
+.iletisim ,
+.bize-ulasin{
   display: grid;
   text-decoration: none;
   transition: scale 0.25s ease-out;
@@ -83,6 +84,9 @@ a {
 }
 .iletisim {
   grid-area: liIletisim;
+}
+.bize-ulasin {
+  grid-area: liBizeUlasin;
 }
 
 .nav-items > li {
@@ -286,7 +290,7 @@ a {
     scale: 0.9;
   }
   .container {
-    width: 97% !important;
+    width: 94% !important;
   }
 
   .hide-img {
