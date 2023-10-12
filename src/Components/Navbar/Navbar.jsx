@@ -4,17 +4,15 @@ import logo from '../../Assets/images/logo/adiyaman-logo.jpg';
 import { NavLink } from 'react-router-dom';
 import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
 import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
-import { t } from 'i18next';
+import i18next, { t } from 'i18next';
 import LangCom from '../lang/LangCom';
-import i18n from '../../i18n';
+import { useTranslation } from 'react-i18next';
 const Navbar = () => {
-  const [flag, setFlag] = useState('');
-
+  const { i18n } = useTranslation();
   useEffect(() => {
     const lang = localStorage.getItem('lang');
     i18n.changeLanguage(lang);
-  }, [flag]);
-
+  }, [i18n]);
   const menu = useRef();
   const nav_items = useRef();
 

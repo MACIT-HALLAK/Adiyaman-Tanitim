@@ -1,14 +1,21 @@
-import i18n from '../../i18n';
+import React, { useCallback, useEffect, useState } from 'react';
 import './LangCom.css';
-const LangCom = ({ setFlag }) => {
+import { useTranslation } from 'react-i18next';
+const LangCom = () => {
+  const { i18n } = useTranslation();
   const lang = localStorage.getItem('lang');
-  const changing = (lang) => {
-    localStorage.setItem('lang', lang || 'tr');
-    i18n.changeLanguage(lang);
-    setFlag(lang);
-  };
+  const changeLanguage = useCallback(
+    (lang) => {
+      localStorage.setItem('lang', lang || 'tr');
+      i18n.changeLanguage(lang);
+    },
+    [lang]
+  );
   return (
-    <select onChange={(e) => changing(e.target.value)} className="languages">
+    <select
+      onChange={(e) => changeLanguage(e.target.value)}
+      className="languages"
+    >
       <option value="tr" selected={lang === 'tr' ? true : false}>
         TR
       </option>
