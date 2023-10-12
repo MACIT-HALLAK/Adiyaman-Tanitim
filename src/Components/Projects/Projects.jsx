@@ -4,7 +4,6 @@ import zigzak from '../../Assets/images/zigzag.png';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
 import logoImg from '../../Assets/images/logo/adiyaman-logo.png';
 import mainImg from '../../Assets/images/hakkinda/main-image.jpg';
-import { useTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
