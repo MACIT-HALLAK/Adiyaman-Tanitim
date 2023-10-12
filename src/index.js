@@ -30,6 +30,10 @@ const routers = createBrowserRouter([
     path: '/Hakkinda',
     element: <Projects />,
   },
+  {
+    path: '/Spinner',
+    element: <Spinner />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

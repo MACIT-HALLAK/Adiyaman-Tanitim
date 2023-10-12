@@ -7,6 +7,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: auto;
   color: var(--primary-color) !important;
+ 
 }
 
 .video-container {
@@ -15,7 +16,7 @@ body {
   justify-content: space-between;
   align-content: center;
   width: 90%;
-  height: 100vh;
+  height: 50vh;
   margin: -10px auto;
   gap: 4rem 1rem;
   align-items: center;
@@ -198,13 +199,19 @@ svg {
   }
 }
 /* ----------------------------- */
+.rota-wrapper {
+  width: 90%;
+  margin: auto;
+}
 .rota-wrapper .rota-content .title {
   background-color: #f8f8f8;
   padding: 20px;
   font-size: 20px;
   color: #1976d2;
   cursor: pointer;
-  border-bottom: 1px solid rgb(148 163 184);;
+  border-bottom: 1px solid rgb(148 163 184);
+  border-right: 1px solid rgb(148 163 184);
+  border-left: 1px solid rgb(148 163 184);
 }
 .rota-wrapper .rota-content .content-wrap {
   background-color: white;
