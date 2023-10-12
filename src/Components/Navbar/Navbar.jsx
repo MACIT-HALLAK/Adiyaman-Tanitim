@@ -1,5 +1,5 @@
 import './Navbar.css';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from '../../Assets/images/logo/adiyaman-logo.jpg';
 import { NavLink } from 'react-router-dom';
 import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
@@ -8,10 +8,13 @@ import { t } from 'i18next';
 import LangCom from '../lang/LangCom';
 import i18n from '../../i18n';
 const Navbar = () => {
+  const [flag, setFlag] = useState('');
+
   useEffect(() => {
     const lang = localStorage.getItem('lang');
     i18n.changeLanguage(lang);
-  }, []);
+  }, [flag]);
+
   const menu = useRef();
   const nav_items = useRef();
 
@@ -105,7 +108,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <LangCom />
+            <LangCom setFlag={setFlag} />
           </li>
         </ul>
       </div>
