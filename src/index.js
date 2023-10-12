@@ -7,6 +7,7 @@ import Areas from './Components/Areas/Areas';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import VideoList from './Components/Video/VideoList';
 import Projects from './Components/Projects/Projects';
+import Spinner from './Components/Spinner/Spinner';
 
 const routers = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const routers = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <React.Suspense fallback="loading...">
+    <React.Suspense fallback={<Spinner />}>
       <RouterProvider router={routers} />
     </React.Suspense>
   </React.StrictMode>

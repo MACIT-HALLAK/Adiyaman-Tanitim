@@ -60,7 +60,7 @@
 }
 .content-center .desc {
   font-size: 1.125rem;
-  text-align: justify;
+  text-wrap: balance;
 }
 
 .content-center .content-title,

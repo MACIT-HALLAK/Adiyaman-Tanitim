@@ -9,6 +9,9 @@ import MapComp from './Components/MapComp/MapComp';
 import Map from './Components/Map/Map';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import useDocumentTitle from './Hooks/useDocumentTitle';
+import { useTranslation, Trans } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import LangCom from './Components/lang/LangCom';
 
 function App() {
   useDocumentTitle('Ana Sayfa');
