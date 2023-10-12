@@ -83,7 +83,7 @@ const ContactUS = () => {
               <form
                 name="contact"
                 class="contact-form validate-form"
-                action={`mailto:asas.ak390@gmail.com?subject=${formData.subject}&body=Name: ${formData.name}%0DEmail: ${formData.email}%0D%0DMessage: ${formData.message}`}
+                action={`mailto:bilgiislem@adiyaman.bel.tr?subject=${formData.subject}&body=Name: ${formData.name}%0DEmail: ${formData.email}%0D%0DMessage: ${formData.message}`}
                 method="post"
                 onSubmit={handleSubmit}
               >
@@ -99,7 +99,7 @@ const ContactUS = () => {
                     }
                   />
                 </div>
-                {errors.name && <div>{errors.name}</div>}
+                {errors.name && <div className="error">{errors.name}</div>}
 
                 <div className="wrap-input validate-input">
                   <input
@@ -113,7 +113,7 @@ const ContactUS = () => {
                     }
                   />
                 </div>
-                {errors.email && <div>{errors.email}</div>}
+                {errors.email && <div className="error">{errors.email}</div>}
 
                 <div className="wrap-input validate-input">
                   <input
@@ -127,7 +127,9 @@ const ContactUS = () => {
                     }
                   />
                 </div>
-                {errors.subject && <div>{errors.subject}</div>}
+                {errors.subject && (
+                  <div className="error">{errors.subject}</div>
+                )}
                 <div className="wrap-input validate-input">
                   <textarea
                     className="input"
@@ -142,7 +144,9 @@ const ContactUS = () => {
                     }
                   ></textarea>
                 </div>
-                {errors.message && <div>{errors.message}</div>}
+                {errors.message && (
+                  <div className="error">{errors.message}</div>
+                )}
 
                 <div className="container-contact-form-btn">
                   <button className="contact-form-btn" type="submit">

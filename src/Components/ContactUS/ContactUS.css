@@ -280,3 +280,10 @@ textarea {
 .wrap-input:has(textarea) {
   overflow: hidden !important;
 }
+
+.error {
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 1.75rem;
+  color: darkred;
+}
