@@ -105,8 +105,15 @@ const Navbar = () => {
               {t('anasayfa.navbar.hakkinda')}
             </NavLink>
           </li>
-          <li>
-            <LangCom />
+          <li className="bize-ulasin">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav__link__active' : ''
+              }
+              to="/ContactUs"
+            >
+              Bize ulaşın
+            </NavLink>
           </li>
         </ul>
       </div>

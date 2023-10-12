@@ -1,0 +1,258 @@
+input {
+  outline: none;
+  border: none;
+}
+section {
+  width: 90.6vw;
+  margin-left: 4vw;
+}
+textarea {
+  outline: none;
+  border: none;
+  font-family: Helvetica Neue, 'Montserrat', sans-serif;
+}
+.contact-p {
+  position: absolute;
+  left: 52vw;
+  top: 20.3vh;
+  background-color: #c9b79b;
+  color: white;
+  width: 36vw;
+  padding: 3.2vw 2vw;
+  display: flex;
+  justify-content: start;
+  font-size: 25px;
+  border: 2px solid #cebda1;
+  border-radius: 7px;
+}
+.contact-img {
+  position: absolute;
+  /* margin-left: 1vw; */
+  width: 40vw;
+  /* height: 19em; */
+  top: 43.2vh;
+  left: 52vw;
+  border: 3px solid #c9b79b;
+  border-radius: 7px;
+}
+.contact-img2 {
+  position: absolute;
+  display: flex;
+  top: 3vh;
+  width: 4vw;
+  right: 2vw;
+  animation: shake 2s ease infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+.container-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 0px;
+  position: relative;
+  width: 43vw;
+}
+
+.wrap-contact {
+  width: 43vw;
+  border-radius: 7px;
+  padding: 44px 0px 20px 0px;
+}
+.contact-form {
+  width: 112%;
+}
+.wrap-input {
+  width: 90%;
+  background-color: #fff;
+  border: 1px solid #cebda1;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.input {
+  position: relative;
+  display: block;
+  width: 95%;
+  background: #fff;
+  border-radius: 31px;
+  color: #8f8fa1;
+  line-height: 1.2;
+  font-family: Helvetica Neue, 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  height: 42px;
+
+  text-transform: none;
+}
+input.input {
+  height: 54px;
+  padding: 0 0px 0 15px;
+}
+textarea.input {
+  min-height: 145px;
+  padding: 15px 3px 0 15px;
+}
+.focus-input {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  border-radius: 31px;
+  background-color: #fff;
+  pointer-events: none;
+}
+.input:focus + .focus-input100 {
+  width: calc(100% + 20px);
+}
+.container-contact-form-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.contact-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 250px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  line-height: 1.2;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #cebda1;
+}
+
+.contact-form-btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form-btn:hover:before {
+  background-color: #916439;
+  border-radius: 7px;
+}
+
+.validate-input {
+  position: relative;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100px;
+  grid-gap: 100px;
+  padding: 10px 30px 0px 30px;
+}
+.grid-container > div {
+  padding: 20px 0;
+  font-size: 10px;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+.listing-hero {
+  background: #f7f0ea;
+  padding: 30px 0 30px;
+}
+.hero-heading {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 709px;
+}
+@media (max-width: 1115px) {
+  .contact-form {
+    width: 100%;
+  }
+  .contact-img {
+    width: 43.8vw;
+    top: 43.2vh;
+    left: 48vw;
+  }
+  .contact-p {
+    left: 48vw;
+    top: 21.9vh;
+    width: 40vw;
+  }
+}
+@media (max-width: 960px) {
+  .contact-p {
+    position: inherit;
+    width: 86vw;
+  }
+  .contact-img {
+    display: none;
+  }
+  .wrap-contact {
+    padding: 0px 0px 20px 0px;
+  }
+  .contact-form {
+    width: 90vw;
+  }
+  .contact-img2 {
+    top: 23vh;
+    width: 5vw;
+    right: 6vw;
+  }
+}
+@media (max-width: 790px) {
+  .contact-img2 {
+    top: 20.2vh;
+    width: 6.2vw;
+  }
+}
+@media (max-width: 720px) {
+  .wrap-contact {
+    width: 84vw;
+  }
+  input.input {
+    padding: 0 0px 0 15px;
+  }
+  .wrap-input {
+    width: 84%;
+  }
+  textarea.input {
+    padding: 15px 3px 0 7px;
+  }
+  .container-contact {
+    padding: 15px 0px;
+  }
+  section {
+    width: 72.6vw;
+    margin-left: 25vw;
+  }
+  .contact-p {
+    position: inherit;
+    width: 88.5vw;
+    margin-left: -22.8vw;
+  }
+}

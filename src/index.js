@@ -9,6 +9,7 @@ import VideoList from './Components/Video/VideoList';
 import Projects from './Components/Projects/Projects';
 import Spinner from './Components/Spinner/Spinner';
 
+import ContactUS from './Components/ContactUS/ContactUS';
 const routers = createBrowserRouter([
   {
     path: '/',
@@ -31,8 +32,8 @@ const routers = createBrowserRouter([
     element: <Projects />,
   },
   {
-    path: '/Spinner',
-    element: <Spinner />,
+    path: '/ContactUS',
+    element: <ContactUS />,
   },
 ]);
 
