@@ -1,3 +1,4 @@
 {
+  "i18next.i18nPaths": "d:/Lectures/React/Adiyaman-Tanitim/public/locales",
   "i18n-ally.localesPaths": ["public/locales", "src/Components/lang"]
 }

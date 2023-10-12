@@ -116,12 +116,12 @@ const Video = (props) => {
   }, [index]);
 
   return (
-        <div
+    <div
       ref={wrapperRef}
       id={`video_wrapper-${index}`}
       className={`video-wrapper`}
     >
-      <span>{t(`rotalar.rota${index + 1}`)}</span>
+      <span>{t(`rotalar.rota${index + 1}.title`)}</span>
 
       <div className="video-controls">
         {isFullscreen === true &&
@@ -177,7 +177,6 @@ const Video = (props) => {
         )}
       </button>
     </div>
-
   );
 };
 

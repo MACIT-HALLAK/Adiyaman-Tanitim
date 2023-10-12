@@ -182,11 +182,62 @@
     "footerSection": "The Union of Municipalities of Turkey organizes competitions with the aim of increasing awareness at the municipal level on issues highlighted by international organizations and the central government. In this context, a 'Supporting Faith Tourism in Cities Idea and Project Competition' was held, and the Adıyaman Municipality was among the top contenders. This website is a product of the 'Discover Adıyaman' project, which was the competition entry of the Adıyaman Municipality."
   },
   "rotalar": {
-    "rota1": "City Tour",
-    "rota2": "City Tour",
-    "rota3": "Out-of-City Tour Nemrut Sunset",
-    "rota4": "Out-of-City Tour Nemrut Sunrise",
-    "rota5": "Out-of-City Tour"
+    "rota1": {
+      "title": "City Tour",
+      "places": {
+        "place1": "City Square",
+        "place2": "Yenipınar Mosque",
+        "place3": "Eskisaray Mosque",
+        "place4": "Adıyaman Castle",
+        "place5": "Mor Petrus and Mor Paulus Church",
+        "place6": "Foundation Mosque",
+        "place7": "Musalla Mosque",
+        "place8": "Grand Mosque",
+        "place9": "Kap Mosque",
+        "place10": "Market Mosque",
+        "place11": "Salt Inn",
+        "place12": "Oturakçı Market"
+      }
+    },
+    "rota2": {
+      "title": "City Tour",
+      "places": {
+        "place1": "Mini Adıyaman",
+        "place2": "Perre Ancient City",
+        "place3": "Zey Mosque"
+      }
+    },
+    "rota3": {
+      "title": "Outside City Tour Nemrut Sunset",
+      "places": {
+        "place1": "Abuzer Gaffari Shrine",
+        "place2": "Companion Saffan Bin Muaatdal Shrine",
+        "place3": "Karakuş Mound",
+        "place4": "Cendere Bridge",
+        "place5": "Kahta Castle",
+        "place6": "Arsemia",
+        "place7": "Mount Nemrut"
+      }
+    },
+    "rota4": {
+      "title": "Outside City Tour Nemrut Sunrise",
+      "places": {
+        "place1": "Mount Nemrut",
+        "place2": "Prophet Üzeyir",
+        "place3": "Cendere Bridge",
+        "place4": "Karakuş Mound",
+        "place5": "Companion Saffan Bin Muaatdal Shrine",
+        "place6": "Mahmut El Ensari Shrine",
+        "place7": "Abuzer Gaffari Shrine"
+      }
+    },
+    "rota5": {
+      "title": "Outside City Tour",
+      "places": {
+        "place1": "Companion Saffan Bin Muaatdal Shrine",
+        "place2": "Menzil"
+      }
+    }
   },
   "inancTurizim": {
     "section1": {

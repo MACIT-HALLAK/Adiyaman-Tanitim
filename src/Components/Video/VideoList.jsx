@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './VideoList.css';
 import Video from './Video';
 import Navbar from '../Navbar/Navbar';
@@ -8,7 +8,10 @@ import rota2 from '../../Assets/Rotalar/Rota2.mp4';
 import rota3 from '../../Assets/Rotalar/Rota3.mp4';
 import rota4 from '../../Assets/Rotalar/Rota4.mp4';
 import rota5 from '../../Assets/Rotalar/Rota5.mp4';
-import Flip from 'react-reveal/Flip';
+import { Flip } from 'react-awesome-reveal';
+import i18n from '../../i18n';
+import { render } from 'react-dom';
+import { useTranslation } from 'react-i18next';
 
 const dataVideos = [
   {
@@ -22,7 +25,7 @@ const dataVideos1 = [
     url: rota2,
   },
 ];
-const dataVideos2 = [ 
+const dataVideos2 = [
   {
     title: 'Şehir Dışı Tur Nemrut Gun Batımı',
     url: rota3,
@@ -42,6 +45,11 @@ const dataVideos4 = [
 ];
 
 function VideoList() {
+  const { t } = useTranslation();
+  useEffect(() => {
+    const lang = localStorage.getItem('lang');
+    i18n.changeLanguage(lang);
+  }, [i18n]);
 
   const [playingVideoIndex, setPlayingVideoIndex] = useState(null);
   const [played, setPlayed] = useState({});
@@ -70,247 +78,251 @@ function VideoList() {
   const [window4, setWindow4] = useState(false);
   const [window5, setWindow5] = useState(false);
 
-  const handleOpebWindow1 = () => {setWindow1(!window1);};
-  const handleOpebWindow2 = () => {setWindow2(!window2);};
-  const handleOpebWindow3 = () => {setWindow3(!window3);};
-  const handleOpebWindow4 = () => {setWindow4(!window4);};
-  const handleOpebWindow5 = () => {setWindow5(!window5);};
+  const handleOpebWindow1 = () => {
+    setWindow1(!window1);
+  };
+  const handleOpebWindow2 = () => {
+    setWindow2(!window2);
+  };
+  const handleOpebWindow3 = () => {
+    setWindow3(!window3);
+  };
+  const handleOpebWindow4 = () => {
+    setWindow4(!window4);
+  };
+  const handleOpebWindow5 = () => {
+    setWindow5(!window5);
+  };
 
   return (
     <>
+      <Navbar />
       <div className="videos-layout">
-        <Navbar />
         <div className="rota-wrapper">
-      <div className="rota-content">
-        <div className="title" onClick={handleOpebWindow1}>{dataVideos[0].title}</div>
-        {window1 && (
-          <div className="content-wrap">
-             <Flip top>
-            <div className="explain">
-              <span>Kent Meydanı,</span>
-              <span>Yenipınar Cami,</span>
-              <span>Eskisaray Cami,</span> 
-              <span>Adıyaman Kalesi,</span>
-              <span>Mor Petrus ve Mor Paulus Kilisesi,</span>  
-              <span>Vakıf Cami,</span>
-              <span>Musalla Cami,</span>
-              <span> Ulu Cami,</span> 
-              <span>Kap Cami,</span>
-              <span>Çarşı Cami,</span>
-              <span>Tuz Hanı,</span>
-              <span>Oturakçı Pazarı.</span>
+          <div className="rota-content">
+            <div className="title" onClick={handleOpebWindow1}>
+              <span>{t(`rotalar.rota1.title`)}</span>
             </div>
-            </Flip>
-            <div>
-              
-        <div className="rota-layout">
-        
-        <div className="video-container">
-         
-          {dataVideos?.map((item, index) => (
-            <React.Fragment key={index}>
-             
-              <Video
-                key={index}
-                item={item}
-                index={index}
-                playingVideoIndex={playingVideoIndex}
-                setPlayed={setPlayed}
-                setDuration={setDuration}
-                played={played}
-                duration={duration}
-                setPlayingVideoIndex={setPlayingVideoIndex}
-                videoState={videoStates[index]}
-                updateVideoState={(newState) =>
-                  updateVideoState(index, newState)
-                }
-              />
-            </React.Fragment>
-          ))}
+            {window1 && (
+              <div className="content-wrap">
+                <Flip top style={{ width: '50%' }}>
+                  <div className="explain" style={{ width: '100%' }}>
+                    <span>🟤 {t('rotalar.rota1.places.place1')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place2')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place3')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place4')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place5')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place6')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place7')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place8')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place9')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place10')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place11')}</span>
+                    <span>🟤 {t('rotalar.rota1.places.place12')}</span>
+                  </div>
+                </Flip>
+                <div>
+                  <div className="rota-layout">
+                    <div className="video-container">
+                      {dataVideos?.map((item, index) => (
+                        <React.Fragment key={index}>
+                          <Video
+                            key={index}
+                            item={item}
+                            index={index}
+                            playingVideoIndex={playingVideoIndex}
+                            setPlayed={setPlayed}
+                            setDuration={setDuration}
+                            played={played}
+                            duration={duration}
+                            setPlayingVideoIndex={setPlayingVideoIndex}
+                            videoState={videoStates[index]}
+                            updateVideoState={(newState) =>
+                              updateVideoState(index, newState)
+                            }
+                          />
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div></div>
+          <div className="rota-content">
+            <div className="title" onClick={handleOpebWindow2}>
+              <span>{t(`rotalar.rota2.title`)}</span>
+            </div>
+            {window2 && (
+              <Flip top>
+                <div className="content-wrap">
+                  <div className="explain">
+                    <span>🟤 {t('rotalar.rota2.places.place1')}</span>
+                    <span>🟤 {t('rotalar.rota2.places.place2')}</span>
+                    <span>🟤 {t('rotalar.rota2.places.place3')}</span>
+                  </div>
+                  <div>
+                    <div className="rota-layout">
+                      <div className="video-container">
+                        {dataVideos1?.map((item, index) => (
+                          <React.Fragment key={index}>
+                            <Video
+                              key={index}
+                              item={item}
+                              index={index}
+                              playingVideoIndex={playingVideoIndex}
+                              setPlayed={setPlayed}
+                              setDuration={setDuration}
+                              played={played}
+                              duration={duration}
+                              setPlayingVideoIndex={setPlayingVideoIndex}
+                              videoState={videoStates[index]}
+                              updateVideoState={(newState) =>
+                                updateVideoState(index, newState)
+                              }
+                            />
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Flip>
+            )}
+          </div>
+          <div className="rota-content">
+            <div className="title" onClick={handleOpebWindow3}>
+              <span>{t(`rotalar.rota3.title`)}</span>
+            </div>
+            {window3 && (
+              <Flip top>
+                <div className="content-wrap">
+                  <div className="explain">
+                    <span>🟤 {t('rotalar.rota3.places.place1')}</span>
+                    <span>🟤 {t('rotalar.rota3.places.place2')}</span>
+                    <span>🟤 {t('rotalar.rota3.places.place3')}</span>
+                    <span>🟤 {t('rotalar.rota3.places.place4')}</span>
+                    <span>🟤 {t('rotalar.rota3.places.place5')}</span>
+                    <span>🟤 {t('rotalar.rota3.places.place6')}</span>
+                    <span>🟤 {t('rotalar.rota3.places.place7')}</span>
+                  </div>
+                  <div>
+                    <div className="rota-layout">
+                      <div className="video-container">
+                        {dataVideos2?.map((item, index) => (
+                          <React.Fragment key={index}>
+                            <Video
+                              key={index}
+                              item={item}
+                              index={index}
+                              playingVideoIndex={playingVideoIndex}
+                              setPlayed={setPlayed}
+                              setDuration={setDuration}
+                              played={played}
+                              duration={duration}
+                              setPlayingVideoIndex={setPlayingVideoIndex}
+                              videoState={videoStates[index]}
+                              updateVideoState={(newState) =>
+                                updateVideoState(index, newState)
+                              }
+                            />
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Flip>
+            )}
+          </div>
+          <div className="rota-content">
+            <div className="title" onClick={handleOpebWindow4}>
+              <span>{t(`rotalar.rota4.title`)}</span>
+            </div>
+            {window4 && (
+              <Flip top>
+                <div className="content-wrap">
+                  <div className="explain">
+                    <span>🟤 {t('rotalar.rota4.places.place1')}</span>
+                    <span>🟤 {t('rotalar.rota4.places.place2')}</span>
+                    <span>🟤 {t('rotalar.rota4.places.place3')}</span>
+                    <span>🟤 {t('rotalar.rota4.places.place4')}</span>
+                    <span>🟤 {t('rotalar.rota4.places.place5')}</span>
+                    <span>🟤 {t('rotalar.rota4.places.place6')}</span>
+                    <span>🟤 {t('rotalar.rota4.places.place7')}</span>
+                  </div>
+                  <div>
+                    <div className="rota-layout">
+                      <div className="video-container">
+                        {dataVideos3?.map((item, index) => (
+                          <React.Fragment key={index}>
+                            <Video
+                              key={index}
+                              item={item}
+                              index={index}
+                              playingVideoIndex={playingVideoIndex}
+                              setPlayed={setPlayed}
+                              setDuration={setDuration}
+                              played={played}
+                              duration={duration}
+                              setPlayingVideoIndex={setPlayingVideoIndex}
+                              videoState={videoStates[index]}
+                              updateVideoState={(newState) =>
+                                updateVideoState(index, newState)
+                              }
+                            />
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Flip>
+            )}
+          </div>
+          <div className="rota-content">
+            <div className="title" onClick={handleOpebWindow5}>
+              <span>{t(`rotalar.rota5.title`)}</span>
+            </div>
+            {window5 && (
+              <Flip top>
+                <div className="content-wrap">
+                  <div className="explain">
+                    <span>🟤 {t('rotalar.rota5.places.place1')}</span>
+                    <span>🟤 {t('rotalar.rota5.places.place2')}</span>
+                  </div>
+                  <div>
+                    {' '}
+                    <div className="rota-layout">
+                      <div className="video-container">
+                        {dataVideos4?.map((item, index) => (
+                          <React.Fragment key={index}>
+                            <Video
+                              key={index}
+                              item={item}
+                              index={index}
+                              playingVideoIndex={playingVideoIndex}
+                              setPlayed={setPlayed}
+                              setDuration={setDuration}
+                              played={played}
+                              duration={duration}
+                              setPlayingVideoIndex={setPlayingVideoIndex}
+                              videoState={videoStates[index]}
+                              updateVideoState={(newState) =>
+                                updateVideoState(index, newState)
+                              }
+                            />
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Flip>
+            )}
+          </div>
         </div>
-      </div>
-      
-            </div>
-          </div>
-        )}
-      </div>
-      <div></div>
-      <div className="rota-content">
-        <div className="title" onClick={handleOpebWindow2}>{dataVideos1[0].title}</div>
-        {window2 && (
-           <Flip top>
-          <div className="content-wrap">
-            <div className="explain">
-              <span>Mini Adıyaman,</span>
-              <span>Perre Antik Kenti,</span>
-              <span>Zey Cami.</span> 
-
-            </div>
-            <div>
-            <div className="rota-layout">
-            <div className="video-container">
-         
-          {dataVideos1?.map((item, index) => (
-            <React.Fragment key={index}>
-             
-              <Video
-                key={index}
-                item={item}
-                index={index}
-                playingVideoIndex={playingVideoIndex}
-                setPlayed={setPlayed}
-                setDuration={setDuration}
-                played={played}
-                duration={duration}
-                setPlayingVideoIndex={setPlayingVideoIndex}
-                videoState={videoStates[index]}
-                updateVideoState={(newState) =>
-                  updateVideoState(index, newState)
-                }
-              />
-            </React.Fragment>
-          ))}
-        </div>
-            </div>
-            </div>
-          </div>
-          </Flip>
-        )}
-      </div>
-      <div className="rota-content">
-        <div className="title" onClick={handleOpebWindow3}>{dataVideos2[0].title}</div>
-        {window3 && (
-           <Flip top>
-          <div className="content-wrap">
-            <div className="explain">
-              <span>Abuzer Gaffari Türbesi,</span>
-              <span>Sahabe Saffan Bin Muaatdal Türbesi,</span>
-              <span>Karakuş Tümülüsü,</span> 
-              <span>Cendere Köprüsü,</span>
-              <span>Kahta Kalesi,</span>
-              <span>Arsemia,</span>
-              <span>Nemrut Dağı.</span>
-
-            </div>
-            <div>
-            <div className="rota-layout">
-            <div className="video-container">
-         
-          {dataVideos2?.map((item, index) => (
-            <React.Fragment key={index}>
-             
-              <Video
-                key={index}
-                item={item}
-                index={index}
-                playingVideoIndex={playingVideoIndex}
-                setPlayed={setPlayed}
-                setDuration={setDuration}
-                played={played}
-                duration={duration}
-                setPlayingVideoIndex={setPlayingVideoIndex}
-                videoState={videoStates[index]}
-                updateVideoState={(newState) =>
-                  updateVideoState(index, newState)
-                }
-              />
-            </React.Fragment>
-          ))}
-        </div>
-            </div>
-          </div>
-          </div>
-          </Flip>
-        )}
-        </div>
-      <div className="rota-content">
-        <div className="title" onClick={handleOpebWindow4}>{dataVideos3[0].title}</div>
-        {window4 && (
-           <Flip top>
-          <div className="content-wrap">
-            <div className="explain">
-              <span>Nemrut Dağı,</span>
-              <span>Üzeyir Peygamber,</span>
-              <span>Cendere Köprüsü,</span> 
-              <span>Karakuş Tümülüsü,</span>
-              <span>Sahabe Saffan Bin Muaatdal Türbesi,</span>
-              <span>Mahmut El Ensari Türbesi,</span>
-              <span>Abuzer Gaffari Türbesi.</span>
-            </div>
-            <div>
-            <div className="rota-layout">
-            <div className="video-container">
-         
-         {dataVideos3?.map((item, index) => (
-           <React.Fragment key={index}>
-            
-             <Video
-               key={index}
-               item={item}
-               index={index}
-               playingVideoIndex={playingVideoIndex}
-               setPlayed={setPlayed}
-               setDuration={setDuration}
-               played={played}
-               duration={duration}
-               setPlayingVideoIndex={setPlayingVideoIndex}
-               videoState={videoStates[index]}
-               updateVideoState={(newState) =>
-                 updateVideoState(index, newState)
-               }
-             />
-           </React.Fragment>
-         ))}
-       </div>
-            </div>
-          </div>
-          </div>
-          </Flip>
-        )}
-        </div>
-      <div className="rota-content">
-        <div className="title" onClick={handleOpebWindow5}>{dataVideos4[0].title}</div>
-        {window5 && (
-           <Flip top>
-          <div className="content-wrap">
-            <div className="explain">
-              <span>Sahabe Saffan Bin Muaatdal Türbesi,</span>
-              <span>Menzil.</span>
-
-            </div>
-            <div> <div className="rota-layout">
-
-            <div className="video-container">
-         
-         {dataVideos4?.map((item, index) => (
-           <React.Fragment key={index}>
-            
-             <Video
-               key={index}
-               item={item}
-               index={index}
-               playingVideoIndex={playingVideoIndex}
-               setPlayed={setPlayed}
-               setDuration={setDuration}
-               played={played}
-               duration={duration}
-               setPlayingVideoIndex={setPlayingVideoIndex}
-               videoState={videoStates[index]}
-               updateVideoState={(newState) =>
-                 updateVideoState(index, newState)
-               }
-             />
-           </React.Fragment>
-         ))}
-       </div>
-            </div>
-            </div>
-          </div>
-          </Flip>
-        )}
-        </div>
-    </div>
-
       </div>
     </>
   );

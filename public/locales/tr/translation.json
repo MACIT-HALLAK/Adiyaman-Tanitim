@@ -182,11 +182,62 @@
     "footerSection": "Türkiye Belediyeler Birliği, uluslararası kuruluşların ve merkezi yönetimin öne çıkardığı konularda belediyeler düzeyinde farkındalığı artırmak amacıyla yarışmalar tertip etmektedir. Bu çerçevede, “Şehirlerde İnanç Turizminin Desteklenmesi Fikir ve Proje Yarışması” düzenlenmiş ve Adıyaman Belediyesi dereceye girmiştir. Bu web sitesi Adıyaman Belediyesi'nin yarışma projesi olan Adıyaman'ı Keşfet projesinin bir ürünüdür."
   },
   "rotalar": {
-    "rota1": "Şehir İçi Tur",
-    "rota2": "Şehir İçi Tur",
-    "rota3": "Şehir Dışı Tur Nemrut Gun Batımı",
-    "rota4": "Şehir Dışı Tur Nemrut Gun Dogumu",
-    "rota5": "Şehir Dışı Tur"
+    "rota1": {
+      "title": "Şehir İçi Tur",
+      "places": {
+        "place1": "Kent Meydanı",
+        "place2": "Yenipınar Cami",
+        "place3": "Eskisaray Cami",
+        "place4": "Adıyaman Kalesi",
+        "place5": "Mor Petrus ve Mor Paulus Kilisesi",
+        "place6": "Vakıf Cami",
+        "place7": "Musalla Cami",
+        "place8": "Ulu Cami",
+        "place9": "Kap Cami",
+        "place10": "Çarşı Cami",
+        "place11": "Tuz Hanı",
+        "place12": "Oturakçı Pazarı"
+      }
+    },
+    "rota2": {
+      "title": "Şehir İçi Tur",
+      "places": {
+        "place1": "Mini Adıyaman",
+        "place2": "Perre Antik Kenti",
+        "place3": "Zey Cami"
+      }
+    },
+    "rota3": {
+      "title": "Şehir Dışı Tur Nemrut Gun Batımı",
+      "places": {
+        "place1": "Abuzer Gaffari Türbesi",
+        "place2": "Sahabe Saffan Bin Muaatdal Türbesi",
+        "place3": "Karakuş Tümülüsü",
+        "place4": "Cendere Köprüsü",
+        "place5": "Kahta Kalesi",
+        "place6": "Arsemia",
+        "place7": "Nemrut Dağı"
+      }
+    },
+    "rota4": {
+      "title": "Şehir Dışı Tur Nemrut Gun Dogumu",
+      "places": {
+        "place1": "Nemrut Dağı",
+        "place2": "Üzeyir Peygamber",
+        "place3": "Cendere Köprüsü",
+        "place4": "Karakuş Tümülüsü",
+        "place5": "Sahabe Saffan Bin Muaatdal Türbesi",
+        "place6": "Mahmut El Ensari Türbesi",
+        "place7": "Abuzer Gaffari Türbesiı"
+      }
+    },
+    "rota5": {
+      "title": "Şehir Dışı Tur",
+      "places": {
+        "place1": "Sahabe Saffan Bin Muaatdal Türbesi",
+        "place2": "Menzil"
+      }
+    }
   },
   "inancTurizim": {
     "section1": {
