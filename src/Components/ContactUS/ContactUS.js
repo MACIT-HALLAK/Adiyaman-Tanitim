@@ -1,11 +1,13 @@
 import './ContactUS.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useTransition } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import img from '../../Assets/images/itm2.png';
 import img2 from '../../Assets/images/icons8-mail-50 (1).png';
+import { useTranslation } from 'react-i18next';
 
 const ContactUS = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -71,7 +73,7 @@ const ContactUS = () => {
         <section>
           <div>
             <p className="contact-p">
-              Bize Ulaşın
+              {t('contact.title')}
               <img className="contact-img2" src={img2} alt="contact_img" />
             </p>
             <img className="contact-img" src={img} alt="contact_img" />
@@ -87,10 +89,10 @@ const ContactUS = () => {
               >
                 <div class="wrap-input validate-input">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     name="name"
-                    placeholder="Ad-Soyad"
+                    placeholder={t('contact.inputs.name')}
                     value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
@@ -99,12 +101,12 @@ const ContactUS = () => {
                 </div>
                 {errors.name && <div>{errors.name}</div>}
 
-                <div class="wrap-input validate-input">
+                <div className="wrap-input validate-input">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     name="email"
-                    placeholder="E-posta"
+                    placeholder={t('contact.inputs.email')}
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -113,12 +115,12 @@ const ContactUS = () => {
                 </div>
                 {errors.email && <div>{errors.email}</div>}
 
-                <div class="wrap-input validate-input">
+                <div className="wrap-input validate-input">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     name="email"
-                    placeholder="Konu Başlığı"
+                    placeholder={t('contact.inputs.subject')}
                     value={formData.subject}
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
@@ -126,12 +128,14 @@ const ContactUS = () => {
                   />
                 </div>
                 {errors.subject && <div>{errors.subject}</div>}
-                <div class="wrap-input validate-input">
+                <div className="wrap-input validate-input">
                   <textarea
-                    class="input"
+                    className="input"
                     type="text"
                     name="message"
-                    placeholder="Mesaj"
+                    rows={15}
+                    cols={135}
+                    placeholder={t('contact.inputs.message')}
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -140,9 +144,9 @@ const ContactUS = () => {
                 </div>
                 {errors.message && <div>{errors.message}</div>}
 
-                <div class="container-contact-form-btn">
-                  <button class="contact-form-btn" type="submit">
-                    <span>Send</span>
+                <div className="container-contact-form-btn">
+                  <button className="contact-form-btn" type="submit">
+                    <span>{t('contact.inputs.button')}</span>
                   </button>
                 </div>
               </form>

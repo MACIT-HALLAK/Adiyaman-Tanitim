@@ -115,6 +115,9 @@ const Navbar = () => {
               Bize ulaşın
             </NavLink>
           </li>
+          <li className="lng">
+            <LangCom />
+          </li>
         </ul>
       </div>
     </>

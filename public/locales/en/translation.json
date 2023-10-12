@@ -324,5 +324,15 @@
 
       "section6": "With this project, the aims are; *To promote Adiyaman domestically and internationally, *To include Adiyaman in the Southeast tours that prominently feature religious tourism sites in Şanlıurfa, Diyarbakır, and Mardin, and to create tour programs, *To reveal the religious tourism potential that Adiyaman possesses and to shed light on the investments to be made and services to be provided, both to reduce socio-economic disparities and to contribute to the region's development."
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "inputs": {
+      "name": "Name-Surname",
+      "email": "Contact Email",
+      "subject": "Subject Title",
+      "message": "Message",
+      "button": "SEND"
+    }
   }
 }

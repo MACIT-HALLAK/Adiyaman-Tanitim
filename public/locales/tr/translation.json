@@ -324,5 +324,15 @@
 
       "section6": "Bu proje ile; *Adıyaman’ın yurtiçi ve yurtdışında tanıtımının yapılması, *Bölgede inanç turizmi alanında öne çıkan Şanlıurfa, Diyarbakır ve Mardin’i de kapsayan Güneydoğu gezilerinde rotaya Adıyaman’ın dâhil edilerek tur programlarının oluşturulması, *Adıyaman’ın sahip olduğu inanç turizm potansiyelini ortaya çıkarmak, yapılacak yatırım ve verilecek hizmetlere ışık tutmak, hem sosyo-ekonomik gelişmişlik farklarının azaltılmasına hem de bölgenin kalkınmasına katkıda bulunmak hedeflenmektedir."
     }
+  },
+  "contact": {
+    "title": "Bize Ulaşın",
+    "inputs": {
+      "name": "Ad-Soyad",
+      "email": "İletişim E-posta",
+      "subject": "Konu Başlığı",
+      "message": "Mesaj",
+      "button": "GÖNDER"
+    }
   }
 }

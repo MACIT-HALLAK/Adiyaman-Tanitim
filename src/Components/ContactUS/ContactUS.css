@@ -256,3 +256,27 @@ textarea.input {
     margin-left: -22.8vw;
   }
 }
+input {
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  color: var(--secondary-color) !important;
+  font-size: 0.85rem;
+}
+
+textarea {
+  width: auto !important;
+  height: auto !important;
+  font-size: 0.75rem !important;
+}
+
+.wrap-input:has(textarea) {
+  overflow: hidden !important;
+}
