@@ -20,6 +20,17 @@ const ContactUS = () => {
     subject: '',
     message: '',
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setErrors({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    }, 3000);
+  }, [errors]);
   const validateEmail = (email) => {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
