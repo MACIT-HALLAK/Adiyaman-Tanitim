@@ -4,6 +4,12 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 const LangCom = () => {
   const lang = localStorage.getItem('lang');
+  useEffect(() => {
+    const lang = localStorage.getItem('lang');
+    if (!lang) {
+      i18n.changeLanguage('tr');
+    }
+  }, [i18n]);
   const changeLanguage = useCallback(
     (lang) => {
       localStorage.setItem('lang', lang || 'tr');

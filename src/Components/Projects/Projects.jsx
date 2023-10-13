@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import zigzak from '../../Assets/images/zigzag.png';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
 import logoImg from '../../Assets/images/logo/adiyaman-logo.png';
-import mainImg from '../../Assets/images/hakkinda/main-image.jpg';
+import mainImg from '../../Assets/images/hakkinda/main-image-second.jpg';
 import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
@@ -37,14 +37,14 @@ const Projects = () => {
           </p>
         </div>
         <div className="side-content">
-          <img
+          {/* <img
             src={logoImg}
             alt="discover adıyaman"
             width={100}
             height={100}
             className="proj-logo-img"
             srcSet=""
-          />
+          /> */}
           <img
             src={mainImg}
             className="main-image"

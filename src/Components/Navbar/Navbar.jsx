@@ -11,8 +11,10 @@ const Navbar = () => {
   const { t } = useTranslation();
   useEffect(() => {
     const lang = localStorage.getItem('lang');
-    i18n.changeLanguage(lang);
-  }, [i18n]);
+    if (lang) {
+      i18n.changeLanguage(lang || 'tr');
+    }
+  }, []);
   const menu = useRef();
   const nav_items = useRef();
 

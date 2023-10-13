@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
   width: 90%;
   margin: 0 auto;
+  gap: 3rem;
 }
 .project-content {
   color: var(--secondary-color);
@@ -61,16 +62,8 @@
 .side-content {
   display: flex;
   flex-direction: column;
-  gap: 75px;
-  align-items: flex-end;
-  padding-top: 25px;
-}
-
-.main-image {
-  width: 80%;
-  aspect-ratio: 1 / 1;
-  min-height: 300px;
-  max-height: 320px;
+  align-items: center;
+  position: relative;
 }
 
 .proj-logo-img {
@@ -79,10 +72,26 @@
   object-fit: contain;
   max-height: 50px;
 }
-@media (min-width: 1800px) {
+
+@media (max-width: 1600px) {
   .main-image {
+    width: 100%;
+    object-fit: contain;
     flex-grow: 1;
-    max-height: 490px !important;
+    translate: 0px -175px;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1600px) {
+  .main-image {
+    translate: 0px -125px;
+  }
+}
+@media (min-width: 1600px) {
+  .main-image {
+    width: 90%;
+    height: 90% !important;
+    position: absolute;
+    top: 20px;
   }
 }
 

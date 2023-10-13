@@ -1,11 +1,12 @@
 .languages {
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--secondary-color);
   background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s;
+  color: var(--primary-color);
 }
 
 .languages:hover {

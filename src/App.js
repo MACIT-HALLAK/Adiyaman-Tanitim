@@ -12,8 +12,15 @@ import useDocumentTitle from './Hooks/useDocumentTitle';
 import { useTranslation, Trans } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import LangCom from './Components/lang/LangCom';
+import i18n from './i18n';
 
 function App() {
+  useEffect(() => {
+    const lang = localStorage.getItem('lang');
+    if (!lang) {
+      i18n.changeLanguage(lang || 'tr');
+    }
+  }, []);
   useDocumentTitle('Ana Sayfa');
   return (
     <div className="App">
