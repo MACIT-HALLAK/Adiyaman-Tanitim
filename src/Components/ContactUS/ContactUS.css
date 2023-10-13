@@ -15,7 +15,7 @@
   'c-input2 c-input2 c-input2 c-input2'
   'c-input3 c-input3 c-input3 c-input3'
   'c-text c-text c-text c-text'
-  '. . c-button .'
+  'c-button c-button c-button c-button'
   ;
   width: 50vw;
   gap: 0vh 0vw;
@@ -77,6 +77,7 @@
   grid-area: c-button;
   width: 29vw;
   height: 8vh;
+  margin-left: 8.5vw;
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
@@ -104,6 +105,12 @@
   border: 3px solid #d0b994;
   border-radius: 7px;
 }
+.error {
+  color: red;
+  padding: 0;
+  margin-top: -14px;
+  font-size: 15px;
+}
 @media (max-width: 1115px) {
   .contact-us {
     display: grid;
@@ -122,6 +129,10 @@
   }
   .c-text {
     width: 83vw;
+  }
+  .c-button {
+    width: 100%;
+    margin-left: 0;
   }
 
 }

@@ -8,7 +8,7 @@ import img2 from '../../Assets/images/icons8-mail-50 (1).png';
 const ContactUS = () => {
   const [typingText, setTypingText] = useState('');
   const [currentCharacterIndex, setCurrentCharacterIndex] = useState(0);
-
+    
   // Text to be typed
   const textToType = 'Bize Ulaşın';
 
@@ -46,37 +46,11 @@ const ContactUS = () => {
     // Reset errors
     setErrors({ name: '', email: '', message: '' });
 
-    // Validate Name
-    if (!formData.name.trim()) {
-      setErrors((prevErrors) => ({ ...prevErrors, name: 'Name is required' }));
-      e.preventDefault();
-      return;
-    }
-
     // Validate Email
     if (!validateEmail(formData.email)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
         email: 'Invalid email format',
-      }));
-      e.preventDefault();
-      return;
-    }
-
-    // Validate Message
-    if (!formData.subject.trim()) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        subject: 'subject is required',
-      }));
-      e.preventDefault();
-      return;
-    }
-    // Validate Message
-    if (!formData.message.trim()) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        message: 'Message is required',
       }));
       e.preventDefault();
       return;
@@ -104,7 +78,7 @@ const ContactUS = () => {
                 setFormData({ ...formData, name: e.target.value })
               }
             />
-            {errors.name && <div>{errors.name}</div>}
+          
             <input
               className="c-input2"
               placeholder="E-mail"
@@ -113,7 +87,7 @@ const ContactUS = () => {
                 setFormData({ ...formData, email: e.target.value })
               }
             />
-            {errors.email && <div>{errors.email}</div>}
+            {errors.email && <div className='error'>{errors.email}</div>}
             <input
               className="c-input3"
               placeholder="Konu Başlığı"
@@ -122,7 +96,7 @@ const ContactUS = () => {
                 setFormData({ ...formData, subject: e.target.value })
               }
             />
-            {errors.subject && <div>{errors.subject}</div>}
+          
             <textarea
               className="c-text"
               placeholder="Mesaj"
@@ -130,8 +104,8 @@ const ContactUS = () => {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-            ></textarea>
-            {errors.message && <div>{errors.message}</div>}
+            ></textarea> 
+
             <button type="submit" className="c-button">
               Send
             </button>
