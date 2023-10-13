@@ -63,7 +63,7 @@ const Areas = () => {
           </div>
 
           <div className="areas-decs">
-            {t(`inancTurizim.section${boldIndex + 1}.desc`).slice(1)}
+            {t(`inancTurizim.section${boldIndex + 1}.desc`)}
           </div>
         </div>
         <ScrollToTop />

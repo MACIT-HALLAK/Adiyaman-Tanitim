@@ -160,7 +160,7 @@ a {
     -o-transform: translate(20%, 50%);
   }
 }
-@media (max-width: 1290px) {
+@media (max-width: 1400px) {
   .container {
     grid-template-areas:
       'logo logo menu menu'

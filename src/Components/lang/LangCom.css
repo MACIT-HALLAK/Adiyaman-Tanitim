@@ -2,7 +2,7 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--secondary-color);
-  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
+  background: transparent;
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s;
@@ -23,4 +23,59 @@
   li:has(.languages) {
     margin-right: 1rem;
   }
+}
+
+.themesCon {
+  position: relative;
+  width: 60px;
+  --parent-width: 60px;
+}
+
+.switcher {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 0;
+  cursor: pointer;
+  top: 50%;
+  translate: 0 -50%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
+  z-index: 40000;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -ms-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  filter: drop-shadow(0px 0px 5px var(--secondary-color));
+  -webkit-filter: drop-shadow(0px 0px 5px var(--secondary-color));
+}
+
+.themesEle {
+  position: absolute;
+}
+
+.en__language.isActive ~ .switcher {
+  translate: -45px -18px;
+}
+.en__language {
+  right: 0;
+  transform: translate(-10px, -50%);
+  -webkit-transform: translate(-10px, -50%);
+  -moz-transform: translate(-10px, -50%);
+  -ms-transform: translate(-10px, -50%);
+  -o-transform: translate(-10px, -50%);
+}
+
+.tr__language {
+  left: 0;
+  transform: translate(10px, -50%);
+  -webkit-transform: translate(10px, -50%);
+  -moz-transform: translate(10px, -50%);
+  -ms-transform: translate(10px, -50%);
+  -o-transform: translate(10px, -50%);
 }

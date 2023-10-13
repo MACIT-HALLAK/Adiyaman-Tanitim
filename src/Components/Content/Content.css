@@ -9,6 +9,7 @@
 .content-img {
   width: 60%;
   aspect-ratio: 13 / 9;
+  z-index: -1;
   border-radius: 7px;
   padding-top: 5px;
   background-repeat: no-repeat;
