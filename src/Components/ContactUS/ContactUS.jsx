@@ -8,6 +8,21 @@ import { useTranslation } from 'react-i18next';
 
 const ContactUS = () => {
   const { t } = useTranslation();
+  const [typedText, setTypedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const textToType = t('contact.title');
+
+  useEffect(() => {
+    const delay = 150; // 0.5 seconds delay
+    if (currentIndex < textToType.length) {
+      const timer = setTimeout(() => {
+        setTypedText(textToType.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, delay);
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, textToType]);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -82,13 +97,14 @@ const ContactUS = () => {
       <Navbar />
       <div className="Contact-Us">
         <section>
-          <div>
+          <div className='contact-head'>
             <p className="contact-p">
-              {t('contact.title')}
-              <img className="contact-img2" src={img2} alt="contact_img" />
+              {typedText}
             </p>
-            <img className="contact-img" src={img} alt="contact_img" />
           </div>
+          
+            <img className="contact-img2" src={img2} alt="contact_img" />
+            <img className="contact-img" src={img} alt="contact_img" />
           <div class="container-contact">
             <div class="wrap-contact">
               <form

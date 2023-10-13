@@ -14,7 +14,7 @@ textarea {
 .contact-p {
   position: absolute;
   left: 52vw;
-  top: 20.3vh;
+  top: 16.1vh;
   background-color: #c9b79b;
   color: white;
   width: 36vw;
@@ -30,7 +30,7 @@ textarea {
   /* margin-left: 1vw; */
   width: 40vw;
   /* height: 19em; */
-  top: 43.2vh;
+  top: 40.2vh;
   left: 52vw;
   border: 3px solid #c9b79b;
   border-radius: 7px;
@@ -38,9 +38,9 @@ textarea {
 .contact-img2 {
   position: absolute;
   display: flex;
-  top: 3vh;
+  top: 24vh;
   width: 4vw;
-  right: 2vw;
+  right: 9vw;
   animation: shake 2s ease infinite;
 }
 @keyframes shake {
@@ -64,7 +64,7 @@ textarea {
 .wrap-contact {
   width: 43vw;
   border-radius: 7px;
-  padding: 44px 0px 20px 0px;
+  padding: 14px 0px 20px 0px;
 }
 .contact-form {
   width: 112%;
@@ -76,7 +76,7 @@ textarea {
   border-radius: 7px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
   position: relative;
   z-index: 1;
 }
@@ -161,53 +161,11 @@ textarea.input {
 .validate-input {
   position: relative;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 100px;
-  grid-gap: 100px;
-  padding: 10px 30px 0px 30px;
-}
-.grid-container > div {
-  padding: 20px 0;
-  font-size: 10px;
-}
-
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
-}
-.listing-hero {
-  background: #f7f0ea;
-  padding: 30px 0 30px;
-}
-.hero-heading {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 709px;
-}
 @media (max-width: 1115px) {
-  .contact-form {
-    width: 100%;
-  }
-  .contact-img {
-    width: 43.8vw;
-    top: 43.2vh;
-    left: 48vw;
-  }
-  .contact-p {
-    left: 48vw;
-    top: 21.9vh;
-    width: 40vw;
-  }
-}
-@media (max-width: 960px) {
   .contact-p {
     position: inherit;
     width: 86vw;
+    padding: 5vh 2vw;
   }
   .contact-img {
     display: none;
@@ -217,20 +175,64 @@ textarea.input {
   }
   .contact-form {
     width: 90vw;
+    margin-top: -13%;
   }
   .contact-img2 {
-    top: 23vh;
+    position: relative;
+    top: -15.8vh;
     width: 5vw;
-    right: 6vw;
+    right: -83.3vw;
   }
 }
-@media (max-width: 790px) {
+@media (max-width: 850px){
   .contact-img2 {
-    top: 20.2vh;
-    width: 6.2vw;
+    top: -15.7vh;
+    width: 6vw;
+    right: -81.3vw;
+  }
+  .contact-form {
+    margin-top: -19%;
+}
+
+}
+@media (max-width: 730px){
+  .contact-img2 {
+      top: -15.2vh;
+      width: 7vw;
+      right: -80.5vw;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 570px) {
+  .contact-img2 {
+    top: -13.2vh;
+    width: 7.5vw;
+    right: -78.5vw;
+}
+  .contact-p {
+    width: 85vw;
+    padding: 3.5vh 2vw;
+}
+.contact-form {
+  margin-top: -26%;
+}
+input.input {
+  height: 46px;
+}
+.wrap-input {
+  margin-bottom: 16px;
+}
+}
+@media (max-width: 450px) {
+  .contact-img2 {
+    top: -12.9vh;
+    width: 9.4vw;
+    right: -76.5vw;
+}
+.contact-form {
+  margin-top: -33%;
+}
+}
+/* @media (max-width: 720px) {
   .wrap-contact {
     width: 84vw;
   }
@@ -255,14 +257,8 @@ textarea.input {
     width: 88.5vw;
     margin-left: -22.8vw;
   }
-}
-input {
-  transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-}
+} */
+
 input:focus,
 input:focus-visible,
 textarea:focus,
@@ -271,19 +267,3 @@ textarea:focus-visible {
   font-size: 0.85rem;
 }
 
-textarea {
-  width: auto !important;
-  height: auto !important;
-  font-size: 0.75rem !important;
-}
-
-.wrap-input:has(textarea) {
-  overflow: hidden !important;
-}
-
-.error {
-  width: 90%;
-  margin-inline: auto;
-  margin-bottom: 1.75rem;
-  color: darkred;
-}
