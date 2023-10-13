@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import './LangCom.css';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 const LangCom = () => {
-  const { i18n } = useTranslation();
   const lang = localStorage.getItem('lang');
   const changeLanguage = useCallback(
     (lang) => {

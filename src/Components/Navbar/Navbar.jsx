@@ -112,7 +112,7 @@ const Navbar = () => {
               }
               to="/ContactUs"
             >
-              Bize ulaşın
+              {t('contact.title')}
             </NavLink>
           </li>
           <li className="lng">
