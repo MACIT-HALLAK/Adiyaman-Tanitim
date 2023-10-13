@@ -27,7 +27,7 @@
 
 .themesCon {
   position: relative;
-  width: 60px;
+  width: 45px;
   --parent-width: 60px;
 }
 
@@ -60,22 +60,22 @@
 }
 
 .en__language.isActive ~ .switcher {
-  translate: -45px -18px;
+  translate: -30px -18px;
 }
 .en__language {
   right: 0;
-  transform: translate(-10px, -50%);
-  -webkit-transform: translate(-10px, -50%);
-  -moz-transform: translate(-10px, -50%);
-  -ms-transform: translate(-10px, -50%);
-  -o-transform: translate(-10px, -50%);
+  transform: translate(0px, -45%);
+  -webkit-transform: translate(0px, -45%);
+  -moz-transform: translate(0px, -45%);
+  -ms-transform: translate(0px, -45%);
+  -o-transform: translate(0px, -45%);
 }
 
 .tr__language {
   left: 0;
-  transform: translate(10px, -50%);
-  -webkit-transform: translate(10px, -50%);
-  -moz-transform: translate(10px, -50%);
-  -ms-transform: translate(10px, -50%);
-  -o-transform: translate(10px, -50%);
+  transform: translate(0px, -45%);
+  -webkit-transform: translate(0px, -45%);
+  -moz-transform: translate(0px, -45%);
+  -ms-transform: translate(0px, -45%);
+  -o-transform: translate(0px, -45%);
 }

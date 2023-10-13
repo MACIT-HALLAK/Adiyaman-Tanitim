@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import tr_flag from '../../Assets/images/flags/turkey.png';
+import uk_flag from '../../Assets/images/flags/united-kingdom.png';
 import './LangCom.css';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
@@ -39,7 +41,7 @@ const LangCom = () => {
           } themesEle tr__language`}
           onClick={(e) => changeLanguage(e)}
         >
-          TR
+          <img src={tr_flag} alt={'tr_flag'} width={30} height={30} />
         </div>
         <div
           className={` ${
@@ -47,7 +49,7 @@ const LangCom = () => {
           } themesEle en__language`}
           onClick={(e) => changeLanguage(e)}
         >
-          EN
+          <img src={uk_flag} width={30} height={30} alt="uk_flag" />
         </div>
         <div
           className="switcher"
