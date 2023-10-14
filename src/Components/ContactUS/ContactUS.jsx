@@ -4,12 +4,12 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import img from '../../Assets/images/itm2.png';
 import img2 from '../../Assets/images/icons8-mail-50 (1).png';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const ContactUS = () => {
   const [typingText, setTypingText] = useState('');
   const [currentCharacterIndex, setCurrentCharacterIndex] = useState(0);
-
+  const { t } = useTranslation();
   // Text to be typed
   const textToType = 'Bize Ulaşın';
 
@@ -68,7 +68,6 @@ const ContactUS = () => {
             onSubmit={handleSubmit}
           >
             <p className="c-p">{typingText}</p>
-            {/* <img className="c-img" src={img2} /> */}
 
             <input
               className="c-input1"
@@ -107,7 +106,6 @@ const ContactUS = () => {
               className="c-text"
               name="message"
               cols={120}
-              style={{ resize: 'none' }}
               placeholder={t('contact.inputs.message')}
               value={formData.message}
               onChange={(e) =>
