@@ -68,6 +68,12 @@
 
 .main-image {
   z-index: -1000;
+  width: 90%;
+  height: 90% !important;
+  position: absolute;
+  object-fit: contain;
+  object-position: top;
+  top: 20px;
 }
 
 .proj-logo-img {
@@ -75,28 +81,6 @@
   aspect-ratio: 1/1;
   object-fit: contain;
   max-height: 50px;
-}
-
-@media (max-width: 1600px) {
-  .main-image {
-    width: 100%;
-    object-fit: contain;
-    flex-grow: 1;
-    translate: 0px -175px;
-  }
-}
-@media (min-width: 1500px) and (max-width: 1600px) {
-  .main-image {
-    translate: 0px -125px;
-  }
-}
-@media (min-width: 1600px) {
-  .main-image {
-    width: 90%;
-    height: 90% !important;
-    position: absolute;
-    top: 20px;
-  }
 }
 
 hr {
