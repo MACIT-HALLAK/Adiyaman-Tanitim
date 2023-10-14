@@ -10,30 +10,32 @@ import Projects from './Components/Projects/Projects';
 import Spinner from './Components/Spinner/Spinner';
 
 import ContactUS from './Components/ContactUS/ContactUS';
+import Home from './Components/Home/Home';
 const routers = createBrowserRouter([
   {
-    path: '/',
     element: <App />,
-  },
-  {
-    path: '/MosquesPage',
-    element: <MosquesPage />,
-  },
-  {
-    path: '/Areas',
-    element: <Areas />,
-  },
-  {
-    path: '/Videos',
-    element: <VideoList />,
-  },
-  {
-    path: '/Hakkinda',
-    element: <Projects />,
-  },
-  {
-    path: '/ContactUS',
-    element: <ContactUS />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/Areas',
+        element: <Areas />,
+      },
+      {
+        path: '/Videos',
+        element: <VideoList />,
+      },
+      {
+        path: '/Hakkinda',
+        element: <Projects />,
+      },
+      {
+        path: '/ContactUS',
+        element: <ContactUS />,
+      },
+    ],
   },
 ]);
 

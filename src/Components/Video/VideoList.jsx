@@ -96,7 +96,6 @@ function VideoList() {
 
   return (
     <>
-      <Navbar />
       <div className="videos-layout">
         <div className="rota-wrapper">
           <div className="rota-content">

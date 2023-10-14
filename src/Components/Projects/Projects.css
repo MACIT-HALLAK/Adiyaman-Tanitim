@@ -66,6 +66,10 @@
   position: relative;
 }
 
+.main-image {
+  z-index: -1000;
+}
+
 .proj-logo-img {
   width: 60%;
   aspect-ratio: 1/1;

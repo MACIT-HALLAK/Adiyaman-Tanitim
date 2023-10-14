@@ -12,7 +12,6 @@ const Projects = () => {
 
   return (
     <>
-      <Navbar />
       <div className="project-container">
         <div className="project-content">
           <div className="project-title-wrapper">

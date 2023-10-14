@@ -4,11 +4,12 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import img from '../../Assets/images/itm2.png';
 import img2 from '../../Assets/images/icons8-mail-50 (1).png';
+import { t } from 'i18next';
 
 const ContactUS = () => {
   const [typingText, setTypingText] = useState('');
   const [currentCharacterIndex, setCurrentCharacterIndex] = useState(0);
-    
+
   // Text to be typed
   const textToType = 'Bize Ulaşın';
 
@@ -59,7 +60,6 @@ const ContactUS = () => {
 
   return (
     <>
-      <Navbar />
       <div className="contact-us">
         <div className="contact-form">
           <form
@@ -72,42 +72,44 @@ const ContactUS = () => {
 
             <input
               className="c-input1"
-              placeholder="Ad-Soyad"
+              placeholder={t('contact.inputs.name')}
               value={formData.name}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
             />
-          
+
             <input
               className="c-input2"
-              placeholder="E-mail"
+              placeholder={t('contact.inputs.email')}
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
             />
-            {errors.email && <div className='error'>{errors.email}</div>}
+            {errors.email && <div className="error">{errors.email}</div>}
             <input
               className="c-input3"
-              placeholder="Konu Başlığı"
+              placeholder={t('contact.inputs.subject')}
               value={formData.subject}
               onChange={(e) =>
                 setFormData({ ...formData, subject: e.target.value })
               }
             />
-          
+
             <textarea
               className="c-text"
-              placeholder="Mesaj"
+              cols={120}
+              style={{ resize: 'none' }}
+              placeholder={t('contact.inputs.message')}
               value={formData.message}
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-            ></textarea> 
+            ></textarea>
 
             <button type="submit" className="c-button">
-              Send
+              {t('contact.inputs.button')}
             </button>
           </form>
         </div>
@@ -115,8 +117,6 @@ const ContactUS = () => {
           <img className="c-img1" src={img} alt="contact_img" />
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

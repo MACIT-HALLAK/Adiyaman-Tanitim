@@ -24,7 +24,6 @@ const Areas = () => {
   }, []);
   return (
     <>
-      <Navber />
       <div className="areas-layout">
         <div className="main-content">
           <p
@@ -66,7 +65,6 @@ const Areas = () => {
             {t(`inancTurizim.section${boldIndex + 1}.desc`)}
           </div>
         </div>
-        <ScrollToTop />
       </div>
     </>
   );
