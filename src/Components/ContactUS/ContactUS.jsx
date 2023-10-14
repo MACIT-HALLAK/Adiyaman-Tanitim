@@ -63,7 +63,7 @@ const ContactUS = () => {
       <div className="contact-us">
         <div className="contact-form">
           <form
-            action={`mailto:mahmmmoud144@gmail.com?subject=Contact Form Submission&body=Name: ${formData.name}%0DEmail: ${formData.email}%0D%0DMessage: ${formData.message}`}
+            action={`mailto:bilgiislem@adiyaman.bel.tr?subject=Contact Form Submission&body=Name: ${formData.name}%0DEmail: ${formData.email}%0D%0DMessage: ${formData.message}`}
             method="post"
             onSubmit={handleSubmit}
           >
@@ -73,6 +73,8 @@ const ContactUS = () => {
             <input
               className="c-input1"
               placeholder={t('contact.inputs.name')}
+              type="text"
+              name="name"
               value={formData.name}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
@@ -82,6 +84,8 @@ const ContactUS = () => {
             <input
               className="c-input2"
               placeholder={t('contact.inputs.email')}
+              type="email"
+              name="email"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -91,6 +95,8 @@ const ContactUS = () => {
             <input
               className="c-input3"
               placeholder={t('contact.inputs.subject')}
+              type="text"
+              name="subject"
               value={formData.subject}
               onChange={(e) =>
                 setFormData({ ...formData, subject: e.target.value })
@@ -99,6 +105,7 @@ const ContactUS = () => {
 
             <textarea
               className="c-text"
+              name="message"
               cols={120}
               style={{ resize: 'none' }}
               placeholder={t('contact.inputs.message')}
@@ -106,7 +113,7 @@ const ContactUS = () => {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-            ></textarea>
+            />
 
             <button type="submit" className="c-button">
               {t('contact.inputs.button')}
