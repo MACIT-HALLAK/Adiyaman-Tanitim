@@ -8,7 +8,7 @@ import rota2 from '../../Assets/Rotalar/Rota2.mp4';
 import rota3 from '../../Assets/Rotalar/Rota3.mp4';
 import rota4 from '../../Assets/Rotalar/Rota4.mp4';
 import rota5 from '../../Assets/Rotalar/Rota5.mp4';
-import { Flip } from 'react-awesome-reveal';
+
 import i18n from '../../i18n';
 import { render } from 'react-dom';
 import { useTranslation } from 'react-i18next';
@@ -80,18 +80,38 @@ function VideoList() {
 
   const handleOpebWindow1 = () => {
     setWindow1(!window1);
+    setWindow2(false);
+    setWindow3(false);
+    setWindow4(false);
+    setWindow5(false);
   };
   const handleOpebWindow2 = () => {
     setWindow2(!window2);
+    setWindow1(false);
+    setWindow3(false);
+    setWindow4(false);
+    setWindow5(false);
   };
   const handleOpebWindow3 = () => {
     setWindow3(!window3);
+    setWindow2(false);
+    setWindow1(false);
+    setWindow4(false);
+    setWindow5(false);
   };
   const handleOpebWindow4 = () => {
     setWindow4(!window4);
+    setWindow2(false);
+    setWindow3(false);
+    setWindow1(false);
+    setWindow5(false);
   };
   const handleOpebWindow5 = () => {
     setWindow5(!window5);
+    setWindow2(false);
+    setWindow3(false);
+    setWindow4(false);
+    setWindow1(false);
   };
 
   return (
@@ -104,7 +124,7 @@ function VideoList() {
             </div>
             {window1 && (
               <div className="content-wrap">
-                <Flip top style={{ width: '50%' }}>
+            
                   <div className="explain" style={{ width: '100%' }}>
                     <span>🟤 {t('rotalar.rota1.places.place1')}</span>
                     <span>🟤 {t('rotalar.rota1.places.place2')}</span>
@@ -119,7 +139,7 @@ function VideoList() {
                     <span>🟤 {t('rotalar.rota1.places.place11')}</span>
                     <span>🟤 {t('rotalar.rota1.places.place12')}</span>
                   </div>
-                </Flip>
+          
                 <div>
                   <div className="rota-layout">
                     <div className="video-container">
@@ -154,7 +174,7 @@ function VideoList() {
               <span>{t(`rotalar.rota2.title`)}</span>
             </div>
             {window2 && (
-              <Flip top>
+         
                 <div className="content-wrap">
                   <div className="explain">
                     <span>🟤 {t('rotalar.rota2.places.place1')}</span>
@@ -187,7 +207,7 @@ function VideoList() {
                     </div>
                   </div>
                 </div>
-              </Flip>
+          
             )}
           </div>
           <div className="rota-content">
@@ -195,7 +215,7 @@ function VideoList() {
               <span>{t(`rotalar.rota3.title`)}</span>
             </div>
             {window3 && (
-              <Flip top>
+        
                 <div className="content-wrap">
                   <div className="explain">
                     <span>🟤 {t('rotalar.rota3.places.place1')}</span>
@@ -232,7 +252,7 @@ function VideoList() {
                     </div>
                   </div>
                 </div>
-              </Flip>
+          
             )}
           </div>
           <div className="rota-content">
@@ -240,7 +260,7 @@ function VideoList() {
               <span>{t(`rotalar.rota4.title`)}</span>
             </div>
             {window4 && (
-              <Flip top>
+        
                 <div className="content-wrap">
                   <div className="explain">
                     <span>🟤 {t('rotalar.rota4.places.place1')}</span>
@@ -277,7 +297,7 @@ function VideoList() {
                     </div>
                   </div>
                 </div>
-              </Flip>
+          
             )}
           </div>
           <div className="rota-content">
@@ -285,7 +305,7 @@ function VideoList() {
               <span>{t(`rotalar.rota5.title`)}</span>
             </div>
             {window5 && (
-              <Flip top>
+         
                 <div className="content-wrap">
                   <div className="explain">
                     <span>🟤 {t('rotalar.rota5.places.place1')}</span>
@@ -318,7 +338,7 @@ function VideoList() {
                     </div>
                   </div>
                 </div>
-              </Flip>
+      
             )}
           </div>
         </div>

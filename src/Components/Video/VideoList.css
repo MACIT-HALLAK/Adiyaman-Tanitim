@@ -14,7 +14,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  width: 90%;
+  width: 110%;
   height: 50vh;
   margin: -10px auto;
   gap: 4rem 1rem;
@@ -230,7 +230,7 @@ svg {
   flex-direction: column;
   font-size: 16px;
   padding: 10px;
-  width: 50%;
+  width: 60%;
 }
 .rota-wrapper .rota-content .explain span {
   padding: 3px;
