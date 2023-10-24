@@ -22,7 +22,7 @@ import slidimage18 from '../../Assets/images/sliders/slider18.jpeg';
 import { Link } from 'react-router-dom';
 import TypeWriter from './TypeWriter';
 import { useTranslation } from 'react-i18next';
-
+import { IoIosArrowBack,IoIosArrowForward } from "react-icons/io";
 const ImageComponent = React.lazy(() => import('../skeletons/ImageComponent'));
 
 const Content = () => {
@@ -50,6 +50,7 @@ const Content = () => {
     slidimage18,
   ];
   const delay1 = 5000; // 10 saniye
+  const [left, setLeft] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -153,6 +154,12 @@ const Content = () => {
         'Tarihte yolcuların konaklama ve ticaret merkezi olarak inşa edilen ve günümüze kadar ayakta kalmayı başaran 200 yıllık Tarihi Tuz Hanı, aslına ve günümüz şartlarına uygun yapılan restorasyon çalışmalarının ardından mimari güzelliğiyle dikkatleri üzerinde topluyor.',
     },
   ]);
+  const handleClickLeft =()=> {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1) % images.length);
+  }
+  const handleClickRight =()=> {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+}
   return (
     <>
       <div className="content" style={{ position: 'relative' }}>
@@ -176,7 +183,10 @@ const Content = () => {
             currentImageIndex={currentImageIndex}
           />
         </Suspense>
+        <div onClick={handleClickLeft} className='navigation left'><IoIosArrowBack /></div>
+        <div onClick={handleClickRight} className='navigation right'><IoIosArrowForward /></div>
       </div>
+
     </>
   );
 };

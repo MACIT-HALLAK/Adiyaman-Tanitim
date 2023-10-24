@@ -134,3 +134,39 @@
     text-align: justify;
   }
 }
+.navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+}
+.navigation::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f4f6f7;
+  top: -8px;
+  left: -8px;
+  z-index: -5;
+ 
+}
+.navigation.left {
+  left: -22px;
+}
+.navigation.right {
+  right: -22px;
+}
+
+@media (max-width: 700px) {
+  .navigation.left {
+    left: -3px;
+  }
+  .navigation.right {
+    right: -3px;
+  }
+}
