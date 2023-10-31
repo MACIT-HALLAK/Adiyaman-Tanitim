@@ -11,6 +11,7 @@ import Map from '../Map/Map';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
 import i18n from '../../i18n';
+import Image from '../Image/Image';
 
 const Home = () => {
   useEffect(() => {
@@ -25,7 +26,8 @@ const Home = () => {
       <header className="App-header">
         <Content />
         <Statistics />
-        <Map />
+        {/* <Map /> */}
+        <Image />
         <TitleCom />
         <ImageGallery />
         <MapComp />
