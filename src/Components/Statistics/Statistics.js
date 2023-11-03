@@ -1,21 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import './Statistics.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Statistics = () => {
   const { t } = useTranslation();
   const [population, setPopulation] = useState(0);
   const [malePopulation, setMalePopulation] = useState(0);
   const [femalePopulation, setFemalePopulation] = useState(0);
-  let Statistics_line1 = document.querySelector('.statistics-line-1');
-  let Statistics_line2 = document.querySelector('.statistics-line-2');
-  let Statistics_line3 = document.querySelector('.statistics-line-3');
+  
+  
+  const Statistics_line1Ref = useRef(null);
+  const Statistics_line2Ref = useRef(null);
+  const Statistics_line3Ref = useRef(null);
 
   useEffect(() => {
     const targetPopulation = 635169;
     const targetMalePopulation = 320177;
     const targetFemalePopulation = 314992;
-    const duration = 2000; // 2 saniye
+    const duration = 2000;
+    const scrollThreshold = 150;
 
     let startTimestamp;
     let requestId;
@@ -49,8 +52,17 @@ const Statistics = () => {
     };
 
     const handleScroll = () => {
-      if (window.scrollY > 155) {
+      if (window.scrollY > scrollThreshold) {
         requestId = requestAnimationFrame(updatePopulations);
+        if (Statistics_line1Ref.current) {
+          Statistics_line1Ref.current.style.display = 'block';
+        }
+        if (Statistics_line2Ref.current) {
+          Statistics_line2Ref.current.style.display = 'block';
+        }
+        if (Statistics_line3Ref.current) {
+          Statistics_line3Ref.current.style.display = 'block';
+        }
       }
     };
 
@@ -63,29 +75,24 @@ const Statistics = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  if (window.scrollY > 155) {
-    Statistics_line1.style.display = 'block';
-    Statistics_line2.style.display = 'block';
-    Statistics_line3.style.display = 'block';
-  }
 
   return (
     <div className="Statistics">
       <div>
         {t('anasayfa.istatistic.nufusSayisi')}
-        <div className="statistics-line-1"></div>
+        <div className="statistics-line-1" ref={Statistics_line1Ref}></div>
         <span>{population.toLocaleString()}</span>
       </div>
 
       <div>
         {t('anasayfa.istatistic.erkekSayisi')}
-        <div className="statistics-line-2"></div>
+        <div className="statistics-line-2" ref={Statistics_line2Ref}></div>
         <span>{malePopulation.toLocaleString()}</span>
       </div>
 
       <div>
         {t('anasayfa.istatistic.kadinSayisi')}
-        <div className="statistics-line-3"></div>
+        <div className="statistics-line-3" ref={Statistics_line3Ref}></div>
         <span>{femalePopulation.toLocaleString()}</span>
       </div>
     </div>
