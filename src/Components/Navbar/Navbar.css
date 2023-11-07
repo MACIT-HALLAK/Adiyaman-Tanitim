@@ -41,7 +41,7 @@
   scale: 0.8;
   mix-blend-mode: darken;
   transform: translateX(-15%);
-  left: 15%;
+  left: 20%;
 }
 .nav-items {
   display: grid;

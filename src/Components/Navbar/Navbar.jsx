@@ -4,6 +4,7 @@ import logo from '../../Assets/images/logo/adiyaman-logo.jpg';
 import { NavLink } from 'react-router-dom';
 import slidimage1 from '../../Assets/images/logoAdiyaman.jpeg';
 import slidimage2 from '../../Assets/images/TTB_logo.jpeg';
+import slidimage3 from '../../Assets/images/ktb_logo_.png';
 import LangCom from '../lang/LangCom';
 import i18n from '../../i18n';
 import { useTranslation } from 'react-i18next';
@@ -41,7 +42,7 @@ const Navbar = () => {
           <div className="container-logo">
             <div className="logo-img-con hide-img">
               {' '}
-              <a href="https://www.tbb.gov.tr/Tr/">
+              <a href="https://www.tbb.gov.tr/Tr/" target="_blank">
                 <img
                   className="footer-img2 nav-img "
                   src={slidimage2}
@@ -50,10 +51,19 @@ const Navbar = () => {
               </a>
             </div>
             <div className="logo-img-con hide-img">
-              <a href="https://ww.adiyaman.bel.tr/">
+              <a href="https://ww.adiyaman.bel.tr/" target="_blank">
                 <img
                   className="footer-img1 nav-img "
                   src={slidimage1}
+                  alt="footer-img1"
+                />
+              </a>
+            </div>
+            <div className="logo-img-con hide-img">
+              <a href="https://adiyaman.ktb.gov.tr/" target="_blank">
+                <img
+                  className="footer-img1 nav-img "
+                  src={slidimage3}
                   alt="footer-img1"
                 />
               </a>

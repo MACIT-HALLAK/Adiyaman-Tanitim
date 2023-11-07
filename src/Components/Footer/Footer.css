@@ -24,16 +24,16 @@
 .footer-img1 {
   display: grid;
   grid-area: f-img1;
-  width: 4.3em;
-  height: 4em;
+  width: 60px;
+  height: 60px;
   justify-items: center;
   align-items: center;
 }
 .footer-img2 {
   display: grid;
   grid-area: f-img2;
-  width: 4em;
-  height: 4em;
+  width: 60px;
+  height: 60px;
   justify-items: center;
   align-items: center;
 }
