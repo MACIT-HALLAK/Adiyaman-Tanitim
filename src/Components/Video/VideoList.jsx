@@ -125,7 +125,7 @@ function VideoList() {
             {window1 && (
               <div className="content-wrap">
             
-                  <div className="explain" style={{ width: '100%' }}>
+                  <div className="explain" style={{ width: '50%' }}>
                     <span>🟤 {t('rotalar.rota1.places.place1')}</span>
                     <span>🟤 {t('rotalar.rota1.places.place2')}</span>
                     <span>🟤 {t('rotalar.rota1.places.place3')}</span>
@@ -176,7 +176,7 @@ function VideoList() {
             {window2 && (
          
                 <div className="content-wrap">
-                  <div className="explain">
+                  <div className="explain" style={{ width: '50%' }}>
                     <span>🟤 {t('rotalar.rota2.places.place1')}</span>
                     <span>🟤 {t('rotalar.rota2.places.place2')}</span>
                     <span>🟤 {t('rotalar.rota2.places.place3')}</span>
@@ -217,7 +217,7 @@ function VideoList() {
             {window3 && (
         
                 <div className="content-wrap">
-                  <div className="explain">
+                  <div className="explain" style={{ width: '50%' }}>
                     <span>🟤 {t('rotalar.rota3.places.place1')}</span>
                     <span>🟤 {t('rotalar.rota3.places.place2')}</span>
                     <span>🟤 {t('rotalar.rota3.places.place3')}</span>
@@ -262,7 +262,7 @@ function VideoList() {
             {window4 && (
         
                 <div className="content-wrap">
-                  <div className="explain">
+                  <div className="explain" style={{ width: '50%' }}>
                     <span>🟤 {t('rotalar.rota4.places.place1')}</span>
                     <span>🟤 {t('rotalar.rota4.places.place2')}</span>
                     <span>🟤 {t('rotalar.rota4.places.place3')}</span>
@@ -307,7 +307,7 @@ function VideoList() {
             {window5 && (
          
                 <div className="content-wrap">
-                  <div className="explain">
+                  <div className="explain" style={{ width: '50%' }}>
                     <span>🟤 {t('rotalar.rota5.places.place1')}</span>
                     <span>🟤 {t('rotalar.rota5.places.place2')}</span>
                   </div>

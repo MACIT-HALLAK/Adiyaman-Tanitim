@@ -137,14 +137,12 @@ const Video = (props) => {
             </div>
           )}
       </div>
-
+     
       <ReactPlayer
         ref={playerRef}
         url={item?.url}
         playing={playingVideoIndex === index && isPlaying}
         loop
-        width="100%"
-        height="100%"
         controls={true}
         onProgress={({ played }) =>
           setPlayed((prev) => ({ ...prev, [index]: played }))
@@ -157,6 +155,7 @@ const Video = (props) => {
           updateVideoState({ ...videoState, isPlaying: false });
         }}
       />
+    
       <button
         className={`play-button ${isPlaying ? 'pause-hide' : ''}`}
         onClick={() => {

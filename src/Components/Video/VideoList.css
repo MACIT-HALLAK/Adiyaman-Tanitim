@@ -14,9 +14,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  width: 110%;
+  width: 250%;
   height: 50vh;
-  margin: -10px auto;
+  margin: 70px auto;
   gap: 4rem 1rem;
   align-items: center;
 }
@@ -33,6 +33,8 @@ video::-webkit-media-controls-download-button {
 }
 
 .play-button {
+  margin-left: -95px;
+  margin-top: -40px;
   position: absolute;
   padding: 1.5rem;
   border: none;
@@ -55,7 +57,7 @@ video::-webkit-media-controls-download-button {
 }
 
 .video-wrapper {
-  width: 25%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +78,7 @@ video::-webkit-media-controls-download-button {
 }
 
 .video-wrapper span {
+  margin-left: -105px;
   text-align: center;
   font-weight: bold;
   margin-bottom: 5px;
@@ -95,37 +98,28 @@ video::-webkit-media-controls-download-button {
 }
 
 @media (max-width: 1290px) {
-  .video-wrapper {
-    width: 50% !important;
-  }
+  
 
   .video-container {
-    justify-content: center;
-    margin: 20px auto !important;
+    margin: 50px auto !important;
     height: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .video-wrapper {
-    width: 80% !important;
-  }
+ 
 
   .video-container {
-    justify-content: center;
-    margin: 20px auto !important;
+    margin: 50px auto !important;
     height: auto;
   }
 }
 
 @media (max-width: 567px) {
-  .video-wrapper {
-    width: 100% !important;
-  }
+ 
 
   .video-container {
-    justify-content: center;
-    margin: 20px auto !important;
+    margin: 50px auto !important;
     height: auto;
   }
 }
@@ -187,6 +181,8 @@ svg {
 }
 
 .rota-layout video {
+  width: 80% !important;
+  height: 80% !important;
   border: 10px solid var(--secondary-color);
   -webkit-border: 1px solid var(--secondary-color);
   -moz-border: 1px solid var(--secondary-color);
@@ -198,6 +194,7 @@ svg {
   .videos-layout .container {
     width: 90% !important;
   }
+
 }
 /* ----------------------------- */
 .rota-wrapper {
@@ -236,4 +233,25 @@ svg {
 }
 .rota-wrapper .rota-content .explain span {
   padding: 3px;
+}
+@media (max-width: 800px) {
+  
+  .rota-wrapper .rota-content .content-wrap {
+    background-color: white;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rota-layout video {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  .play-button {
+    margin-left: -293px;
+    margin-top: -160px;
+  }
+  .video-wrapper span {
+    margin-left: -293px;
+  }
 }
